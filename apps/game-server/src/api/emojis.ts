@@ -1,6 +1,6 @@
-import express from "express";
+import express, { type Router } from "express";
 
-const router = express.Router();
+const router: Router = express.Router();
 
 type EmojiResponse = string[];
 

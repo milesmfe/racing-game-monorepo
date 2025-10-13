@@ -1,14 +1,14 @@
 import cors from "cors";
-import express from "express";
+import express, { type Express } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 
-import type MessageResponse from "./interfaces/message-response.js";
+import type MessageResponse from "@repo/game-server/interfaces/message-response.js";
 
-import api from "./api/index.js";
-import * as middlewares from "./middlewares.js";
+import api from "@repo/game-server/api/index.js";
+import * as middlewares from "@repo/game-server/middlewares.js";
 
-const app = express();
+const app: Express = express();
 
 app.use(morgan("dev"));
 app.use(helmet());

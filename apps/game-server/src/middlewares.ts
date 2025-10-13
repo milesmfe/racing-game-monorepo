@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from "express";
 
-import type ErrorResponse from "./interfaces/error-response.js";
+import type ErrorResponse from "@repo/game-server/interfaces/error-response.js";
 
-import { env } from "./env.js";
+import { env } from "@repo/game-server/env.js";
 
 export function notFound(req: Request, res: Response, next: NextFunction) {
   res.status(404);

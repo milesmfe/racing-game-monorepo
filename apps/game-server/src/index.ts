@@ -1,5 +1,5 @@
-import app from "./app.js";
-import { env } from "./env.js";
+import app from "@repo/game-server/app.js";
+import { env } from "@repo/game-server/env.js";
 
 const port = env.PORT;
 const server = app.listen(port, () => {

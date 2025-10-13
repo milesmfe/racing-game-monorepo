@@ -1,4 +1,10 @@
 {
   "extends": ["@repo/tsconfig/base.json", "./.svelte-kit/tsconfig.json"],
-  "include": ["./*.js", "src/**/*.ts", "test/**/*.ts"]
+  "include": [
+    "./*.js",
+    "./*.svelte",
+    "src/**/*.ts",
+    "src/**/*.svelte",
+    "test/**/*.ts"
+  ]
 }
