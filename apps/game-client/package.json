@@ -1,0 +1,32 @@
+{
+  "name": "@repo/game-client",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "dependencies": {
+    "@repo/game-types": "workspace:*",
+    "@repo/game-ui": "workspace:*",
+    "pixi.js": "^8.14.0",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@sveltejs/adapter-auto": "^6.1.0",
+    "@sveltejs/kit": "^2.43.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "svelte": "^5.39.5",
+    "svelte-check": "^4.3.2",
+    "eslint": "latest",
+    "vite": "^7.1.7",
+    "typescript": "latest"
+  }
+}
