@@ -1,31 +1,28 @@
 {
-  "name": "racing-game-monorepo",
+  "name": "racing-game-mono",
   "version": "1.0.0",
-  "author": "Miles Edwards",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev -w @racing-game-mono/server"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milesmfe/racing-game-monorepo.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/milesmfe/racing-game-monorepo/issues"
+  },
+  "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "eslint": "latest",
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
-    "typescript": "5.9.2"
-  },
-  "packageManager": "pnpm@9.0.0",
-  "engines": {
-    "node": ">=18"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
+    "@types/node": "^24.7.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "@racing-game-mono/server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "dev": "nodemon src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@hono/node-ws": "^1.2.0",
+    "@racing-game-mono/core": "^1.0.0",
+    "hono": "^4.9.12",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

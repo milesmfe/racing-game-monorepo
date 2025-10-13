@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@racing-game-mono/core": ["packages/core/src/index.ts"],
+      "@racing-game-mono/core/*": ["packages/core/src/*"],
+      "@racing-game-mono/server/*": ["apps/server/src/*"]
+    }
+  }
+}
