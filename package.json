@@ -13,6 +13,8 @@
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "eslint": "latest",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
     "typescript": "5.9.2"

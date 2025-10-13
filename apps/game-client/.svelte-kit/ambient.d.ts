@@ -33,6 +33,7 @@ declare module '$env/static/private' {
 	export const SHELL: string;
 	export const TERM: string;
 	export const npm_package_devDependencies_vite: string;
+	export const npm_package_scripts_lint: string;
 	export const VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 	export const npm_package_scripts_dev: string;
 	export const TURBO_IS_TUI: string;
@@ -122,6 +123,7 @@ declare module '$env/dynamic/private' {
 		SHELL: string;
 		TERM: string;
 		npm_package_devDependencies_vite: string;
+		npm_package_scripts_lint: string;
 		VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 		npm_package_scripts_dev: string;
 		TURBO_IS_TUI: string;

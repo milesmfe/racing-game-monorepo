@@ -1,19 +1,29 @@
-import app from "@repo/game-server/app.js";
-import { env } from "@repo/game-server/env.js";
+import http from "http";
+import express from "express";
+import { Server } from "socket.io";
+import type {
+  ClientToServerEvents,
+  ServerToClientEvents,
+} from "@repo/game-types";
 
-const port = env.PORT;
-const server = app.listen(port, () => {
-  /* eslint-disable no-console */
-  console.log(`Listening: http://localhost:${port}`);
-  /* eslint-enable no-console */
+const app = express();
+const server = http.createServer(app);
+
+const io = new Server<ClientToServerEvents, ServerToClientEvents>(server, {
+  cors: {
+    origin: "*",
+  },
 });
 
-server.on("error", (err) => {
-  if ("code" in err && err.code === "EADDRINUSE") {
-    console.error(`Port ${env.PORT} is already in use. Please choose another port or stop the process using it.`);
-  }
-  else {
-    console.error("Failed to start server:", err);
-  }
-  process.exit(1);
+io.on("connection", (socket) => {
+  console.log(`Client connected: ${socket.id}`);
+
+  socket.on("disconnect", () => {
+    console.log(`Client disconnected: ${socket.id}`);
+  });
+});
+
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
