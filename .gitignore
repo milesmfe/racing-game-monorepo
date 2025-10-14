@@ -20,6 +20,10 @@ out/
 build
 dist
 
+# Lock files
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
 
 # Debug
 npm-debug.log*
