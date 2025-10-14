@@ -1,15 +1,15 @@
-// A generic command structure that clients will send
-export interface GameCommand<T extends string, P> {
-  type: T;
-  payload: P;
+export interface Player {
+  id: string;
+  position: { x: number; y: number };
+  velocity: { x: number; y: number };
 }
 
-// Specific command types and their expected payloads
-export type MovePiecePayload = { from: string; to: string; pieceId: string };
-export type EndTurnPayload = {}; // No payload needed for ending a turn
+export interface GameState {
+  players: Map<string, Player>;
+  timestamp: number;
+}
 
-export type MovePieceCommand = GameCommand<"MOVE_PIECE", MovePiecePayload>;
-export type EndTurnCommand = GameCommand<"END_TURN", EndTurnPayload>;
-
-// A union type representing all possible commands in the game
-export type AnyGameCommand = MovePieceCommand | EndTurnCommand;
+export type WSMessage =
+  | { type: "join"; playerId: string }
+  | { type: "update"; position: { x: number; y: number } }
+  | { type: "leave"; playerId: string };

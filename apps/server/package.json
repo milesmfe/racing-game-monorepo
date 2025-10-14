@@ -1,22 +1,27 @@
 {
   "name": "@racing-game-mono/server",
   "version": "1.0.0",
+  "description": "Hono WebSocket server for racing game",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b",
-    "dev": "nodemon src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@hono/node-server": "^1.19.5",
-    "@hono/node-ws": "^1.2.0",
-    "@racing-game-mono/core": "^1.0.0",
-    "hono": "^4.9.12",
-    "ws": "^8.18.3"
+  "keywords": [],
+  "author": "Miles Edwards",
+    "dependencies": {
+    "@racing-game-mono/core": "*",
+    "hono": "^4.6.14",
+    "@hono/node-ws": "^1.0.6",
+    "@hono/node-server": "^1.13.7",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/ws": "^8.18.1",
-    "tsconfig-paths": "^4.2.0"
+    "typescript": "^5.9.3",
+    "@types/node": "^24.7.2",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2"
   }
 }

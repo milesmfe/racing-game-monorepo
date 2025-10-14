@@ -1,47 +1,39 @@
 import { Hono } from "hono";
-import { serve } from "@hono/node-server";
 import { createNodeWebSocket } from "@hono/node-ws";
-import { handleConnection } from "@racing-game-mono/server/network/WebSocketHandler.js";
-import type { Context } from "hono";
-import { WebSocket } from "ws";
-
-const PORT = 8080;
+import type { WSMessage, Player } from "@racing-game-mono/core";
+import { serve } from "@hono/node-server";
 
 const app = new Hono();
 
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });
 
-// Basic REST endpoint for health checks
-app.get("/", (c: Context) => {
-  return c.text("Game Server is running.");
+const players = new Map<string, Player>();
+
+app.get("/", (c) => {
+  return c.text("Racing Game Server");
 });
 
-// Define the WebSocket upgrade route
-app.get(
+const ws = app.get(
   "/ws",
-  upgradeWebSocket((c: Context) => {
+  upgradeWebSocket((c) => {
     return {
-      onOpen(event, ws) {
-        console.log("Client connected.");
-        handleConnection(ws.raw as WebSocket);
+      onMessage(event, ws) {
+        const message = JSON.parse(event.data.toString()) as WSMessage;
+        // Handle game logic here
+        console.log("Received:", message);
       },
-      onClose: () => {
-        // Note: The 'close' logic is handled within GameState to ensure
-        // the player is properly removed from the game instance.
+      onClose() {
         console.log("Connection closed");
-      },
-      onError(event, ws) {
-        console.error("WebSocket error:", event);
       },
     };
   })
 );
 
-console.log(`Server is listening on port ${PORT}`);
-
 const server = serve({
   fetch: app.fetch,
-  port: PORT,
+  port: 3000,
 });
 
 injectWebSocket(server);
+
+console.log("Server running on http://localhost:3000");

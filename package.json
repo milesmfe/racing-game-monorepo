@@ -1,28 +1,41 @@
 {
-  "name": "racing-game-mono",
+  "name": "racing-game-monorepo",
   "version": "1.0.0",
+  "description": "Racing game monorepo with Hono server and Svelte client",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "npm run build --workspaces",
-    "dev": "npm run dev -w @racing-game-mono/server"
+    "build": "npm run build -w packages/core && npm run build --workspaces --if-present",
+    "dev": "npm run build -w packages/core && concurrently \"npm run dev -w packages/core\" \"npm run dev -w apps/server\" \"npm run dev -w apps/web-svelte\"",
+    "dev:core": "npm run dev -w packages/core",
+    "dev:server": "npm run dev -w apps/server",
+    "dev:client": "npm run dev -w apps/web-svelte",
+    "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist",
+    "typecheck": "npm run typecheck -w packages/core && npm run typecheck --workspaces --if-present"
+  },
+  "workspaces": [
+    "packages/core",
+    "apps/server",
+    "apps/web-svelte"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "typescript": "^5.9.3",
+    "concurrently": "^9.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milesmfe/racing-game-monorepo.git"
   },
-  "type": "commonjs",
-  "bugs": {
+  "keywords": [
+    "monorepo",
+    "racing-game",
+    "websocket",
+    "svelte"
+  ],
+  "author": "Miles Edwards",
+    "bugs": {
     "url": "https://github.com/milesmfe/racing-game-monorepo/issues"
   },
-  "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "devDependencies": {
-    "@types/node": "^24.7.2",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  }
+  "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme"
 }

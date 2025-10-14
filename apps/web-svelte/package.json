@@ -1,0 +1,23 @@
+{
+  "name": "@racing-game-mono/web-svelte",
+  "version": "1.0.0",
+  "description": "Svelte client for racing game",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Miles Edwards",
+    "dependencies": {
+    "@racing-game-mono/core": "*",
+    "svelte": "^5.15.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "vite": "^6.0.7",
+    "typescript": "^5.9.3"
+  }
+}
