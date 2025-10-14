@@ -6,17 +6,15 @@
   "type": "module",
   "scripts": {
     "build": "npm run build -w packages/core && npm run build --workspaces --if-present",
-    "dev": "npm run build -w packages/core && concurrently \"npm run dev -w packages/core\" \"npm run dev -w apps/server\" \"npm run dev -w apps/web-svelte\"",
-    "dev:core": "npm run dev -w packages/core",
+    "dev": "npm run build -w packages/core && concurrently \"npm run dev -w apps/server\" \"npm run dev -w apps/web-svelte\"",
     "dev:server": "npm run dev -w apps/server",
     "dev:client": "npm run dev -w apps/web-svelte",
     "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist",
     "typecheck": "npm run typecheck -w packages/core && npm run typecheck --workspaces --if-present"
   },
   "workspaces": [
-    "packages/core",
-    "apps/server",
-    "apps/web-svelte"
+    "packages/*",
+    "apps/*"
   ],
   "devDependencies": {
     "@types/node": "^24.7.2",
@@ -34,7 +32,7 @@
     "svelte"
   ],
   "author": "Miles Edwards",
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/milesmfe/racing-game-monorepo/issues"
   },
   "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme"
