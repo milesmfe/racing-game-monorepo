@@ -5,7 +5,7 @@
   let connected = false;
 
   function connect() {
-    ws = new WebSocket("ws://localhost:3000/ws");
+    ws = new WebSocket(import.meta.env.VITE_WS_URL);
 
     ws.onopen = () => {
       connected = true;

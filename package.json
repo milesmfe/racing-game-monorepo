@@ -5,12 +5,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build -w packages/core && npm run build --workspaces --if-present",
-    "dev": "npm run build -w packages/core && concurrently \"npm run dev -w apps/server\" \"npm run dev -w apps/web-svelte\"",
+    "build": "npm run build:core && npm run build --workspaces --if-present",
+    "build:core": "npm run build -w packages/core",
+    "dev": "npm run build:core && concurrently \"npm run dev:server\" \"npm run dev:web-svelte\"",
     "dev:server": "npm run dev -w apps/server",
-    "dev:client": "npm run dev -w apps/web-svelte",
+    "dev:web-svelte": "npm run dev -w apps/web-svelte",
+    "dev:test": "npm run dev -w apps/test",
+    "lint": "npm run lint --workspaces --if-present",
     "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist",
-    "typecheck": "npm run typecheck -w packages/core && npm run typecheck --workspaces --if-present"
+    "check": "npm run check --workspaces --if-present"
   },
   "workspaces": [
     "packages/*",
@@ -18,8 +21,8 @@
   ],
   "devDependencies": {
     "@types/node": "^24.7.2",
-    "typescript": "^5.9.3",
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.1.0",
+    "typescript": "^5.9.3"
   },
   "repository": {
     "type": "git",
@@ -35,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/milesmfe/racing-game-monorepo/issues"
   },
-  "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme"
+  "homepage": "https://github.com/milesmfe/racing-game-monorepo#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
 }

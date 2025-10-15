@@ -1,14 +1,31 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "_version": "5.0.0",
+
   "extends": "../../tsconfig.json",
+  "references": [{ "path": "../../packages/core" }],
+
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": true,
-    "isolatedModules": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.svelte"],
-  "references": [{ "path": "../../packages/core" }]
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2017",
+    /**
+      Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+      to enforce using `import type` instead of `import` for Types.
+     */
+    "verbatimModuleSyntax": true,
+    /**
+      To have warnings/errors of the Svelte compiler at the correct position,
+      enable source maps by default.
+     */
+    "sourceMap": true,
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "paths": {
+      "@lib/*": ["./src/lib/*"]
+    }
+  }
 }
