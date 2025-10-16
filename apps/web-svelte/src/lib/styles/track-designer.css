@@ -133,6 +133,12 @@ button.active {
   fill: #e74c3c;
 }
 
+.segment.finish {
+  fill: url(#checkerboard);
+  stroke: #333;
+  stroke-width: 1;
+}
+
 .segment.out-of-bounds {
   fill: #222222;
 }

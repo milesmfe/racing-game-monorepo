@@ -2,7 +2,6 @@
   let segmentLength = 40;
   let laneWidth = 30;
   let edgeResolution = 15;
-
   const playerColors = {
     0: "#ffc107",
     1: "#dc3545",
@@ -13,7 +12,6 @@
     6: "#17a2b8",
     7: "#6610f2",
   };
-
   let mode = "drawing";
   let points = [];
   let numberOfLanes = 4;
@@ -24,12 +22,10 @@
   let svgElement;
   let pathElement;
   let pathData = "";
-
   let viewBox = { x: 0, y: 0, width: 1000, height: 700 };
   let isPanning = false;
   let panStart = { x: 0, y: 0 };
   $: viewBoxString = `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`;
-
   $: if (mode === "editing") {
     generateTrack();
   }
@@ -50,7 +46,6 @@
     }
     return null;
   })();
-
   $: segmentDataInput = selectedSegment?.data?.toString() ?? "";
 
   function generateTrack() {
@@ -71,7 +66,6 @@
 
     const numSegments = Math.floor(totalLength / segmentLength);
     const actualSegmentLength = totalLength / numSegments;
-
     const zones = [];
     if (trackLanes.length > 0) {
       trackLanes.forEach((lane, l_idx) => {
@@ -111,7 +105,6 @@
 
     const newLanes = [];
     const centerOffset = (numberOfLanes - 1) / 2;
-
     for (let l = 0; l < numberOfLanes; l++) {
       const lane = [];
       const myZone = zones.find((z) => z.lane === l);
@@ -374,7 +367,9 @@
     const padding = 20;
     const finalWidth = maxX - minX + padding * 2;
     const finalHeight = maxY - minY + padding * 2;
-    const finalViewBox = `${minX - padding} ${minY - padding} ${finalWidth} ${finalHeight}`;
+    const finalViewBox = `${minX - padding} ${
+      minY - padding
+    } ${finalWidth} ${finalHeight}`;
     const svgClone = svgElement.cloneNode(true);
     svgClone.setAttribute("width", finalWidth);
     svgClone.setAttribute("height", finalHeight);
@@ -433,6 +428,7 @@
           type: effectiveType,
           lane: l,
           index: s,
+          span: segment.span,
           data: effectiveType === "out-of-bounds" ? null : segment.data,
           connections: {},
         });
@@ -440,11 +436,12 @@
     }
     const finalSegments = [];
     for (const segment of segmentMap.values()) {
-      const span = segment.span;
+      if (segment.span === 0) continue;
+
       if (oobIds.has(segment.id)) {
         segment.connections = { next: null, diag_left: null, diag_right: null };
       } else {
-        const next_s = (segment.index + 1) % numSegments;
+        const next_s = (segment.index + segment.span) % numSegments;
         const next_id_raw = `l${segment.lane}-s${next_s}`;
         segment.connections.next =
           segmentMap.has(next_id_raw) && !oobIds.has(next_id_raw)
@@ -453,8 +450,8 @@
 
         const left_l = segment.lane + directionMultiplier;
         const right_l = segment.lane - directionMultiplier;
-        const diag_left_id_raw = `l${left_l}-s${next_s + (span > 1 ? span - 1 : 0)}`;
-        const diag_right_id_raw = `l${right_l}-s${next_s + (span > 1 ? span - 1 : 0)}`;
+        const diag_left_id_raw = `l${left_l}-s${next_s}`;
+        const diag_right_id_raw = `l${right_l}-s${next_s}`;
 
         if (isDrawnClockwise) {
           segment.connections.diag_left =
@@ -476,6 +473,7 @@
               : null;
         }
       }
+      delete segment.span;
       finalSegments.push(segment);
     }
     const gameData = {
@@ -540,8 +538,14 @@
     for (let i = 0; i < startSegment.span; i++) {
       const s = lane[(startIndex + i) % lane.length];
       if (!s) continue;
-      fullInnerEdge.push(...s.points.inner.slice(i === 0 ? 0 : 1));
-      fullOuterEdge.push(...s.points.outer.slice(i === 0 ? 0 : 1));
+      // TODO: Handle kinks in merged segments better
+      const isLastSegmentInSpan = i === startSegment.span - 1;
+      fullInnerEdge.push(
+        ...(isLastSegmentInSpan ? s.points.inner : s.points.inner.slice(0, -1))
+      );
+      fullOuterEdge.push(
+        ...(isLastSegmentInSpan ? s.points.outer : s.points.outer.slice(0, -1))
+      );
     }
     return toPointsString([...fullInnerEdge, ...fullOuterEdge.reverse()]);
   }
@@ -584,8 +588,8 @@
       sumX += p.x;
       sumY += p.y;
     });
-    const centerX = sumX / allPoints.length;
-    const centerY = sumY / allPoints.length;
+    let centerX = sumX / allPoints.length;
+    let centerY = sumY / allPoints.length;
     const p_start = segment.points.inner[0];
     const p_end = segment.points.inner[segment.points.inner.length - 1];
     const directionAngle =
@@ -595,7 +599,22 @@
       segment.points.outer[0].x - segment.points.inner[0].x,
       segment.points.outer[0].y - segment.points.inner[0].y
     );
-    const fontSize = width * 0.5;
+    let fontSize = width * 0.5;
+    if (segment.type === "grid") {
+      fontSize *= 0.5;
+
+      const shiftAngleRad = (directionAngle + 180) * (Math.PI / 180);
+      const segmentHeight = Math.hypot(
+        p_end.x - p_start.x,
+        p_end.y - p_start.y
+      );
+      const halfTextWidth = fontSize * 0.75;
+      const padding = segmentHeight * 0.1;
+      const shiftDistance = segmentHeight / 2 - halfTextWidth - padding;
+
+      centerX += shiftDistance * Math.cos(shiftAngleRad);
+      centerY += shiftDistance * Math.sin(shiftAngleRad);
+    }
     return { centerX, centerY, angle, fontSize };
   }
 </script>
@@ -662,6 +681,10 @@
               class:active={selectedSegment.type === "corner"}>Corner</button
             >
             <button
+              on:click={() => setSegmentType("finish")}
+              class:active={selectedSegment.type === "finish"}>Finish</button
+            >
+            <button
               on:click={() => setSegmentType("out-of-bounds")}
               class:active={selectedSegment.type === "out-of-bounds"}
               >Wall</button
@@ -712,6 +735,7 @@
     </button>
   </div>
 
+  <!-- Sorry for disabling these warnings :( I just don't know how to do ARIA support -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <div
@@ -727,6 +751,18 @@
       on:click={handleSvgClick}
       viewBox={viewBoxString}
     >
+      <defs>
+        <pattern
+          id="checkerboard"
+          patternUnits="userSpaceOnUse"
+          width="12"
+          height="12"
+        >
+          <rect width="12" height="12" fill="#f0f0f0" />
+          <rect width="6" height="6" fill="#333" />
+          <rect x="6" y="6" width="6" height="6" fill="#333" />
+        </pattern>
+      </defs>
       <path
         id="centerline"
         bind:this={pathElement}
@@ -778,6 +814,7 @@
                     class:segment={true}
                     class:normal={segment.type === "normal"}
                     class:corner={segment.type === "corner"}
+                    class:finish={segment.type === "finish"}
                     class:out-of-bounds={segment.type === "out-of-bounds"}
                     class:selected={segment.id === selectedSegmentId}
                     class:cap={segment.isCap}
