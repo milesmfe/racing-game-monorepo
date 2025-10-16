@@ -261,7 +261,7 @@ const TrackCreator: React.FC = () => {
       const p2 = pts[(i + 1) % pts.length];
       sum += (p2.x - p1.x) * (p2.y + p1.y);
     }
-    return sum < 0;
+    return sum > 0;
   }, []);
 
   const generatePolyline = useCallback((points: Point[]): string => {
@@ -739,67 +739,84 @@ const TrackCreator: React.FC = () => {
       return;
     }
     const isDrawnClockwise = points.length > 2 && isClockwise(points);
-    const directionMultiplier = isDrawnClockwise ? -1 : 1;
     const numLanes = trackLanes.length;
     const numSegments = trackLanes[0].length;
     const segmentMap = new Map();
-    const oobIds = new Set();
     for (let l = 0; l < numLanes; l++) {
       for (let s = 0; s < numSegments; s++) {
         const segment = trackLanes[l][s];
-        if (!segment.visible) continue;
-        const effectiveType =
-          segment.isSquashed || segment.type === "out-of-bounds"
-            ? "out-of-bounds"
-            : segment.type;
-        if (effectiveType === "out-of-bounds") oobIds.add(segment.id);
-        segmentMap.set(segment.id, {
-          id: segment.id,
-          type: effectiveType,
-          lane: l,
-          index: s,
-          span: segment.span,
-          data: effectiveType === "out-of-bounds" ? null : segment.data,
-          connections: {},
-        });
-      }
-    }
-    const finalSegments: any[] = [];
-    for (const segment of segmentMap.values()) {
-      if (segment.span === 0) continue;
-      if (oobIds.has(segment.id)) {
-        segment.connections = { next: null, diag_left: null, diag_right: null };
-      } else {
-        const next_s = (segment.index + segment.span) % numSegments;
-        const next_id_raw = `l${segment.lane}-s${next_s}`;
-        segment.connections.next =
-          segmentMap.has(next_id_raw) && !oobIds.has(next_id_raw)
-            ? next_id_raw
-            : null;
-        const left_l = segment.lane + directionMultiplier;
-        const right_l = segment.lane - directionMultiplier;
-        const diag_left_id_raw = `l${left_l}-s${next_s}`;
-        const diag_right_id_raw = `l${right_l}-s${next_s}`;
-        if (isDrawnClockwise) {
-          segment.connections.diag_left =
-            segmentMap.has(diag_left_id_raw) && !oobIds.has(diag_left_id_raw)
-              ? diag_left_id_raw
-              : null;
-          segment.connections.diag_right =
-            segmentMap.has(diag_right_id_raw) && !oobIds.has(diag_right_id_raw)
-              ? diag_right_id_raw
-              : null;
-        } else {
-          segment.connections.diag_left =
-            segmentMap.has(diag_right_id_raw) && !oobIds.has(diag_right_id_raw)
-              ? diag_right_id_raw
-              : null;
-          segment.connections.diag_right =
-            segmentMap.has(diag_left_id_raw) && !oobIds.has(diag_left_id_raw)
-              ? diag_left_id_raw
-              : null;
+        if (segment.span > 0 && segment.visible) {
+          const isOOB = segment.type === "out-of-bounds" || segment.isSquashed;
+          segmentMap.set(segment.id, {
+            id: segment.id,
+            type: isOOB ? "out-of-bounds" : segment.type,
+            lane: l,
+            index: s,
+            span: segment.span,
+            data: isOOB ? null : segment.data,
+            connections: {},
+          });
         }
       }
+    }
+    const findDiagonalTarget = (
+      startLane: number,
+      segmentIdx: number,
+      laneOffset: number
+    ): string | null => {
+      let currentLane = startLane + laneOffset;
+      while (currentLane >= 0 && currentLane < numLanes) {
+        const targetSegment = trackLanes[currentLane]?.[segmentIdx];
+        if (!targetSegment) return null;
+        if (
+          targetSegment.visible &&
+          !targetSegment.isSquashed &&
+          targetSegment.type !== "out-of-bounds"
+        ) {
+          return targetSegment.id;
+        }
+        if (!targetSegment.isSquashed) {
+          return null;
+        }
+        currentLane += laneOffset;
+      }
+      return null;
+    };
+    const finalSegments: any[] = [];
+    for (const segment of segmentMap.values()) {
+      if (segment.type === "out-of-bounds") {
+        continue;
+      }
+
+      const next_s = (segment.index + segment.span) % numSegments;
+      const nextIdInLane = `l${segment.lane}-s${next_s}`;
+      const nextSegmentInMap = segmentMap.get(nextIdInLane);
+      segment.connections.next =
+        nextSegmentInMap && nextSegmentInMap.type !== "out-of-bounds"
+          ? nextIdInLane
+          : null;
+      const innerLaneOffset = -1;
+      const outerLaneOffset = +1;
+
+      const targetInnerId = findDiagonalTarget(
+        segment.lane,
+        next_s,
+        innerLaneOffset
+      );
+      const targetOuterId = findDiagonalTarget(
+        segment.lane,
+        next_s,
+        outerLaneOffset
+      );
+
+      if (isDrawnClockwise) {
+        segment.connections.diag_right = targetInnerId;
+        segment.connections.diag_left = targetOuterId;
+      } else {
+        segment.connections.diag_left = targetInnerId;
+        segment.connections.diag_right = targetOuterId;
+      }
+
       delete segment.span;
       finalSegments.push(segment);
     }
