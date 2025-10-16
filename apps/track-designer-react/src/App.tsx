@@ -252,13 +252,16 @@ const TrackCreator: React.FC = () => {
   }, [trackLanes]);
 
   const isClockwise = useCallback((pts: Point[]): boolean => {
-    let a = 0;
-    for (let i = 0; i < pts.length; i++) {
-      a +=
-        (pts[(i + 1) % pts.length].x - pts[i].x) *
-        (pts[(i + 1) % pts.length].y + pts[i].y);
+    if (!pts || pts.length < 3) {
+      return false;
     }
-    return a > 0;
+    let sum = 0.0;
+    for (let i = 0; i < pts.length; i++) {
+      const p1 = pts[i];
+      const p2 = pts[(i + 1) % pts.length];
+      sum += (p2.x - p1.x) * (p2.y + p1.y);
+    }
+    return sum < 0;
   }, []);
 
   const generatePolyline = useCallback((points: Point[]): string => {
