@@ -6,7 +6,6 @@ import React, {
   useCallback,
 } from "react";
 import { useImmer } from "use-immer";
-import "./styles/App.css";
 
 interface Point {
   x: number;
