@@ -21,6 +21,8 @@
   flex-grow: 1;
   background-color: #e9e9e9;
   cursor: default;
+  touch-action: none;
+  cursor: default;
 }
 
 svg {

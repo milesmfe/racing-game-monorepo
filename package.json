@@ -7,9 +7,10 @@
   "scripts": {
     "build": "npm run build:core && npm run build --workspaces --if-present",
     "build:core": "npm run build -w packages/core",
-    "dev": "npm run build:core && concurrently \"npm run dev:server\" \"npm run dev:web-svelte\"",
+    "dev": "npm run build:core && concurrently \"npm run dev:server\" \"npm run dev:web-svelte\" \"npm run dev:track-designer-react\"",
     "dev:server": "npm run dev -w apps/server",
     "dev:web-svelte": "npm run dev -w apps/web-svelte",
+    "dev:track-designer-react": "npm run dev -w apps/track-designer-react",
     "dev:test": "npm run dev -w apps/test",
     "lint": "npm run lint --workspaces --if-present",
     "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist",
