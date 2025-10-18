@@ -196,9 +196,9 @@ const TrackSegment: React.FC<TrackSegmentProps> = React.memo(
 );
 
 // ==========================================================
-// =============== MAIN TRACK CREATOR COMPONENT =============
+// =============== MAIN TRACK DESIGNER COMPONENT =============
 // ==========================================================
-const TrackCreator: React.FC = () => {
+const TrackDesigner: React.FC = () => {
   const [mode, setMode] = useState<"drawing" | "editing">("drawing");
   const [points, setPoints] = useState<Point[]>([]);
   const [numberOfLanes, setNumberOfLanes] = useState(4);
@@ -843,9 +843,9 @@ const TrackCreator: React.FC = () => {
   }, [trackLanes, points, isClockwise]);
 
   return (
-    <div className="track-creator-wrapper">
+    <div className="track-designer-wrapper">
       <div className="controls">
-        <h2>Track Creator</h2>
+        <h2>Track Designer</h2>
         {mode === "drawing" ? (
           <>
             <div className="control-group">
@@ -1102,4 +1102,4 @@ const TrackCreator: React.FC = () => {
   );
 };
 
-export default TrackCreator;
+export default TrackDesigner;

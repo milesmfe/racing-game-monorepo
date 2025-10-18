@@ -1,4 +1,4 @@
-.track-creator-wrapper {
+.track-designer-wrapper {
   display: flex;
   font-family: sans-serif;
   width: 100%;
@@ -107,7 +107,7 @@ button.active {
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
-  .track-creator-wrapper {
+  .track-designer-wrapper {
     border-color: #555;
   }
 
