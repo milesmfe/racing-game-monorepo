@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Miles Edwards",
-    "devDependencies": {
+  "devDependencies": {
     "typescript": "^5.9.3"
   }
 }
