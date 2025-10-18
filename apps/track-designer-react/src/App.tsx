@@ -49,8 +49,8 @@ interface PathCacheEntry {
   normalAngle: number;
 }
 const segmentLength = 40;
-const laneWidth = 30;
-const edgeResolution = 15;
+const laneWidth = 20;
+const edgeResolution = 10;
 const playerColors: { [key: number]: string } = {
   0: "#ffc107",
   1: "#dc3545",
@@ -842,6 +842,175 @@ const TrackDesigner: React.FC = () => {
     URL.revokeObjectURL(url);
   }, [trackLanes, points, isClockwise]);
 
+  const importSVG = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const svgText = e.target?.result as string;
+          const parser = new DOMParser();
+          const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+
+          const polygons = svgDoc.querySelectorAll("polygon");
+          if (polygons.length === 0) {
+            alert("No track segments found in SVG file!");
+            return;
+          }
+
+          // Extract all polygon points and organize by segment
+          const segmentData: Map<
+            string,
+            { points: string; fill: string; stroke: string }
+          > = new Map();
+
+          polygons.forEach((poly) => {
+            const points = poly.getAttribute("points") || "";
+            const fill = poly.getAttribute("fill") || "";
+            const stroke = poly.getAttribute("stroke") || "";
+
+            // Generate a unique key based on the centroid of points
+            const pointsArray = points
+              .split(" ")
+              .map((p) => {
+                const [x, y] = p.split(",").map(Number);
+                return { x, y };
+              })
+              .filter((p) => !isNaN(p.x) && !isNaN(p.y));
+
+            if (pointsArray.length > 0) {
+              const centroidX =
+                pointsArray.reduce((sum, p) => sum + p.x, 0) /
+                pointsArray.length;
+              const centroidY =
+                pointsArray.reduce((sum, p) => sum + p.y, 0) /
+                pointsArray.length;
+              const key = `${Math.round(centroidX)},${Math.round(centroidY)}`;
+              segmentData.set(key, { points, fill, stroke });
+            }
+          });
+
+          // Find the approximate centerline by averaging all polygon points
+          const allPoints: Point[] = [];
+          segmentData.forEach((data) => {
+            const points = data.points
+              .split(" ")
+              .map((p) => {
+                const [x, y] = p.split(",").map(Number);
+                return { x, y };
+              })
+              .filter((p) => !isNaN(p.x) && !isNaN(p.y));
+            allPoints.push(...points);
+          });
+
+          if (allPoints.length === 0) {
+            alert("Could not extract valid points from SVG!");
+            return;
+          }
+
+          // Compute rough centerline by sampling unique centroids
+          const centroids: Point[] = [];
+          segmentData.forEach((data) => {
+            const points = data.points
+              .split(" ")
+              .map((p) => {
+                const [x, y] = p.split(",").map(Number);
+                return { x, y };
+              })
+              .filter((p) => !isNaN(p.x) && !isNaN(p.y));
+
+            if (points.length > 0) {
+              const cx =
+                points.reduce((sum, p) => sum + p.x, 0) / points.length;
+              const cy =
+                points.reduce((sum, p) => sum + p.y, 0) / points.length;
+              centroids.push({ x: cx, y: cy });
+            }
+          });
+
+          // Sort centroids to form a rough path (simple nearest-neighbor)
+          const sortedCentroids: Point[] = [];
+          const remaining = [...centroids];
+          let current = remaining[0];
+          sortedCentroids.push(current);
+          remaining.splice(0, 1);
+
+          while (remaining.length > 0) {
+            let nearestIdx = 0;
+            let nearestDist = Infinity;
+
+            for (let i = 0; i < remaining.length; i++) {
+              const dist = Math.hypot(
+                remaining[i].x - current.x,
+                remaining[i].y - current.y
+              );
+              if (dist < nearestDist) {
+                nearestDist = dist;
+                nearestIdx = i;
+              }
+            }
+
+            current = remaining[nearestIdx];
+            sortedCentroids.push(current);
+            remaining.splice(nearestIdx, 1);
+          }
+
+          // Simplify to about 8-12 control points for the spline
+          const step = Math.max(1, Math.floor(sortedCentroids.length / 10));
+          const simplifiedPoints: Point[] = [];
+          for (let i = 0; i < sortedCentroids.length; i += step) {
+            simplifiedPoints.push(sortedCentroids[i]);
+          }
+
+          if (simplifiedPoints.length < 3) {
+            alert("Not enough points to reconstruct track path!");
+            return;
+          }
+
+          // Estimate number of lanes from the number of segments
+          const estimatedLanes = Math.max(
+            1,
+            Math.floor(Math.sqrt(polygons.length / 10))
+          );
+
+          // Set the extracted data
+          setPoints(simplifiedPoints);
+          setNumberOfLanes(Math.min(12, estimatedLanes));
+          setMode("drawing");
+
+          // Auto-calculate viewBox to fit the track
+          const minX = Math.min(...allPoints.map((p) => p.x));
+          const minY = Math.min(...allPoints.map((p) => p.y));
+          const maxX = Math.max(...allPoints.map((p) => p.x));
+          const maxY = Math.max(...allPoints.map((p) => p.y));
+          const padding = 100;
+
+          setViewBox({
+            x: minX - padding,
+            y: minY - padding,
+            width: maxX - minX + padding * 2,
+            height: maxY - minY + padding * 2,
+          });
+
+          alert(
+            `Track loaded! ${simplifiedPoints.length} control points extracted. Click "Generate Track" to recreate it.`
+          );
+        } catch (error) {
+          console.error("Error parsing SVG:", error);
+          alert(
+            "Error loading SVG file. Please ensure it's a valid SVG created by this tool."
+          );
+        }
+      };
+
+      reader.readAsText(file);
+      event.target.value = ""; // Reset input
+    },
+    []
+  );
+
   return (
     <div className="track-designer-wrapper">
       <div className="controls">
@@ -1008,6 +1177,18 @@ const TrackDesigner: React.FC = () => {
           </>
         )}
         <hr />
+        <button className="import-button">
+          <label htmlFor="import-svg" style={{ cursor: "pointer" }}>
+            Import SVG
+            <input
+              type="file"
+              id="import-svg"
+              accept=".svg"
+              onChange={importSVG}
+              style={{ display: "none" }}
+            />
+          </label>
+        </button>
         <button onClick={reset} className="reset-button">
           {mode === "drawing" ? "Reset Path" : "Start Over"}
         </button>

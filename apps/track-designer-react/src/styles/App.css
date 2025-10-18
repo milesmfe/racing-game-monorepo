@@ -98,6 +98,16 @@ button.active {
   background-color: #fbb;
 }
 
+.import-button {
+  background-color: #dfd;
+  border-color: #8d8;
+  width: calc(100% - 8px);
+}
+
+.import-button:hover {
+  background-color: #bfb;
+}
+
 .type-buttons,
 .action-buttons,
 .export-buttons {
@@ -159,6 +169,15 @@ button.active {
 
   .reset-button:hover {
     background-color: #6a3030;
+  }
+
+  .import-button {
+    background-color: #205a20;
+    border-color: #308a30;
+  }
+
+  .import-button:hover {
+    background-color: #306a30;
   }
 }
 
