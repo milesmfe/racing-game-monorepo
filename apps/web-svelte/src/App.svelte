@@ -8,12 +8,11 @@
     isErrorMessage,
     isConnectMessage,
     type WSMessage,
-    type Id,
   } from "@racing-game-mono/core";
 
   let ws: WebSocket | null = null;
   let connected = false;
-  let clientId: Id = "";
+  let clientId: string = "";
   let result: string = "";
   let error: string = "";
 
@@ -24,7 +23,23 @@
       ws.onopen = () => {
         connected = true;
         error = "";
-        console.log("Connected to server");
+        console.log("WebSocket connection opened. Starting handshake...");
+
+        // After connecting, the client must identify itself.
+        const storedClientId = localStorage.getItem("clientId");
+        if (storedClientId) {
+          // If we have an ID, attempt to reconnect with it.
+          console.log(`Attempting to reconnect as ${storedClientId}...`);
+          const message = createWSMessage.connect(WSConnectCommand.RECONNECT, {
+            clientId: storedClientId,
+          });
+          sendMessage(message);
+        } else {
+          // If we have no ID, we are a new client. Send HELLO.
+          console.log("New client, sending HELLO to get a session ID.");
+          const message = createWSMessage.connect(WSConnectCommand.HELLO);
+          sendMessage(message);
+        }
       };
 
       ws.onmessage = (event) => {
@@ -32,8 +47,8 @@
         let rawData: unknown;
         try {
           rawData = JSON.parse(event.data);
-        } catch (err) {
-          error = "Invalid JSON from server";
+        } catch (e) {
+          error = "Invalid JSON received from server.";
           return;
         }
 
@@ -55,10 +70,10 @@
       ws.onclose = () => {
         connected = false;
         ws = null;
-        console.log("Disconnected");
+        console.log("Disconnected from server.");
       };
     } catch (err) {
-      console.error("Failed to connect:", err);
+      console.error("Failed to initiate connection:", err);
       error = "Failed to connect to server";
     }
   }
@@ -71,20 +86,34 @@
     }
 
     error = "";
+    // The server confirms both new and reconnected sessions with WELCOME or WELCOME_BACK
     if (
       isConnectMessage(message) &&
-      message.command === WSConnectCommand.WELCOME
+      (message.command === WSConnectCommand.WELCOME ||
+        message.command === WSConnectCommand.WELCOME_BACK)
     ) {
-      clientId = message.data ? message.data.clientId : "";
-      result = "Connected successfully";
+      // The `data` field might be optional in the schema, so we check for its existence
+      if (message.data) {
+        clientId = message.data.clientId;
+        result =
+          message.command === WSConnectCommand.WELCOME_BACK
+            ? "Reconnected successfully!"
+            : "Session established successfully!";
+
+        // Store the confirmed client ID for future sessions
+        localStorage.setItem("clientId", clientId);
+        console.log(`Session confirmed with client ID: ${clientId}`);
+      }
     } else {
       result = `Message received: ${JSON.stringify(message)}`;
     }
   }
 
   function sendMessage(message: WSMessage) {
-    if (!ws || !connected) {
-      error = "Not connected";
+    // We need to wait for the socket to be open before sending.
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      // If not open, retry shortly. This handles the race condition on initial connection.
+      setTimeout(() => sendMessage(message), 100);
       return;
     }
     try {
@@ -109,6 +138,7 @@
     if (ws) {
       ws.close();
     }
+    // Note: We do NOT clear localStorage, allowing the user to reconnect.
     connected = false;
     clientId = "";
     result = "";

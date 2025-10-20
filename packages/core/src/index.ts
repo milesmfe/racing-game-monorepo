@@ -70,6 +70,9 @@ export enum WSMessageTarget {
 }
 export enum WSConnectCommand {
   WELCOME = "welcome",
+  WELCOME_BACK = "welcome-back",
+  HELLO = "hello",
+  RECONNECT = "reconnect",
 }
 export enum WSLobbyCommand {
   CREATE = "create",
@@ -87,7 +90,7 @@ const gameDataSchema = z.object({ gameId: z.string().optional() });
 const connectMessageSchema = z.object({
   target: z.literal(WSMessageTarget.CONNECT),
   command: z.enum(WSConnectCommand),
-  data: connectDataSchema,
+  data: connectDataSchema.optional(),
 });
 export type WSConnectMessage = z.infer<typeof connectMessageSchema>;
 
@@ -129,7 +132,7 @@ export const createId = (): Id => {
 export const createWSMessage = {
   connect: (
     command: WSConnectCommand,
-    data: z.infer<typeof connectDataSchema>
+    data?: z.infer<typeof connectDataSchema>
   ): WSConnectMessage => ({
     target: WSMessageTarget.CONNECT,
     command,

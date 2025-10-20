@@ -50,16 +50,17 @@ export default class GameHandler implements Handler {
         // TODO: Implement game action logic
         break;
     }
-
-    // Temporary test response
-    const response = createWSMessage.game(WSGameCommand.ACTION, {
-      gameId: message.data?.gameId,
-    });
-    ws.send(JSON.stringify(response));
   }
 
-  public async handleDisconnect(clientId: Id, ws: WSContext): Promise<void> {
-    // TODO: Implement disconnect logic
-    console.log(`Client ${clientId} disconnected from game`);
+  public getPlayerGameId(clientId: Id): Id | undefined {
+    return this.playerMap.get(clientId);
+  }
+
+  public async handleDisconnect(clientId: Id): Promise<void> {
+    const gameId = this.playerMap.get(clientId);
+    if (gameId) {
+      console.log(`Client ${clientId} disconnected from game ${gameId}`);
+      // TODO: Implement logic to handle player disconnects during a game.
+    }
   }
 }

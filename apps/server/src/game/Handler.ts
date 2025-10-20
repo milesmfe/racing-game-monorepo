@@ -8,5 +8,5 @@ export interface Handler {
   getState(id: Id): unknown;
   clearState(id: Id): void;
   handleMessage(clientId: Id, message: WSMessage, ws: WSContext): Promise<void>;
-  handleDisconnect(clientId: Id, ws: WSContext): Promise<void>;
+  handleDisconnect(clientId: Id): Promise<void>;
 }

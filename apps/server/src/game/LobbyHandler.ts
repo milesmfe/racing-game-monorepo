@@ -5,17 +5,18 @@ import {
   WSLobbyCommand,
   isLobbyMessage,
   createWSMessage,
+  createId,
 } from "@racing-game-mono/core";
 import { Handler } from "./Handler";
 import { WSContext } from "hono/ws";
 
 export default class LobbyHandler implements Handler {
   public readonly stateCache: Map<Id, LobbyState>;
-  public readonly playerMap: Map<string, string>;
+  public readonly playerMap: Map<Id, Id>;
 
   constructor() {
     this.stateCache = new Map<Id, LobbyState>();
-    this.playerMap = new Map<string, string>();
+    this.playerMap = new Map<Id, Id>();
   }
 
   public setState(id: Id, state: LobbyState): void {
@@ -44,15 +45,31 @@ export default class LobbyHandler implements Handler {
 
     switch (message.command) {
       case WSLobbyCommand.CREATE:
-        console.log(`Client ${clientId} is creating a lobby.`);
-        // TODO: Implement lobby creation logic
+        const newLobbyId = createId();
+        const newLobby: LobbyState = {
+          roomName: "New Lobby",
+          players: [{ id: clientId, name: "Player 1", isPlayer: true }],
+          phase: "in-room",
+        };
+
+        this.setState(newLobbyId, newLobby);
+        this.playerMap.set(clientId, newLobbyId);
+
+        console.log(`Client ${clientId} created lobby ${newLobbyId}`);
+
+        const response = createWSMessage.lobby(WSLobbyCommand.CREATE, {
+          lobbyId: newLobbyId,
+        });
+        ws.send(JSON.stringify(response));
         break;
+
       case WSLobbyCommand.JOIN:
         console.log(
           `Client ${clientId} is joining lobby ${message.data?.lobbyId}`
         );
         // TODO: Implement lobby joining logic
         break;
+
       case WSLobbyCommand.LEAVE:
         console.log(
           `Client ${clientId} is leaving lobby ${message.data?.lobbyId}`
@@ -60,15 +77,21 @@ export default class LobbyHandler implements Handler {
         // TODO: Implement lobby leaving logic
         break;
     }
-    // Temporary test response
-    const response = createWSMessage.lobby(WSLobbyCommand.CREATE, {
-      lobbyId: "new-lobby-123",
-    });
-    ws.send(JSON.stringify(response));
   }
 
-  public async handleDisconnect(clientId: Id, ws: WSContext): Promise<void> {
-    // TODO: Implement disconnect logic
-    console.log(`Client ${clientId} disconnected from lobby.`);
+  public getPlayerLobbyId(clientId: Id): Id | undefined {
+    return this.playerMap.get(clientId);
+  }
+
+  public async handleDisconnect(clientId: Id): Promise<void> {
+    const lobbyId = this.playerMap.get(clientId);
+    if (lobbyId) {
+      const lobby = this.getState(lobbyId);
+      if (lobby) {
+        lobby.players = lobby.players.filter((p) => p.id !== clientId);
+        this.setState(lobbyId, lobby);
+        console.log(`Client ${clientId} removed from lobby ${lobbyId}`);
+      }
+    }
   }
 }
