@@ -195,9 +195,9 @@ const TrackSegment: React.FC<TrackSegmentProps> = React.memo(
   }
 );
 
-// ==========================================================
-// =============== MAIN TRACK DESIGNER COMPONENT =============
-// ==========================================================
+// ----------------------------------------------------------------------------
+// Main Track Designer Component
+// ----------------------------------------------------------------------------
 const TrackDesigner: React.FC = () => {
   const [mode, setMode] = useState<"drawing" | "editing">("drawing");
   const [points, setPoints] = useState<Point[]>([]);
@@ -860,7 +860,6 @@ const TrackDesigner: React.FC = () => {
             return;
           }
 
-          // Extract all polygon points and organize by segment
           const segmentData: Map<
             string,
             { points: string; fill: string; stroke: string }
@@ -871,7 +870,6 @@ const TrackDesigner: React.FC = () => {
             const fill = poly.getAttribute("fill") || "";
             const stroke = poly.getAttribute("stroke") || "";
 
-            // Generate a unique key based on the centroid of points
             const pointsArray = points
               .split(" ")
               .map((p) => {
@@ -892,7 +890,6 @@ const TrackDesigner: React.FC = () => {
             }
           });
 
-          // Find the approximate centerline by averaging all polygon points
           const allPoints: Point[] = [];
           segmentData.forEach((data) => {
             const points = data.points
@@ -910,7 +907,6 @@ const TrackDesigner: React.FC = () => {
             return;
           }
 
-          // Compute rough centerline by sampling unique centroids
           const centroids: Point[] = [];
           segmentData.forEach((data) => {
             const points = data.points
@@ -930,7 +926,6 @@ const TrackDesigner: React.FC = () => {
             }
           });
 
-          // Sort centroids to form a rough path (simple nearest-neighbor)
           const sortedCentroids: Point[] = [];
           const remaining = [...centroids];
           let current = remaining[0];
@@ -957,7 +952,6 @@ const TrackDesigner: React.FC = () => {
             remaining.splice(nearestIdx, 1);
           }
 
-          // Simplify to about 8-12 control points for the spline
           const step = Math.max(1, Math.floor(sortedCentroids.length / 10));
           const simplifiedPoints: Point[] = [];
           for (let i = 0; i < sortedCentroids.length; i += step) {
@@ -969,18 +963,15 @@ const TrackDesigner: React.FC = () => {
             return;
           }
 
-          // Estimate number of lanes from the number of segments
           const estimatedLanes = Math.max(
             1,
             Math.floor(Math.sqrt(polygons.length / 10))
           );
 
-          // Set the extracted data
           setPoints(simplifiedPoints);
           setNumberOfLanes(Math.min(12, estimatedLanes));
           setMode("drawing");
 
-          // Auto-calculate viewBox to fit the track
           const minX = Math.min(...allPoints.map((p) => p.x));
           const minY = Math.min(...allPoints.map((p) => p.y));
           const maxX = Math.max(...allPoints.map((p) => p.x));
@@ -1006,7 +997,7 @@ const TrackDesigner: React.FC = () => {
       };
 
       reader.readAsText(file);
-      event.target.value = ""; // Reset input
+      event.target.value = "";
     },
     []
   );

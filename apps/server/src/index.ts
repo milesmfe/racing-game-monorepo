@@ -78,7 +78,9 @@ app.get(
         const clientId = new Id();
         connections.set(clientId, ws);
         clientIds.set(ws, clientId);
-        console.log(`Client ${clientId.value} connected (${connections.size}/${MAX_CONNECTIONS})`);
+        console.log(
+          `Client ${clientId.value} connected (${connections.size}/${MAX_CONNECTIONS})`
+        );
 
         const welcome = createWSMessage.connect(WSConnectCommand.WELCOME, {
           clientId: clientId.value,

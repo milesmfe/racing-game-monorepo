@@ -70,7 +70,10 @@
     }
 
     error = "";
-    if (isConnectMessage(message) && message.command === WSConnectCommand.WELCOME) {
+    if (
+      isConnectMessage(message) &&
+      message.command === WSConnectCommand.WELCOME
+    ) {
       clientId = message.data ? message.data.clientId : "";
       result = "Connected successfully";
     } else {
@@ -118,8 +121,12 @@
   <div class="controls">
     <button on:click={connect} disabled={connected}>Connect</button>
     <button on:click={disconnect} disabled={!connected}>Disconnect</button>
-    <button on:click={sendLobbyMessage} disabled={!connected}>Send Lobby Message</button>
-    <button on:click={sendGameMessage} disabled={!connected}>Send Game Message</button>
+    <button on:click={sendLobbyMessage} disabled={!connected}
+      >Send Lobby Message</button
+    >
+    <button on:click={sendGameMessage} disabled={!connected}
+      >Send Game Message</button
+    >
   </div>
 
   <div class="status">

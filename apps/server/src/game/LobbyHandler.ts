@@ -31,10 +31,17 @@ export default class LobbyHandler implements Handler {
     this.stateCache.delete(id);
   }
 
-  public async handleMessage(clientId: Id, message: WSMessage, ws: WSContext): Promise<void> {
+  public async handleMessage(
+    clientId: Id,
+    message: WSMessage,
+    ws: WSContext
+  ): Promise<void> {
     if (!isLobbyMessage(message)) return;
 
-    console.log(`LobbyHandler received message from ${clientId.value}:`, message);
+    console.log(
+      `LobbyHandler received message from ${clientId.value}:`,
+      message
+    );
 
     switch (message.command) {
       case WSLobbyCommand.CREATE:
@@ -42,16 +49,22 @@ export default class LobbyHandler implements Handler {
         // TODO: Implement lobby creation logic
         break;
       case WSLobbyCommand.JOIN:
-        console.log(`Client ${clientId.value} is joining lobby ${message.data?.lobbyId}`);
+        console.log(
+          `Client ${clientId.value} is joining lobby ${message.data?.lobbyId}`
+        );
         // TODO: Implement lobby joining logic
         break;
       case WSLobbyCommand.LEAVE:
-        console.log(`Client ${clientId.value} is leaving lobby ${message.data?.lobbyId}`);
+        console.log(
+          `Client ${clientId.value} is leaving lobby ${message.data?.lobbyId}`
+        );
         // TODO: Implement lobby leaving logic
         break;
     }
     // Temporary test response
-    const response = createWSMessage.lobby(WSLobbyCommand.CREATE, { lobbyId: "new-lobby-123" });
+    const response = createWSMessage.lobby(WSLobbyCommand.CREATE, {
+      lobbyId: "new-lobby-123",
+    });
     ws.send(JSON.stringify(response));
   }
 }

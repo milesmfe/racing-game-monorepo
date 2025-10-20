@@ -33,20 +33,31 @@ export default class GameHandler implements Handler {
     this.stateCache.delete(id);
   }
 
-  public async handleMessage(clientId: Id, message: WSMessage, ws: WSContext): Promise<void> {
+  public async handleMessage(
+    clientId: Id,
+    message: WSMessage,
+    ws: WSContext
+  ): Promise<void> {
     if (!isGameMessage(message)) return;
 
-    console.log(`GameHandler received message from ${clientId.value}:`, message);
+    console.log(
+      `GameHandler received message from ${clientId.value}:`,
+      message
+    );
 
     switch (message.command) {
       case WSGameCommand.ACTION:
-        console.log(`Client ${clientId.value} performed an action in game ${message.data?.gameId}`);
+        console.log(
+          `Client ${clientId.value} performed an action in game ${message.data?.gameId}`
+        );
         // TODO: Implement game action logic
         break;
     }
 
     // Temporary test response
-    const response = createWSMessage.game(WSGameCommand.ACTION, { gameId: message.data?.gameId });
+    const response = createWSMessage.game(WSGameCommand.ACTION, {
+      gameId: message.data?.gameId,
+    });
     ws.send(JSON.stringify(response));
   }
 
