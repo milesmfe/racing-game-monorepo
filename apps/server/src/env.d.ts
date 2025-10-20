@@ -7,6 +7,7 @@ declare global {
       MAX_GAMES?: string;
       INACTIVE_LOBBY_TIMEOUT?: string;
       ADMIN_API_KEY?: string;
+      MAX_CONNECTIONS: string;
     }
   }
 }

@@ -1,0 +1,2241 @@
+{
+  "meta": {
+    "lanes": 5,
+    "segmentsPerLane": 67,
+    "direction": "clockwise"
+  },
+  "segments": [
+    {
+      "id": "l0-s0",
+      "type": "corner",
+      "lane": 0,
+      "index": 0,
+      "data": 140,
+      "connections": {
+        "next": "l0-s3",
+        "diag_left": null,
+        "diag_right": "l1-s3"
+      }
+    },
+    {
+      "id": "l0-s3",
+      "type": "normal",
+      "lane": 0,
+      "index": 3,
+      "data": null,
+      "connections": {
+        "next": "l0-s4",
+        "diag_left": null,
+        "diag_right": "l1-s4"
+      }
+    },
+    {
+      "id": "l0-s4",
+      "type": "normal",
+      "lane": 0,
+      "index": 4,
+      "data": null,
+      "connections": {
+        "next": "l0-s5",
+        "diag_left": null,
+        "diag_right": "l1-s5"
+      }
+    },
+    {
+      "id": "l0-s5",
+      "type": "normal",
+      "lane": 0,
+      "index": 5,
+      "data": null,
+      "connections": {
+        "next": "l0-s6",
+        "diag_left": null,
+        "diag_right": "l1-s6"
+      }
+    },
+    {
+      "id": "l0-s6",
+      "type": "normal",
+      "lane": 0,
+      "index": 6,
+      "data": null,
+      "connections": {
+        "next": "l0-s7",
+        "diag_left": null,
+        "diag_right": "l1-s7"
+      }
+    },
+    {
+      "id": "l0-s7",
+      "type": "normal",
+      "lane": 0,
+      "index": 7,
+      "data": null,
+      "connections": {
+        "next": "l0-s8",
+        "diag_left": null,
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l0-s8",
+      "type": "normal",
+      "lane": 0,
+      "index": 8,
+      "data": null,
+      "connections": {
+        "next": "l0-s9",
+        "diag_left": null,
+        "diag_right": "l1-s9"
+      }
+    },
+    {
+      "id": "l0-s9",
+      "type": "normal",
+      "lane": 0,
+      "index": 9,
+      "data": null,
+      "connections": {
+        "next": "l0-s10",
+        "diag_left": null,
+        "diag_right": "l1-s10"
+      }
+    },
+    {
+      "id": "l0-s10",
+      "type": "normal",
+      "lane": 0,
+      "index": 10,
+      "data": null,
+      "connections": {
+        "next": "l0-s11",
+        "diag_left": null,
+        "diag_right": "l1-s11"
+      }
+    },
+    {
+      "id": "l0-s11",
+      "type": "normal",
+      "lane": 0,
+      "index": 11,
+      "data": null,
+      "connections": {
+        "next": "l0-s12",
+        "diag_left": null,
+        "diag_right": "l1-s12"
+      }
+    },
+    {
+      "id": "l0-s12",
+      "type": "normal",
+      "lane": 0,
+      "index": 12,
+      "data": null,
+      "connections": {
+        "next": "l0-s13",
+        "diag_left": null,
+        "diag_right": "l1-s13"
+      }
+    },
+    {
+      "id": "l0-s13",
+      "type": "normal",
+      "lane": 0,
+      "index": 13,
+      "data": null,
+      "connections": {
+        "next": "l0-s14",
+        "diag_left": null,
+        "diag_right": "l1-s14"
+      }
+    },
+    {
+      "id": "l0-s14",
+      "type": "normal",
+      "lane": 0,
+      "index": 14,
+      "data": null,
+      "connections": {
+        "next": "l0-s15",
+        "diag_left": null,
+        "diag_right": "l1-s15"
+      }
+    },
+    {
+      "id": "l0-s15",
+      "type": "normal",
+      "lane": 0,
+      "index": 15,
+      "data": null,
+      "connections": {
+        "next": "l0-s16",
+        "diag_left": null,
+        "diag_right": "l1-s16"
+      }
+    },
+    {
+      "id": "l0-s16",
+      "type": "normal",
+      "lane": 0,
+      "index": 16,
+      "data": null,
+      "connections": {
+        "next": "l0-s17",
+        "diag_left": null,
+        "diag_right": "l1-s17"
+      }
+    },
+    {
+      "id": "l0-s17",
+      "type": "normal",
+      "lane": 0,
+      "index": 17,
+      "data": null,
+      "connections": {
+        "next": "l0-s18",
+        "diag_left": null,
+        "diag_right": "l1-s18"
+      }
+    },
+    {
+      "id": "l0-s18",
+      "type": "normal",
+      "lane": 0,
+      "index": 18,
+      "data": null,
+      "connections": {
+        "next": "l0-s19",
+        "diag_left": null,
+        "diag_right": "l1-s19"
+      }
+    },
+    {
+      "id": "l0-s19",
+      "type": "normal",
+      "lane": 0,
+      "index": 19,
+      "data": null,
+      "connections": {
+        "next": "l0-s20",
+        "diag_left": null,
+        "diag_right": "l1-s20"
+      }
+    },
+    {
+      "id": "l0-s20",
+      "type": "normal",
+      "lane": 0,
+      "index": 20,
+      "data": null,
+      "connections": {
+        "next": "l0-s21",
+        "diag_left": null,
+        "diag_right": "l1-s21"
+      }
+    },
+    {
+      "id": "l0-s21",
+      "type": "normal",
+      "lane": 0,
+      "index": 21,
+      "data": null,
+      "connections": {
+        "next": "l0-s22",
+        "diag_left": null,
+        "diag_right": "l1-s22"
+      }
+    },
+    {
+      "id": "l0-s22",
+      "type": "normal",
+      "lane": 0,
+      "index": 22,
+      "data": null,
+      "connections": {
+        "next": "l0-s23",
+        "diag_left": null,
+        "diag_right": "l1-s23"
+      }
+    },
+    {
+      "id": "l0-s23",
+      "type": "corner",
+      "lane": 0,
+      "index": 23,
+      "data": 80,
+      "connections": {
+        "next": "l0-s25",
+        "diag_left": null,
+        "diag_right": "l1-s25"
+      }
+    },
+    {
+      "id": "l0-s25",
+      "type": "normal",
+      "lane": 0,
+      "index": 25,
+      "data": null,
+      "connections": {
+        "next": "l0-s26",
+        "diag_left": null,
+        "diag_right": "l1-s26"
+      }
+    },
+    {
+      "id": "l0-s26",
+      "type": "normal",
+      "lane": 0,
+      "index": 26,
+      "data": null,
+      "connections": {
+        "next": "l0-s27",
+        "diag_left": null,
+        "diag_right": "l1-s27"
+      }
+    },
+    {
+      "id": "l0-s27",
+      "type": "normal",
+      "lane": 0,
+      "index": 27,
+      "data": null,
+      "connections": {
+        "next": "l0-s28",
+        "diag_left": null,
+        "diag_right": "l1-s28"
+      }
+    },
+    {
+      "id": "l0-s28",
+      "type": "normal",
+      "lane": 0,
+      "index": 28,
+      "data": null,
+      "connections": {
+        "next": "l0-s29",
+        "diag_left": null,
+        "diag_right": "l1-s29"
+      }
+    },
+    {
+      "id": "l0-s29",
+      "type": "normal",
+      "lane": 0,
+      "index": 29,
+      "data": null,
+      "connections": {
+        "next": "l0-s30",
+        "diag_left": null,
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l0-s30",
+      "type": "corner",
+      "lane": 0,
+      "index": 30,
+      "data": 40,
+      "connections": {
+        "next": "l0-s33",
+        "diag_left": null,
+        "diag_right": "l1-s33"
+      }
+    },
+    {
+      "id": "l0-s33",
+      "type": "normal",
+      "lane": 0,
+      "index": 33,
+      "data": null,
+      "connections": {
+        "next": "l0-s34",
+        "diag_left": null,
+        "diag_right": "l1-s34"
+      }
+    },
+    {
+      "id": "l0-s34",
+      "type": "normal",
+      "lane": 0,
+      "index": 34,
+      "data": null,
+      "connections": {
+        "next": "l0-s35",
+        "diag_left": null,
+        "diag_right": "l1-s35"
+      }
+    },
+    {
+      "id": "l0-s35",
+      "type": "corner",
+      "lane": 0,
+      "index": 35,
+      "data": 60,
+      "connections": {
+        "next": "l0-s37",
+        "diag_left": null,
+        "diag_right": "l1-s37"
+      }
+    },
+    {
+      "id": "l0-s37",
+      "type": "normal",
+      "lane": 0,
+      "index": 37,
+      "data": null,
+      "connections": {
+        "next": "l0-s38",
+        "diag_left": null,
+        "diag_right": "l1-s38"
+      }
+    },
+    {
+      "id": "l0-s38",
+      "type": "corner",
+      "lane": 0,
+      "index": 38,
+      "data": 60,
+      "connections": {
+        "next": "l0-s39",
+        "diag_left": null,
+        "diag_right": "l1-s39"
+      }
+    },
+    {
+      "id": "l0-s39",
+      "type": "normal",
+      "lane": 0,
+      "index": 39,
+      "data": null,
+      "connections": {
+        "next": "l0-s40",
+        "diag_left": null,
+        "diag_right": "l1-s40"
+      }
+    },
+    {
+      "id": "l0-s40",
+      "type": "normal",
+      "lane": 0,
+      "index": 40,
+      "data": null,
+      "connections": {
+        "next": "l0-s41",
+        "diag_left": null,
+        "diag_right": "l1-s41"
+      }
+    },
+    {
+      "id": "l0-s41",
+      "type": "normal",
+      "lane": 0,
+      "index": 41,
+      "data": null,
+      "connections": {
+        "next": "l0-s42",
+        "diag_left": null,
+        "diag_right": "l1-s42"
+      }
+    },
+    {
+      "id": "l0-s42",
+      "type": "finish",
+      "lane": 0,
+      "index": 42,
+      "data": null,
+      "connections": {
+        "next": "l0-s43",
+        "diag_left": null,
+        "diag_right": "l1-s43"
+      }
+    },
+    {
+      "id": "l0-s43",
+      "type": "grid",
+      "lane": 0,
+      "index": 43,
+      "data": 3,
+      "connections": {
+        "next": "l0-s44",
+        "diag_left": null,
+        "diag_right": "l1-s44"
+      }
+    },
+    {
+      "id": "l0-s44",
+      "type": "normal",
+      "lane": 0,
+      "index": 44,
+      "data": null,
+      "connections": {
+        "next": "l0-s45",
+        "diag_left": null,
+        "diag_right": "l1-s45"
+      }
+    },
+    {
+      "id": "l0-s45",
+      "type": "normal",
+      "lane": 0,
+      "index": 45,
+      "data": null,
+      "connections": {
+        "next": "l0-s46",
+        "diag_left": null,
+        "diag_right": "l1-s46"
+      }
+    },
+    {
+      "id": "l0-s46",
+      "type": "normal",
+      "lane": 0,
+      "index": 46,
+      "data": null,
+      "connections": {
+        "next": "l0-s47",
+        "diag_left": null,
+        "diag_right": "l1-s47"
+      }
+    },
+    {
+      "id": "l0-s47",
+      "type": "normal",
+      "lane": 0,
+      "index": 47,
+      "data": null,
+      "connections": {
+        "next": "l0-s48",
+        "diag_left": null,
+        "diag_right": "l1-s48"
+      }
+    },
+    {
+      "id": "l0-s48",
+      "type": "normal",
+      "lane": 0,
+      "index": 48,
+      "data": null,
+      "connections": {
+        "next": "l0-s49",
+        "diag_left": null,
+        "diag_right": "l1-s49"
+      }
+    },
+    {
+      "id": "l0-s49",
+      "type": "normal",
+      "lane": 0,
+      "index": 49,
+      "data": null,
+      "connections": {
+        "next": "l0-s50",
+        "diag_left": null,
+        "diag_right": "l1-s50"
+      }
+    },
+    {
+      "id": "l0-s50",
+      "type": "normal",
+      "lane": 0,
+      "index": 50,
+      "data": null,
+      "connections": {
+        "next": "l0-s51",
+        "diag_left": null,
+        "diag_right": "l1-s51"
+      }
+    },
+    {
+      "id": "l0-s51",
+      "type": "corner",
+      "lane": 0,
+      "index": 51,
+      "data": 100,
+      "connections": {
+        "next": "l0-s53",
+        "diag_left": null,
+        "diag_right": "l1-s53"
+      }
+    },
+    {
+      "id": "l0-s53",
+      "type": "normal",
+      "lane": 0,
+      "index": 53,
+      "data": null,
+      "connections": {
+        "next": "l0-s54",
+        "diag_left": null,
+        "diag_right": "l1-s54"
+      }
+    },
+    {
+      "id": "l0-s54",
+      "type": "normal",
+      "lane": 0,
+      "index": 54,
+      "data": null,
+      "connections": {
+        "next": "l0-s55",
+        "diag_left": null,
+        "diag_right": "l1-s55"
+      }
+    },
+    {
+      "id": "l0-s55",
+      "type": "normal",
+      "lane": 0,
+      "index": 55,
+      "data": null,
+      "connections": {
+        "next": "l0-s56",
+        "diag_left": null,
+        "diag_right": "l1-s56"
+      }
+    },
+    {
+      "id": "l0-s56",
+      "type": "normal",
+      "lane": 0,
+      "index": 56,
+      "data": null,
+      "connections": {
+        "next": "l0-s57",
+        "diag_left": null,
+        "diag_right": "l1-s57"
+      }
+    },
+    {
+      "id": "l0-s57",
+      "type": "normal",
+      "lane": 0,
+      "index": 57,
+      "data": null,
+      "connections": {
+        "next": "l0-s58",
+        "diag_left": null,
+        "diag_right": "l1-s58"
+      }
+    },
+    {
+      "id": "l0-s58",
+      "type": "normal",
+      "lane": 0,
+      "index": 58,
+      "data": null,
+      "connections": {
+        "next": "l0-s59",
+        "diag_left": null,
+        "diag_right": "l1-s59"
+      }
+    },
+    {
+      "id": "l0-s59",
+      "type": "normal",
+      "lane": 0,
+      "index": 59,
+      "data": null,
+      "connections": {
+        "next": "l0-s60",
+        "diag_left": null,
+        "diag_right": "l1-s60"
+      }
+    },
+    {
+      "id": "l0-s60",
+      "type": "normal",
+      "lane": 0,
+      "index": 60,
+      "data": null,
+      "connections": {
+        "next": "l0-s61",
+        "diag_left": null,
+        "diag_right": "l1-s61"
+      }
+    },
+    {
+      "id": "l0-s61",
+      "type": "normal",
+      "lane": 0,
+      "index": 61,
+      "data": null,
+      "connections": {
+        "next": "l0-s62",
+        "diag_left": null,
+        "diag_right": "l1-s62"
+      }
+    },
+    {
+      "id": "l0-s62",
+      "type": "normal",
+      "lane": 0,
+      "index": 62,
+      "data": null,
+      "connections": {
+        "next": "l0-s63",
+        "diag_left": null,
+        "diag_right": "l1-s63"
+      }
+    },
+    {
+      "id": "l0-s63",
+      "type": "normal",
+      "lane": 0,
+      "index": 63,
+      "data": null,
+      "connections": {
+        "next": "l0-s64",
+        "diag_left": null,
+        "diag_right": "l1-s64"
+      }
+    },
+    {
+      "id": "l0-s64",
+      "type": "normal",
+      "lane": 0,
+      "index": 64,
+      "data": null,
+      "connections": {
+        "next": "l0-s65",
+        "diag_left": null,
+        "diag_right": "l1-s65"
+      }
+    },
+    {
+      "id": "l0-s65",
+      "type": "normal",
+      "lane": 0,
+      "index": 65,
+      "data": null,
+      "connections": {
+        "next": "l0-s66",
+        "diag_left": null,
+        "diag_right": "l1-s66"
+      }
+    },
+    {
+      "id": "l0-s66",
+      "type": "normal",
+      "lane": 0,
+      "index": 66,
+      "data": null,
+      "connections": {
+        "next": "l0-s0",
+        "diag_left": null,
+        "diag_right": "l1-s0"
+      }
+    },
+    {
+      "id": "l1-s0",
+      "type": "corner",
+      "lane": 1,
+      "index": 0,
+      "data": 140,
+      "connections": {
+        "next": "l1-s3",
+        "diag_left": "l0-s3",
+        "diag_right": "l3-s3"
+      }
+    },
+    {
+      "id": "l1-s3",
+      "type": "normal",
+      "lane": 1,
+      "index": 3,
+      "data": null,
+      "connections": {
+        "next": "l1-s4",
+        "diag_left": "l0-s4",
+        "diag_right": "l3-s4"
+      }
+    },
+    {
+      "id": "l1-s4",
+      "type": "normal",
+      "lane": 1,
+      "index": 4,
+      "data": null,
+      "connections": {
+        "next": "l1-s5",
+        "diag_left": "l0-s5",
+        "diag_right": "l3-s5"
+      }
+    },
+    {
+      "id": "l1-s5",
+      "type": "normal",
+      "lane": 1,
+      "index": 5,
+      "data": null,
+      "connections": {
+        "next": "l1-s6",
+        "diag_left": "l0-s6",
+        "diag_right": "l3-s6"
+      }
+    },
+    {
+      "id": "l1-s6",
+      "type": "normal",
+      "lane": 1,
+      "index": 6,
+      "data": null,
+      "connections": {
+        "next": "l1-s7",
+        "diag_left": "l0-s7",
+        "diag_right": "l3-s7"
+      }
+    },
+    {
+      "id": "l1-s7",
+      "type": "normal",
+      "lane": 1,
+      "index": 7,
+      "data": null,
+      "connections": {
+        "next": null,
+        "diag_left": "l0-s8",
+        "diag_right": "l3-s8"
+      }
+    },
+    {
+      "id": "l1-s12",
+      "type": "normal",
+      "lane": 1,
+      "index": 12,
+      "data": null,
+      "connections": {
+        "next": "l1-s13",
+        "diag_left": "l0-s13",
+        "diag_right": "l3-s13"
+      }
+    },
+    {
+      "id": "l1-s13",
+      "type": "normal",
+      "lane": 1,
+      "index": 13,
+      "data": null,
+      "connections": {
+        "next": "l1-s14",
+        "diag_left": "l0-s14",
+        "diag_right": "l3-s14"
+      }
+    },
+    {
+      "id": "l1-s14",
+      "type": "normal",
+      "lane": 1,
+      "index": 14,
+      "data": null,
+      "connections": {
+        "next": "l1-s15",
+        "diag_left": "l0-s15",
+        "diag_right": "l3-s15"
+      }
+    },
+    {
+      "id": "l1-s15",
+      "type": "normal",
+      "lane": 1,
+      "index": 15,
+      "data": null,
+      "connections": {
+        "next": "l1-s16",
+        "diag_left": "l0-s16",
+        "diag_right": "l3-s16"
+      }
+    },
+    {
+      "id": "l1-s16",
+      "type": "normal",
+      "lane": 1,
+      "index": 16,
+      "data": null,
+      "connections": {
+        "next": "l1-s17",
+        "diag_left": "l0-s17",
+        "diag_right": "l3-s17"
+      }
+    },
+    {
+      "id": "l1-s17",
+      "type": "normal",
+      "lane": 1,
+      "index": 17,
+      "data": null,
+      "connections": {
+        "next": "l1-s18",
+        "diag_left": "l0-s18",
+        "diag_right": "l3-s18"
+      }
+    },
+    {
+      "id": "l1-s18",
+      "type": "normal",
+      "lane": 1,
+      "index": 18,
+      "data": null,
+      "connections": {
+        "next": "l1-s19",
+        "diag_left": "l0-s19",
+        "diag_right": "l3-s19"
+      }
+    },
+    {
+      "id": "l1-s19",
+      "type": "normal",
+      "lane": 1,
+      "index": 19,
+      "data": null,
+      "connections": {
+        "next": "l1-s20",
+        "diag_left": "l0-s20",
+        "diag_right": "l3-s20"
+      }
+    },
+    {
+      "id": "l1-s20",
+      "type": "normal",
+      "lane": 1,
+      "index": 20,
+      "data": null,
+      "connections": {
+        "next": "l1-s21",
+        "diag_left": "l0-s21",
+        "diag_right": "l3-s21"
+      }
+    },
+    {
+      "id": "l1-s21",
+      "type": "normal",
+      "lane": 1,
+      "index": 21,
+      "data": null,
+      "connections": {
+        "next": "l1-s22",
+        "diag_left": "l0-s22",
+        "diag_right": "l3-s22"
+      }
+    },
+    {
+      "id": "l1-s22",
+      "type": "normal",
+      "lane": 1,
+      "index": 22,
+      "data": null,
+      "connections": {
+        "next": "l1-s23",
+        "diag_left": "l0-s23",
+        "diag_right": "l3-s23"
+      }
+    },
+    {
+      "id": "l1-s23",
+      "type": "corner",
+      "lane": 1,
+      "index": 23,
+      "data": 80,
+      "connections": {
+        "next": "l1-s25",
+        "diag_left": "l0-s25",
+        "diag_right": "l3-s25"
+      }
+    },
+    {
+      "id": "l1-s25",
+      "type": "normal",
+      "lane": 1,
+      "index": 25,
+      "data": null,
+      "connections": {
+        "next": "l1-s26",
+        "diag_left": "l0-s26",
+        "diag_right": "l3-s26"
+      }
+    },
+    {
+      "id": "l1-s26",
+      "type": "normal",
+      "lane": 1,
+      "index": 26,
+      "data": null,
+      "connections": {
+        "next": "l1-s27",
+        "diag_left": "l0-s27",
+        "diag_right": "l3-s27"
+      }
+    },
+    {
+      "id": "l1-s27",
+      "type": "normal",
+      "lane": 1,
+      "index": 27,
+      "data": null,
+      "connections": {
+        "next": "l1-s28",
+        "diag_left": "l0-s28",
+        "diag_right": "l3-s28"
+      }
+    },
+    {
+      "id": "l1-s28",
+      "type": "normal",
+      "lane": 1,
+      "index": 28,
+      "data": null,
+      "connections": {
+        "next": "l1-s29",
+        "diag_left": "l0-s29",
+        "diag_right": "l3-s29"
+      }
+    },
+    {
+      "id": "l1-s29",
+      "type": "normal",
+      "lane": 1,
+      "index": 29,
+      "data": null,
+      "connections": {
+        "next": null,
+        "diag_left": "l0-s30",
+        "diag_right": "l3-s30"
+      }
+    },
+    {
+      "id": "l1-s37",
+      "type": "normal",
+      "lane": 1,
+      "index": 37,
+      "data": null,
+      "connections": {
+        "next": "l1-s38",
+        "diag_left": "l0-s38",
+        "diag_right": "l2-s38"
+      }
+    },
+    {
+      "id": "l1-s38",
+      "type": "corner",
+      "lane": 1,
+      "index": 38,
+      "data": 60,
+      "connections": {
+        "next": "l1-s39",
+        "diag_left": "l0-s39",
+        "diag_right": "l2-s39"
+      }
+    },
+    {
+      "id": "l1-s39",
+      "type": "normal",
+      "lane": 1,
+      "index": 39,
+      "data": null,
+      "connections": {
+        "next": "l1-s40",
+        "diag_left": "l0-s40",
+        "diag_right": "l2-s40"
+      }
+    },
+    {
+      "id": "l1-s40",
+      "type": "normal",
+      "lane": 1,
+      "index": 40,
+      "data": null,
+      "connections": {
+        "next": "l1-s41",
+        "diag_left": "l0-s41",
+        "diag_right": "l2-s41"
+      }
+    },
+    {
+      "id": "l1-s41",
+      "type": "normal",
+      "lane": 1,
+      "index": 41,
+      "data": null,
+      "connections": {
+        "next": "l1-s42",
+        "diag_left": "l0-s42",
+        "diag_right": "l2-s42"
+      }
+    },
+    {
+      "id": "l1-s42",
+      "type": "finish",
+      "lane": 1,
+      "index": 42,
+      "data": null,
+      "connections": {
+        "next": "l1-s43",
+        "diag_left": "l0-s43",
+        "diag_right": "l2-s43"
+      }
+    },
+    {
+      "id": "l1-s43",
+      "type": "grid",
+      "lane": 1,
+      "index": 43,
+      "data": 2,
+      "connections": {
+        "next": "l1-s44",
+        "diag_left": "l0-s44",
+        "diag_right": "l2-s44"
+      }
+    },
+    {
+      "id": "l1-s44",
+      "type": "normal",
+      "lane": 1,
+      "index": 44,
+      "data": null,
+      "connections": {
+        "next": "l1-s45",
+        "diag_left": "l0-s45",
+        "diag_right": "l2-s45"
+      }
+    },
+    {
+      "id": "l1-s45",
+      "type": "normal",
+      "lane": 1,
+      "index": 45,
+      "data": null,
+      "connections": {
+        "next": "l1-s46",
+        "diag_left": "l0-s46",
+        "diag_right": "l2-s46"
+      }
+    },
+    {
+      "id": "l1-s46",
+      "type": "normal",
+      "lane": 1,
+      "index": 46,
+      "data": null,
+      "connections": {
+        "next": "l1-s47",
+        "diag_left": "l0-s47",
+        "diag_right": "l2-s47"
+      }
+    },
+    {
+      "id": "l1-s47",
+      "type": "normal",
+      "lane": 1,
+      "index": 47,
+      "data": null,
+      "connections": {
+        "next": "l1-s48",
+        "diag_left": "l0-s48",
+        "diag_right": "l2-s48"
+      }
+    },
+    {
+      "id": "l1-s48",
+      "type": "normal",
+      "lane": 1,
+      "index": 48,
+      "data": null,
+      "connections": {
+        "next": "l1-s49",
+        "diag_left": "l0-s49",
+        "diag_right": "l2-s49"
+      }
+    },
+    {
+      "id": "l1-s49",
+      "type": "normal",
+      "lane": 1,
+      "index": 49,
+      "data": null,
+      "connections": {
+        "next": "l1-s50",
+        "diag_left": "l0-s50",
+        "diag_right": "l2-s50"
+      }
+    },
+    {
+      "id": "l1-s50",
+      "type": "normal",
+      "lane": 1,
+      "index": 50,
+      "data": null,
+      "connections": {
+        "next": "l1-s51",
+        "diag_left": "l0-s51",
+        "diag_right": "l2-s51"
+      }
+    },
+    {
+      "id": "l1-s51",
+      "type": "corner",
+      "lane": 1,
+      "index": 51,
+      "data": 100,
+      "connections": {
+        "next": "l1-s53",
+        "diag_left": "l0-s53",
+        "diag_right": "l3-s53"
+      }
+    },
+    {
+      "id": "l1-s53",
+      "type": "normal",
+      "lane": 1,
+      "index": 53,
+      "data": null,
+      "connections": {
+        "next": "l1-s54",
+        "diag_left": "l0-s54",
+        "diag_right": "l3-s54"
+      }
+    },
+    {
+      "id": "l1-s54",
+      "type": "normal",
+      "lane": 1,
+      "index": 54,
+      "data": null,
+      "connections": {
+        "next": "l1-s55",
+        "diag_left": "l0-s55",
+        "diag_right": "l3-s55"
+      }
+    },
+    {
+      "id": "l1-s55",
+      "type": "normal",
+      "lane": 1,
+      "index": 55,
+      "data": null,
+      "connections": {
+        "next": "l1-s56",
+        "diag_left": "l0-s56",
+        "diag_right": "l3-s56"
+      }
+    },
+    {
+      "id": "l1-s56",
+      "type": "normal",
+      "lane": 1,
+      "index": 56,
+      "data": null,
+      "connections": {
+        "next": "l1-s57",
+        "diag_left": "l0-s57",
+        "diag_right": "l3-s57"
+      }
+    },
+    {
+      "id": "l1-s57",
+      "type": "normal",
+      "lane": 1,
+      "index": 57,
+      "data": null,
+      "connections": {
+        "next": "l1-s58",
+        "diag_left": "l0-s58",
+        "diag_right": "l3-s58"
+      }
+    },
+    {
+      "id": "l1-s58",
+      "type": "normal",
+      "lane": 1,
+      "index": 58,
+      "data": null,
+      "connections": {
+        "next": "l1-s59",
+        "diag_left": "l0-s59",
+        "diag_right": "l3-s59"
+      }
+    },
+    {
+      "id": "l1-s59",
+      "type": "normal",
+      "lane": 1,
+      "index": 59,
+      "data": null,
+      "connections": {
+        "next": "l1-s60",
+        "diag_left": "l0-s60",
+        "diag_right": "l3-s60"
+      }
+    },
+    {
+      "id": "l1-s60",
+      "type": "normal",
+      "lane": 1,
+      "index": 60,
+      "data": null,
+      "connections": {
+        "next": "l1-s61",
+        "diag_left": "l0-s61",
+        "diag_right": "l3-s61"
+      }
+    },
+    {
+      "id": "l1-s61",
+      "type": "normal",
+      "lane": 1,
+      "index": 61,
+      "data": null,
+      "connections": {
+        "next": "l1-s62",
+        "diag_left": "l0-s62",
+        "diag_right": "l3-s62"
+      }
+    },
+    {
+      "id": "l1-s62",
+      "type": "normal",
+      "lane": 1,
+      "index": 62,
+      "data": null,
+      "connections": {
+        "next": "l1-s63",
+        "diag_left": "l0-s63",
+        "diag_right": "l3-s63"
+      }
+    },
+    {
+      "id": "l1-s63",
+      "type": "normal",
+      "lane": 1,
+      "index": 63,
+      "data": null,
+      "connections": {
+        "next": "l1-s64",
+        "diag_left": "l0-s64",
+        "diag_right": "l3-s64"
+      }
+    },
+    {
+      "id": "l1-s64",
+      "type": "normal",
+      "lane": 1,
+      "index": 64,
+      "data": null,
+      "connections": {
+        "next": "l1-s65",
+        "diag_left": "l0-s65",
+        "diag_right": "l3-s65"
+      }
+    },
+    {
+      "id": "l1-s65",
+      "type": "normal",
+      "lane": 1,
+      "index": 65,
+      "data": null,
+      "connections": {
+        "next": "l1-s66",
+        "diag_left": "l0-s66",
+        "diag_right": "l3-s66"
+      }
+    },
+    {
+      "id": "l1-s66",
+      "type": "normal",
+      "lane": 1,
+      "index": 66,
+      "data": null,
+      "connections": {
+        "next": "l1-s0",
+        "diag_left": "l0-s0",
+        "diag_right": "l3-s0"
+      }
+    },
+    {
+      "id": "l2-s36",
+      "type": "normal",
+      "lane": 2,
+      "index": 36,
+      "data": null,
+      "connections": {
+        "next": "l2-s39",
+        "diag_left": "l1-s39",
+        "diag_right": "l3-s39"
+      }
+    },
+    {
+      "id": "l2-s39",
+      "type": "normal",
+      "lane": 2,
+      "index": 39,
+      "data": null,
+      "connections": {
+        "next": "l2-s40",
+        "diag_left": "l1-s40",
+        "diag_right": "l3-s40"
+      }
+    },
+    {
+      "id": "l2-s40",
+      "type": "normal",
+      "lane": 2,
+      "index": 40,
+      "data": null,
+      "connections": {
+        "next": "l2-s41",
+        "diag_left": "l1-s41",
+        "diag_right": "l3-s41"
+      }
+    },
+    {
+      "id": "l2-s41",
+      "type": "normal",
+      "lane": 2,
+      "index": 41,
+      "data": null,
+      "connections": {
+        "next": "l2-s42",
+        "diag_left": "l1-s42",
+        "diag_right": "l3-s42"
+      }
+    },
+    {
+      "id": "l2-s42",
+      "type": "finish",
+      "lane": 2,
+      "index": 42,
+      "data": null,
+      "connections": {
+        "next": "l2-s43",
+        "diag_left": "l1-s43",
+        "diag_right": "l3-s43"
+      }
+    },
+    {
+      "id": "l2-s43",
+      "type": "grid",
+      "lane": 2,
+      "index": 43,
+      "data": 1,
+      "connections": {
+        "next": "l2-s44",
+        "diag_left": "l1-s44",
+        "diag_right": "l3-s44"
+      }
+    },
+    {
+      "id": "l2-s44",
+      "type": "normal",
+      "lane": 2,
+      "index": 44,
+      "data": null,
+      "connections": {
+        "next": "l2-s45",
+        "diag_left": "l1-s45",
+        "diag_right": "l3-s45"
+      }
+    },
+    {
+      "id": "l2-s45",
+      "type": "normal",
+      "lane": 2,
+      "index": 45,
+      "data": null,
+      "connections": {
+        "next": "l2-s46",
+        "diag_left": "l1-s46",
+        "diag_right": "l3-s46"
+      }
+    },
+    {
+      "id": "l2-s46",
+      "type": "normal",
+      "lane": 2,
+      "index": 46,
+      "data": null,
+      "connections": {
+        "next": "l2-s47",
+        "diag_left": "l1-s47",
+        "diag_right": "l3-s47"
+      }
+    },
+    {
+      "id": "l2-s47",
+      "type": "normal",
+      "lane": 2,
+      "index": 47,
+      "data": null,
+      "connections": {
+        "next": "l2-s48",
+        "diag_left": "l1-s48",
+        "diag_right": "l3-s48"
+      }
+    },
+    {
+      "id": "l2-s48",
+      "type": "normal",
+      "lane": 2,
+      "index": 48,
+      "data": null,
+      "connections": {
+        "next": null,
+        "diag_left": "l1-s53",
+        "diag_right": "l3-s53"
+      }
+    },
+    {
+      "id": "l3-s0",
+      "type": "corner",
+      "lane": 3,
+      "index": 0,
+      "data": 140,
+      "connections": {
+        "next": "l3-s3",
+        "diag_left": "l1-s3",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s3",
+      "type": "normal",
+      "lane": 3,
+      "index": 3,
+      "data": null,
+      "connections": {
+        "next": "l3-s4",
+        "diag_left": "l1-s4",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s4",
+      "type": "normal",
+      "lane": 3,
+      "index": 4,
+      "data": null,
+      "connections": {
+        "next": "l3-s5",
+        "diag_left": "l1-s5",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s5",
+      "type": "normal",
+      "lane": 3,
+      "index": 5,
+      "data": null,
+      "connections": {
+        "next": "l3-s6",
+        "diag_left": "l1-s6",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s6",
+      "type": "normal",
+      "lane": 3,
+      "index": 6,
+      "data": null,
+      "connections": {
+        "next": "l3-s7",
+        "diag_left": "l1-s7",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s7",
+      "type": "normal",
+      "lane": 3,
+      "index": 7,
+      "data": null,
+      "connections": {
+        "next": "l3-s8",
+        "diag_left": null,
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s8",
+      "type": "normal",
+      "lane": 3,
+      "index": 8,
+      "data": null,
+      "connections": {
+        "next": "l3-s9",
+        "diag_left": "l1-s9",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s9",
+      "type": "normal",
+      "lane": 3,
+      "index": 9,
+      "data": null,
+      "connections": {
+        "next": "l3-s10",
+        "diag_left": "l1-s10",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s10",
+      "type": "normal",
+      "lane": 3,
+      "index": 10,
+      "data": null,
+      "connections": {
+        "next": "l3-s11",
+        "diag_left": "l1-s11",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s11",
+      "type": "normal",
+      "lane": 3,
+      "index": 11,
+      "data": null,
+      "connections": {
+        "next": "l3-s12",
+        "diag_left": "l1-s12",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s12",
+      "type": "normal",
+      "lane": 3,
+      "index": 12,
+      "data": null,
+      "connections": {
+        "next": "l3-s13",
+        "diag_left": "l1-s13",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s13",
+      "type": "normal",
+      "lane": 3,
+      "index": 13,
+      "data": null,
+      "connections": {
+        "next": "l3-s14",
+        "diag_left": "l1-s14",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s14",
+      "type": "normal",
+      "lane": 3,
+      "index": 14,
+      "data": null,
+      "connections": {
+        "next": "l3-s15",
+        "diag_left": "l1-s15",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s15",
+      "type": "normal",
+      "lane": 3,
+      "index": 15,
+      "data": null,
+      "connections": {
+        "next": "l3-s16",
+        "diag_left": "l1-s16",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s16",
+      "type": "normal",
+      "lane": 3,
+      "index": 16,
+      "data": null,
+      "connections": {
+        "next": "l3-s17",
+        "diag_left": "l1-s17",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s17",
+      "type": "normal",
+      "lane": 3,
+      "index": 17,
+      "data": null,
+      "connections": {
+        "next": "l3-s18",
+        "diag_left": "l1-s18",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s18",
+      "type": "normal",
+      "lane": 3,
+      "index": 18,
+      "data": null,
+      "connections": {
+        "next": "l3-s19",
+        "diag_left": "l1-s19",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s19",
+      "type": "normal",
+      "lane": 3,
+      "index": 19,
+      "data": null,
+      "connections": {
+        "next": "l3-s20",
+        "diag_left": "l1-s20",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s20",
+      "type": "normal",
+      "lane": 3,
+      "index": 20,
+      "data": null,
+      "connections": {
+        "next": "l3-s21",
+        "diag_left": "l1-s21",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s21",
+      "type": "normal",
+      "lane": 3,
+      "index": 21,
+      "data": null,
+      "connections": {
+        "next": "l3-s22",
+        "diag_left": "l1-s22",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s22",
+      "type": "normal",
+      "lane": 3,
+      "index": 22,
+      "data": null,
+      "connections": {
+        "next": "l3-s23",
+        "diag_left": "l1-s23",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s23",
+      "type": "corner",
+      "lane": 3,
+      "index": 23,
+      "data": 80,
+      "connections": {
+        "next": "l3-s25",
+        "diag_left": "l1-s25",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s25",
+      "type": "normal",
+      "lane": 3,
+      "index": 25,
+      "data": null,
+      "connections": {
+        "next": "l3-s26",
+        "diag_left": "l1-s26",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s26",
+      "type": "normal",
+      "lane": 3,
+      "index": 26,
+      "data": null,
+      "connections": {
+        "next": "l3-s27",
+        "diag_left": "l1-s27",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s27",
+      "type": "normal",
+      "lane": 3,
+      "index": 27,
+      "data": null,
+      "connections": {
+        "next": "l3-s28",
+        "diag_left": "l1-s28",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s28",
+      "type": "normal",
+      "lane": 3,
+      "index": 28,
+      "data": null,
+      "connections": {
+        "next": "l3-s29",
+        "diag_left": "l1-s29",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s29",
+      "type": "normal",
+      "lane": 3,
+      "index": 29,
+      "data": null,
+      "connections": {
+        "next": "l3-s30",
+        "diag_left": null,
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s30",
+      "type": "normal",
+      "lane": 3,
+      "index": 30,
+      "data": null,
+      "connections": {
+        "next": "l3-s31",
+        "diag_left": null,
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s31",
+      "type": "corner",
+      "lane": 3,
+      "index": 31,
+      "data": 60,
+      "connections": {
+        "next": "l3-s33",
+        "diag_left": "l1-s33",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s33",
+      "type": "normal",
+      "lane": 3,
+      "index": 33,
+      "data": null,
+      "connections": {
+        "next": "l3-s34",
+        "diag_left": "l1-s34",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s34",
+      "type": "normal",
+      "lane": 3,
+      "index": 34,
+      "data": null,
+      "connections": {
+        "next": "l3-s35",
+        "diag_left": "l1-s35",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s35",
+      "type": "normal",
+      "lane": 3,
+      "index": 35,
+      "data": null,
+      "connections": {
+        "next": "l3-s36",
+        "diag_left": "l2-s36",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s36",
+      "type": "corner",
+      "lane": 3,
+      "index": 36,
+      "data": 60,
+      "connections": {
+        "next": "l3-s39",
+        "diag_left": "l2-s39",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s39",
+      "type": "normal",
+      "lane": 3,
+      "index": 39,
+      "data": null,
+      "connections": {
+        "next": "l3-s40",
+        "diag_left": "l2-s40",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s40",
+      "type": "normal",
+      "lane": 3,
+      "index": 40,
+      "data": null,
+      "connections": {
+        "next": "l3-s41",
+        "diag_left": "l2-s41",
+        "diag_right": "l4-s41"
+      }
+    },
+    {
+      "id": "l3-s41",
+      "type": "normal",
+      "lane": 3,
+      "index": 41,
+      "data": null,
+      "connections": {
+        "next": "l3-s42",
+        "diag_left": "l2-s42",
+        "diag_right": "l4-s42"
+      }
+    },
+    {
+      "id": "l3-s42",
+      "type": "finish",
+      "lane": 3,
+      "index": 42,
+      "data": null,
+      "connections": {
+        "next": "l3-s43",
+        "diag_left": "l2-s43",
+        "diag_right": "l4-s43"
+      }
+    },
+    {
+      "id": "l3-s43",
+      "type": "grid",
+      "lane": 3,
+      "index": 43,
+      "data": 0,
+      "connections": {
+        "next": "l3-s44",
+        "diag_left": "l2-s44",
+        "diag_right": "l4-s44"
+      }
+    },
+    {
+      "id": "l3-s44",
+      "type": "normal",
+      "lane": 3,
+      "index": 44,
+      "data": null,
+      "connections": {
+        "next": "l3-s45",
+        "diag_left": "l2-s45",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s45",
+      "type": "normal",
+      "lane": 3,
+      "index": 45,
+      "data": null,
+      "connections": {
+        "next": "l3-s46",
+        "diag_left": "l2-s46",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s46",
+      "type": "normal",
+      "lane": 3,
+      "index": 46,
+      "data": null,
+      "connections": {
+        "next": "l3-s47",
+        "diag_left": "l2-s47",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s47",
+      "type": "normal",
+      "lane": 3,
+      "index": 47,
+      "data": null,
+      "connections": {
+        "next": "l3-s48",
+        "diag_left": "l2-s48",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s48",
+      "type": "normal",
+      "lane": 3,
+      "index": 48,
+      "data": null,
+      "connections": {
+        "next": "l3-s49",
+        "diag_left": "l2-s49",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s49",
+      "type": "normal",
+      "lane": 3,
+      "index": 49,
+      "data": null,
+      "connections": {
+        "next": "l3-s50",
+        "diag_left": "l2-s50",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s50",
+      "type": "corner",
+      "lane": 3,
+      "index": 50,
+      "data": 80,
+      "connections": {
+        "next": "l3-s53",
+        "diag_left": "l1-s53",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s53",
+      "type": "normal",
+      "lane": 3,
+      "index": 53,
+      "data": null,
+      "connections": {
+        "next": "l3-s54",
+        "diag_left": "l1-s54",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s54",
+      "type": "normal",
+      "lane": 3,
+      "index": 54,
+      "data": null,
+      "connections": {
+        "next": "l3-s55",
+        "diag_left": "l1-s55",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s55",
+      "type": "normal",
+      "lane": 3,
+      "index": 55,
+      "data": null,
+      "connections": {
+        "next": "l3-s56",
+        "diag_left": "l1-s56",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s56",
+      "type": "normal",
+      "lane": 3,
+      "index": 56,
+      "data": null,
+      "connections": {
+        "next": "l3-s57",
+        "diag_left": "l1-s57",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s57",
+      "type": "normal",
+      "lane": 3,
+      "index": 57,
+      "data": null,
+      "connections": {
+        "next": "l3-s58",
+        "diag_left": "l1-s58",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s58",
+      "type": "normal",
+      "lane": 3,
+      "index": 58,
+      "data": null,
+      "connections": {
+        "next": "l3-s59",
+        "diag_left": "l1-s59",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s59",
+      "type": "normal",
+      "lane": 3,
+      "index": 59,
+      "data": null,
+      "connections": {
+        "next": "l3-s60",
+        "diag_left": "l1-s60",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s60",
+      "type": "normal",
+      "lane": 3,
+      "index": 60,
+      "data": null,
+      "connections": {
+        "next": "l3-s61",
+        "diag_left": "l1-s61",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s61",
+      "type": "normal",
+      "lane": 3,
+      "index": 61,
+      "data": null,
+      "connections": {
+        "next": "l3-s62",
+        "diag_left": "l1-s62",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s62",
+      "type": "normal",
+      "lane": 3,
+      "index": 62,
+      "data": null,
+      "connections": {
+        "next": "l3-s63",
+        "diag_left": "l1-s63",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s63",
+      "type": "normal",
+      "lane": 3,
+      "index": 63,
+      "data": null,
+      "connections": {
+        "next": "l3-s64",
+        "diag_left": "l1-s64",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s64",
+      "type": "normal",
+      "lane": 3,
+      "index": 64,
+      "data": null,
+      "connections": {
+        "next": "l3-s65",
+        "diag_left": "l1-s65",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s65",
+      "type": "normal",
+      "lane": 3,
+      "index": 65,
+      "data": null,
+      "connections": {
+        "next": "l3-s66",
+        "diag_left": "l1-s66",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l3-s66",
+      "type": "normal",
+      "lane": 3,
+      "index": 66,
+      "data": null,
+      "connections": {
+        "next": "l3-s0",
+        "diag_left": "l1-s0",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l4-s41",
+      "type": "pit",
+      "lane": 4,
+      "index": 41,
+      "data": 3,
+      "connections": {
+        "next": "l4-s42",
+        "diag_left": "l3-s42",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l4-s42",
+      "type": "pit",
+      "lane": 4,
+      "index": 42,
+      "data": 2,
+      "connections": {
+        "next": "l4-s43",
+        "diag_left": "l3-s43",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l4-s43",
+      "type": "pit",
+      "lane": 4,
+      "index": 43,
+      "data": 1,
+      "connections": {
+        "next": "l4-s44",
+        "diag_left": "l3-s44",
+        "diag_right": null
+      }
+    },
+    {
+      "id": "l4-s44",
+      "type": "pit",
+      "lane": 4,
+      "index": 44,
+      "data": 0,
+      "connections": {
+        "next": null,
+        "diag_left": "l3-s45",
+        "diag_right": null
+      }
+    }
+  ]
+}
