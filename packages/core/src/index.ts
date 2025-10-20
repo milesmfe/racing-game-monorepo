@@ -3,9 +3,7 @@ import { z } from "zod";
 // ----------------------------------------------------------------------------
 // Shared Schemas and Types
 // ----------------------------------------------------------------------------
-export const IdSchema = z.object({
-  id: z.string(),
-});
+export const IdSchema = z.string().min(1);
 export type Id = z.infer<typeof IdSchema>;
 
 export const PlayerSchema = z.object({
@@ -122,8 +120,11 @@ export const wsMessageSchema = z.discriminatedUnion("target", [
 export type WSMessage = z.infer<typeof wsMessageSchema>;
 
 // ----------------------------------------------------------------------------
-// Shared WebSocket Message Creators and Type Guards
+// Shared Factory and Type Guard Functions
 // ----------------------------------------------------------------------------
+export const createId = (): Id => {
+  return crypto.randomUUID();
+};
 
 export const createWSMessage = {
   connect: (

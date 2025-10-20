@@ -8,11 +8,12 @@
     isErrorMessage,
     isConnectMessage,
     type WSMessage,
+    type Id,
   } from "@racing-game-mono/core";
 
   let ws: WebSocket | null = null;
   let connected = false;
-  let clientId: string = "";
+  let clientId: Id = "";
   let result: string = "";
   let error: string = "";
 

@@ -24,7 +24,7 @@ export default class GameHandler implements Handler {
 
   public getState(id: Id): GameState {
     if (!this.stateCache.has(id)) {
-      throw new Error(`Game state for ID ${id.value} not found`);
+      throw new Error(`Game state for ID ${id} not found`);
     }
     return this.stateCache.get(id) as GameState;
   }
@@ -40,15 +40,12 @@ export default class GameHandler implements Handler {
   ): Promise<void> {
     if (!isGameMessage(message)) return;
 
-    console.log(
-      `GameHandler received message from ${clientId.value}:`,
-      message
-    );
+    console.log(`GameHandler received message from ${clientId}:`, message);
 
     switch (message.command) {
       case WSGameCommand.ACTION:
         console.log(
-          `Client ${clientId.value} performed an action in game ${message.data?.gameId}`
+          `Client ${clientId} performed an action in game ${message.data?.gameId}`
         );
         // TODO: Implement game action logic
         break;
@@ -63,6 +60,6 @@ export default class GameHandler implements Handler {
 
   public async handleDisconnect(clientId: Id, ws: WSContext): Promise<void> {
     // TODO: Implement disconnect logic
-    console.log(`Client ${clientId.value} disconnected from game`);
+    console.log(`Client ${clientId} disconnected from game`);
   }
 }

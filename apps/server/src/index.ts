@@ -7,6 +7,7 @@ import "dotenv/config";
 
 import {
   Id,
+  createId,
   WSConnectCommand,
   WSMessageTarget,
   createWSMessage,
@@ -56,7 +57,7 @@ const handleClientMessage = async (
       await gameHandler.handleMessage(clientId, message, ws);
       break;
     case WSMessageTarget.CONNECT:
-      console.warn(`Client ${clientId.value} sent a CONNECT target message.`);
+      console.warn(`Client ${clientId} sent a CONNECT target message.`);
       sendError(ws, "Connection messages are server-only.");
       break;
   }
@@ -75,15 +76,15 @@ app.get(
           return;
         }
 
-        const clientId = new Id();
+        const clientId = createId();
         connections.set(clientId, ws);
         clientIds.set(ws, clientId);
         console.log(
-          `Client ${clientId.value} connected (${connections.size}/${MAX_CONNECTIONS})`
+          `Client ${clientId} connected (${connections.size}/${MAX_CONNECTIONS})`
         );
 
         const welcome = createWSMessage.connect(WSConnectCommand.WELCOME, {
-          clientId: clientId.value,
+          clientId: clientId,
         });
         ws.send(JSON.stringify(welcome));
       },
@@ -107,7 +108,7 @@ app.get(
         }
 
         handleClientMessage(clientId, message, ws).catch((err) => {
-          console.error(`Error handling message from ${clientId.value}:`, err);
+          console.error(`Error handling message from ${clientId}:`, err);
           sendError(ws, "Internal server error");
         });
       },
@@ -119,7 +120,7 @@ app.get(
         connections.delete(clientId);
         clientIds.delete(ws);
         console.log(
-          `Client ${clientId.value} disconnected (${connections.size}/${MAX_CONNECTIONS})`
+          `Client ${clientId} disconnected (${connections.size}/${MAX_CONNECTIONS})`
         );
       },
     };

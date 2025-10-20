@@ -11,9 +11,11 @@ import { WSContext } from "hono/ws";
 
 export default class LobbyHandler implements Handler {
   public readonly stateCache: Map<Id, LobbyState>;
+  public readonly playerMap: Map<string, string>;
 
   constructor() {
     this.stateCache = new Map<Id, LobbyState>();
+    this.playerMap = new Map<string, string>();
   }
 
   public setState(id: Id, state: LobbyState): void {
@@ -22,7 +24,7 @@ export default class LobbyHandler implements Handler {
 
   public getState(id: Id): LobbyState {
     if (!this.stateCache.has(id)) {
-      throw new Error(`Lobby state for ID ${id.value} not found`);
+      throw new Error(`Lobby state for ID ${id} not found`);
     }
     return this.stateCache.get(id) as LobbyState;
   }
@@ -38,25 +40,22 @@ export default class LobbyHandler implements Handler {
   ): Promise<void> {
     if (!isLobbyMessage(message)) return;
 
-    console.log(
-      `LobbyHandler received message from ${clientId.value}:`,
-      message
-    );
+    console.log(`LobbyHandler received message from ${clientId}:`, message);
 
     switch (message.command) {
       case WSLobbyCommand.CREATE:
-        console.log(`Client ${clientId.value} is creating a lobby.`);
+        console.log(`Client ${clientId} is creating a lobby.`);
         // TODO: Implement lobby creation logic
         break;
       case WSLobbyCommand.JOIN:
         console.log(
-          `Client ${clientId.value} is joining lobby ${message.data?.lobbyId}`
+          `Client ${clientId} is joining lobby ${message.data?.lobbyId}`
         );
         // TODO: Implement lobby joining logic
         break;
       case WSLobbyCommand.LEAVE:
         console.log(
-          `Client ${clientId.value} is leaving lobby ${message.data?.lobbyId}`
+          `Client ${clientId} is leaving lobby ${message.data?.lobbyId}`
         );
         // TODO: Implement lobby leaving logic
         break;
@@ -66,5 +65,10 @@ export default class LobbyHandler implements Handler {
       lobbyId: "new-lobby-123",
     });
     ws.send(JSON.stringify(response));
+  }
+
+  public async handleDisconnect(clientId: Id, ws: WSContext): Promise<void> {
+    // TODO: Implement disconnect logic
+    console.log(`Client ${clientId} disconnected from lobby.`);
   }
 }
