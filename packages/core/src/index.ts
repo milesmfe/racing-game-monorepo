@@ -63,21 +63,21 @@ export type GameState = z.infer<typeof GameState>;
 // ----------------------------------------------------------------------------
 
 export enum WSMessageTarget {
-  CONNECT,
-  LOBBY,
-  GAME,
-  ERROR,
+  CONNECT = "connect",
+  LOBBY = "lobby",
+  GAME = "game",
+  ERROR = "error",
 }
 export enum WSConnectCommand {
-  WELCOME,
+  WELCOME = "welcome",
 }
 export enum WSLobbyCommand {
-  CREATE,
-  JOIN,
-  LEAVE,
+  CREATE = "create",
+  JOIN = "join",
+  LEAVE = "leave",
 }
 export enum WSGameCommand {
-  ACTION,
+  ACTION = "action",
 }
 
 const connectDataSchema = z.object({ clientId: z.string() });
