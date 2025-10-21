@@ -7,11 +7,14 @@
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Miles Edwards",
   "devDependencies": {
+    "@types/jest": "30.0.0",
+    "ts-jest": "^29.4.5",
     "typescript": "^5.9.3"
   }
 }

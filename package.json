@@ -15,6 +15,7 @@
     "lint": "npm run lint --workspaces --if-present",
     "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist",
     "check": "npm run check --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
     "deploy": "npm run build && npm run deploy:prepare && npm run deploy:copy && npm run deploy:install",
     "deploy:prepare": "rm -rf ./deploy && mkdir -p ./deploy/web/dist ./deploy/track-designer/dist ./deploy/packages/core/dist",
     "deploy:copy": "cp apps/server/dist/index.js ./deploy/index.js && cp package.json ./deploy/ && cp -r apps/web-svelte/dist/* ./deploy/web/dist/ && cp -r apps/track-designer-react/dist/* ./deploy/track-designer/dist/ && cp -r packages/core/dist/* ./deploy/packages/core/dist && echo 'NODE_ENV=production' > ./deploy/.env",
