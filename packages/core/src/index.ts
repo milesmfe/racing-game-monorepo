@@ -1,175 +1,187 @@
 import { z } from "zod";
 
 // ----------------------------------------------------------------------------
-// Shared Schemas and Types
+// State & Identity
 // ----------------------------------------------------------------------------
-export const IdSchema = z.string().min(1);
+const IdSchema = z.string().length(36);
+
 export type Id = z.infer<typeof IdSchema>;
 
-export const PlayerSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  roll: z.number(),
-  rollOrder: z.number(),
-  currentPosition: z.object({ i: z.number(), j: z.number() }),
-  currentSpeed: z.number(),
-  brakeWear: z.number(),
-  tyreWear: z.number(),
-  lapsRemaining: z.number(),
-  spunOff: z.boolean(),
-  isPlayer: z.boolean(),
-  socketId: z.string(),
-});
-export type Player = z.infer<typeof PlayerSchema>;
-
-export const LobbyState = z.object({
-  roomName: z.string(),
-  players: z.array(
-    z.object({
-      id: z.string(),
-      name: z.string(),
-      isPlayer: z.boolean(),
-    })
-  ),
-  phase: z.enum(["initial", "in-room"]),
-});
-export type LobbyState = z.infer<typeof LobbyState>;
-
-export const GameState = z.object({
-  players: z.array(PlayerSchema),
-  numLaps: z.number(),
-  finishedPlayerIds: z.array(z.string()),
-  lastPlayerId: z.string().nullable(),
-  raceOverTriggered: z.boolean(),
-  phase: z.enum([
-    "speedselect",
-    "moving",
-    "penalty",
-    "turn-over",
-    "finished",
-    "waiting",
-  ]),
-  currentPlayerIndex: z.number(),
-  requiredSteps: z.number(),
-  die1Result: z.number().nullable(),
-  die2Result: z.number().nullable(),
-  winnerData: z.object({ id: z.number(), name: z.string() }).nullable(),
-  podiumData: z.array(z.object({ id: z.number(), name: z.string() })),
-});
-export type GameState = z.infer<typeof GameState>;
+export function createId(): Id {
+    return crypto.randomUUID();
+}
 
 // ----------------------------------------------------------------------------
-// Shared WebSocket Message Schemas and Types
+// WebSocket Messaging
 // ----------------------------------------------------------------------------
-
-export enum WSMessageTarget {
-  CONNECT = "connect",
-  LOBBY = "lobby",
-  GAME = "game",
-  ERROR = "error",
-}
-export enum WSConnectCommand {
-  WELCOME = "welcome",
-  WELCOME_BACK = "welcome-back",
-  HELLO = "hello",
-  RECONNECT = "reconnect",
-}
-export enum WSLobbyCommand {
-  CREATE = "create",
-  JOIN = "join",
-  LEAVE = "leave",
-}
-export enum WSGameCommand {
-  ACTION = "action",
+export enum WSProtocol {
+    CONNECT = "connect",
+    RECONNECT = "reconnect",
+    CREATE_LOBBY = "create_lobby",
+    JOIN_LOBBY = "join_lobby",
+    LEAVE_LOBBY = "leave_lobby",
+    START_GAME = "start_game",
+    ERROR = "error",
 }
 
-const connectDataSchema = z.object({ clientId: z.string() });
-const lobbyDataSchema = z.object({ lobbyId: z.string().optional() });
-const gameDataSchema = z.object({ gameId: z.string().optional() });
-
-const connectMessageSchema = z.object({
-  target: z.literal(WSMessageTarget.CONNECT),
-  command: z.enum(WSConnectCommand),
-  data: connectDataSchema.optional(),
+const clientConnectMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.CONNECT),
 });
-export type WSConnectMessage = z.infer<typeof connectMessageSchema>;
+export type ClientConnectMessage = z.infer<typeof clientConnectMessageSchema>;
 
-const lobbyMessageSchema = z.object({
-  target: z.literal(WSMessageTarget.LOBBY),
-  command: z.enum(WSLobbyCommand),
-  data: lobbyDataSchema.optional(),
+const clientReconnectMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.RECONNECT),
+    id: IdSchema,
 });
-export type WSLobbyMessage = z.infer<typeof lobbyMessageSchema>;
+export type ClientReconnectMessage = z.infer<
+    typeof clientReconnectMessageSchema
+>;
 
-const gameMessageSchema = z.object({
-  target: z.literal(WSMessageTarget.GAME),
-  command: z.enum(WSGameCommand),
-  data: gameDataSchema.optional(),
+const clientCreateLobbyMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.CREATE_LOBBY),
 });
-export type WSGameMessage = z.infer<typeof gameMessageSchema>;
+export type ClientCreateLobbyMessage = z.infer<
+    typeof clientCreateLobbyMessageSchema
+>;
 
-const errorMessageSchema = z.object({
-  target: z.literal(WSMessageTarget.ERROR),
-  data: z.object({ message: z.string() }),
+const clientJoinLobbyMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.JOIN_LOBBY),
+    id: IdSchema,
 });
-export type WSErrorMessage = z.infer<typeof errorMessageSchema>;
+export type ClientJoinLobbyMessage = z.infer<
+    typeof clientJoinLobbyMessageSchema
+>;
 
-export const wsMessageSchema = z.discriminatedUnion("target", [
-  connectMessageSchema,
-  lobbyMessageSchema,
-  gameMessageSchema,
-  errorMessageSchema,
+const clientLeaveLobbyMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.LEAVE_LOBBY),
+});
+export type ClientLeaveLobbyMessage = z.infer<
+    typeof clientLeaveLobbyMessageSchema
+>;
+
+const clientStartGameMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.START_GAME),
+});
+export type ClientStartGameMessage = z.infer<
+    typeof clientStartGameMessageSchema
+>;
+
+const clientMessageSchena = z.discriminatedUnion("protocol", [
+    clientConnectMessageSchema,
+    clientReconnectMessageSchema,
+    clientCreateLobbyMessageSchema,
+    clientJoinLobbyMessageSchema,
+    clientLeaveLobbyMessageSchema,
+    clientStartGameMessageSchema,
 ]);
-export type WSMessage = z.infer<typeof wsMessageSchema>;
+export type ClientMessage = z.infer<typeof clientMessageSchena>;
 
-// ----------------------------------------------------------------------------
-// Shared Factory and Type Guard Functions
-// ----------------------------------------------------------------------------
-export const createId = (): Id => {
-  return crypto.randomUUID();
-};
+const serverConnectMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.CONNECT),
+        success: z.literal(true),
+        id: IdSchema,
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.CONNECT),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerConnectMessage = z.infer<typeof serverConnectMessageSchema>;
 
-export const createWSMessage = {
-  connect: (
-    command: WSConnectCommand,
-    data?: z.infer<typeof connectDataSchema>
-  ): WSConnectMessage => ({
-    target: WSMessageTarget.CONNECT,
-    command,
-    data,
-  }),
-  lobby: (
-    command: WSLobbyCommand,
-    data?: z.infer<typeof lobbyDataSchema>
-  ): WSLobbyMessage => ({
-    target: WSMessageTarget.LOBBY,
-    command,
-    data,
-  }),
-  game: (
-    command: WSGameCommand,
-    data?: z.infer<typeof gameDataSchema>
-  ): WSGameMessage => ({
-    target: WSMessageTarget.GAME,
-    command,
-    data,
-  }),
-  error: (message: string): WSErrorMessage => ({
-    target: WSMessageTarget.ERROR,
-    data: { message },
-  }),
-};
+const serverReconnectMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.RECONNECT),
+        success: z.literal(true),
+        id: IdSchema,
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.RECONNECT),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerReconnectMessage = z.infer<
+    typeof serverReconnectMessageSchema
+>;
 
-export function parseWSMessage(data: unknown): WSMessage | null {
-  const result = wsMessageSchema.safeParse(data);
-  return result.success ? result.data : null;
+const serverCreateLobbyMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.CREATE_LOBBY),
+        success: z.literal(true),
+        id: IdSchema,
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.CREATE_LOBBY),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerCreateLobbyMessage = z.infer<
+    typeof serverCreateLobbyMessageSchema
+>;
+
+const serverJoinLobbyMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.JOIN_LOBBY),
+        id: IdSchema,
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.JOIN_LOBBY),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerJoinLobbyMessage = z.infer<
+    typeof serverJoinLobbyMessageSchema
+>;
+
+const serverLeaveLobbyMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.LEAVE_LOBBY),
+        success: z.literal(true),
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.LEAVE_LOBBY),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerLeaveLobbyMessage = z.infer<
+    typeof serverLeaveLobbyMessageSchema
+>;
+
+const serverStartGameMessageSchema =
+    z.object({
+        protocol: z.literal(WSProtocol.START_GAME),
+        success: z.literal(true),
+    }) ||
+    z.object({
+        protocol: z.literal(WSProtocol.START_GAME),
+        success: z.literal(false),
+        error: z.string(),
+    });
+export type ServerStartGameMessage = z.infer<
+    typeof serverStartGameMessageSchema
+>;
+
+const serverErrorMessageSchema = z.object({
+    protocol: z.literal(WSProtocol.ERROR),
+    error: z.string(),
+});
+export type ServerErrorMessage = z.infer<typeof serverErrorMessageSchema>;
+
+const serverMessageSchema = z.discriminatedUnion("protocol", [
+    serverConnectMessageSchema,
+    serverReconnectMessageSchema,
+    serverCreateLobbyMessageSchema,
+    serverJoinLobbyMessageSchema,
+    serverLeaveLobbyMessageSchema,
+    serverStartGameMessageSchema,
+    serverErrorMessageSchema,
+]);
+export type ServerMessage = z.infer<typeof serverMessageSchema>;
+
+export function parseClientMessage(data: unknown): ClientMessage {
+    return clientMessageSchena.parse(data);
 }
 
-export const isConnectMessage = (msg: WSMessage): msg is WSConnectMessage =>
-  msg.target === WSMessageTarget.CONNECT;
-export const isLobbyMessage = (msg: WSMessage): msg is WSLobbyMessage =>
-  msg.target === WSMessageTarget.LOBBY;
-export const isGameMessage = (msg: WSMessage): msg is WSGameMessage =>
-  msg.target === WSMessageTarget.GAME;
-export const isErrorMessage = (msg: WSMessage): msg is WSErrorMessage =>
-  msg.target === WSMessageTarget.ERROR;
+export function parseServerMessage(data: unknown): ServerMessage {
+    return serverMessageSchema.parse(data);
+}

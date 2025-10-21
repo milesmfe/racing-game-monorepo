@@ -8,23 +8,22 @@ import "dotenv/config";
 import {
   Id,
   createId,
-  WSConnectCommand,
-  WSMessageTarget,
-  createWSMessage,
-  parseWSMessage,
-  type WSMessage,
-  isConnectMessage,
+  WSProtocol,
+  ClientMessage,
+  ServerMessage,
+  parseClientMessage,
 } from "@racing-game-mono/core";
-import LobbyHandler from "./game/LobbyHandler";
-import GameHandler from "./game/GameHandler";
+// import LobbyHandler from "./game/LobbyHandler";
+// import GameHandler from "./game/GameHandler";
 
 // ----------------------------------------------------------------------------
 // State & Connections
 // ----------------------------------------------------------------------------
 const connections = new Map<Id, WSContext>();
 const clientIds = new WeakMap<WSContext, Id>();
-const lobbyHandler = new LobbyHandler();
-const gameHandler = new GameHandler();
+// const lobbyHandler = new LobbyHandler();
+// const gameHandler = new GameHandler();
+const testKnownClients = Array<Id>();
 
 // ----------------------------------------------------------------------------
 // Hono Setup
@@ -39,41 +38,22 @@ app.use("/*", cors({ origin: process.env.ALLOWED_ORIGINS?.split(",") || [] }));
 app.get("/api/health", (c) => c.json({ status: "ok" }));
 
 // ----------------------------------------------------------------------------
-// Helper Functions
-// ----------------------------------------------------------------------------
-const sendError = (ws: WSContext, message: string): void => {
-  ws.send(JSON.stringify(createWSMessage.error(message)));
-};
-
-const isClientInActiveSession = (clientId: Id): boolean => {
-  return (
-    gameHandler.getPlayerGameId(clientId) !== null ||
-    lobbyHandler.getPlayerLobbyId(clientId) !== null
-  );
-};
-
-const handleClientMessage = async (
-  clientId: Id,
-  message: WSMessage,
-  ws: WSContext
-): Promise<void> => {
-  switch (message.target) {
-    case WSMessageTarget.LOBBY:
-      await lobbyHandler.handleMessage(clientId, message, ws);
-      break;
-    case WSMessageTarget.GAME:
-      await gameHandler.handleMessage(clientId, message, ws);
-      break;
-    case WSMessageTarget.CONNECT:
-      console.warn(`Client ${clientId} sent a CONNECT target message.`);
-      sendError(ws, "Connection messages are server-only.");
-      break;
-  }
-};
-
-// ----------------------------------------------------------------------------
 // WebSocket
 // ----------------------------------------------------------------------------
+
+function sendError(ws: WSContext, error: string): void {
+  const res: ServerMessage = {
+    protocol: WSProtocol.ERROR,
+    error,
+  };
+  ws.send(JSON.stringify(res));
+}
+
+function sendErrorAndClose(ws: WSContext, error: string, code: number): void {
+  sendError(ws, error);
+  ws.close(code, error);
+}
+
 app.get(
   "/ws",
   upgradeWebSocket(() => {
@@ -84,94 +64,96 @@ app.get(
           ws.close(1001, "Server full");
           return;
         }
-        // Otherwise, an unknown client has connected (no ID assigned yet)
         console.log("Unknown client connected");
       },
 
       onMessage(event, ws) {
-        let rawData: unknown;
+        // Parse and validate message
+        let message: ClientMessage;
         try {
-          rawData = JSON.parse(event.data.toString());
-        } catch (err) {
-          // Invalid JSON
-          sendError(ws, "Invalid JSON");
-          return;
-        }
-
-        const message = parseWSMessage(rawData);
-        if (!message) {
-          // Not a valid WSMessage
-          sendError(ws, "Invalid message format");
+          const rawMessage: unknown = JSON.parse(event.data.toString());
+          message = parseClientMessage(rawMessage);
+        } catch {
+          sendErrorAndClose(ws, "Invalid message", 1003);
           return;
         }
 
         let clientId = clientIds.get(ws);
-        if (!clientId) {
-          if (!isConnectMessage(message)) {
-            // First message from unknown client was not a CONNECT command
-            sendError(ws, "First message must be a CONNECT command");
+
+        // Handle RECONNECT for unknown connections
+        if (!clientId && message.protocol === WSProtocol.RECONNECT) {
+          if (!testKnownClients.includes(message.id)) {
+            sendErrorAndClose(ws, "Reconnect failed", 1008);
             return;
           }
 
-          // Handle a reconnect attempt
-          if (message.command === WSConnectCommand.RECONNECT) {
-            if (!message.data?.clientId) {
-              sendError(ws, "RECONNECT command missing clientId");
-              return;
-            }
-            clientId = message.data.clientId;
-            // If client is not in an active session, treat as new connection
-            if (!isClientInActiveSession(clientId)) {
-              console.log(
-                `Client ${clientId} failed to reconnect. Assigning new ID.`
-              );
-              clientId = createId();
-              connections.set(clientId, ws);
-              clientIds.set(ws, clientId);
-              const welcome = createWSMessage.connect(
-                WSConnectCommand.WELCOME,
-                { clientId }
-              );
-              ws.send(JSON.stringify(welcome));
-              return;
-            }
-            // Successful reconnection: reassign socket to existing clientId
-            connections.set(clientId, ws);
-            clientIds.set(ws, clientId);
-            console.log(`Client ${clientId} reconnected successfully.`);
-            const welcomeBack = createWSMessage.connect(
-              WSConnectCommand.WELCOME_BACK,
-              {
-                clientId,
-              }
-            );
-            ws.send(JSON.stringify(welcomeBack));
-            // TODO: Send state data for lobby/game
-            return;
-          }
+          connections.set(message.id, ws);
+          clientIds.set(ws, message.id);
+          clientId = message.id;
 
-          if (message.command === WSConnectCommand.HELLO) {
-            // New client connection: assign a fresh clientId
-            clientId = createId();
-            connections.set(clientId, ws);
-            clientIds.set(ws, clientId);
-            console.log(`Client ${clientId} connected.`);
-            const welcome = createWSMessage.connect(WSConnectCommand.WELCOME, {
-              clientId,
-            });
-            ws.send(JSON.stringify(welcome));
-            return;
-          }
-          // Unknown client with invalid CONNECT command
-          sendError(ws, "Invalid CONNECT command");
+          // TODO: Notify game/lobby of reconnection
+          console.log(`${clientId} reconnected`);
+
+          const res: ServerMessage = {
+            protocol: WSProtocol.RECONNECT,
+            id: clientId,
+            success: true,
+          };
+          ws.send(JSON.stringify(res));
           return;
         }
 
-        // Existing client: handle the message for lobby/game
-        handleClientMessage(clientId, message, ws).catch((err) => {
-          console.error(`Error handling message from ${clientId}:`, err);
-          sendError(ws, "Internal server error");
-        });
+        // Handle CONNECT for unknown connections
+        if (!clientId && message.protocol === WSProtocol.CONNECT) {
+          const id = createId();
+          connections.set(id, ws);
+          clientIds.set(ws, id);
+          testKnownClients.push(id); // TEST
+
+          console.log(
+            `${id} connected (${connections.size}/${MAX_CONNECTIONS})`
+          );
+
+          const res: ServerMessage = {
+            protocol: WSProtocol.CONNECT,
+            id,
+            success: true,
+          };
+          ws.send(JSON.stringify(res));
+          return;
+        }
+
+        // Unknown connections must CONNECT or RECONNECT first
+        if (!clientId) {
+          sendErrorAndClose(ws, "First message must be CONNECT", 1008);
+          return;
+        }
+
+        // Handle known client messages
+        switch (message.protocol) {
+          case WSProtocol.CREATE_LOBBY:
+            // TODO: Implement lobby creation
+            sendError(ws, "Not yet implemented");
+            break;
+
+          case WSProtocol.JOIN_LOBBY:
+            // TODO: Implement lobby joining
+            sendError(ws, "Not yet implemented");
+            break;
+
+          case WSProtocol.LEAVE_LOBBY:
+            // TODO: Implement lobby leaving
+            sendError(ws, "Not yet implemented");
+            break;
+
+          case WSProtocol.START_GAME:
+            // TODO: Implement game start
+            sendError(ws, "Not yet implemented");
+            break;
+
+          default:
+            sendError(ws, "Could not determine intent");
+        }
       },
 
       onClose(_event, ws) {
