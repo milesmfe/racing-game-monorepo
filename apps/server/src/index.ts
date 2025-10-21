@@ -64,7 +64,6 @@ app.get(
           ws.close(1001, "Server full");
           return;
         }
-        console.log("Unknown client connected");
       },
 
       onMessage(event, ws) {
@@ -160,7 +159,6 @@ app.get(
         // If socket had no assigned clientId, it was an unknown client
         const clientId = clientIds.get(ws);
         if (!clientId) {
-          console.log("Unknown client disconnected");
           return;
         }
 
