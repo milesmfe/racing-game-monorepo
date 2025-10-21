@@ -41,19 +41,6 @@ app.get("/api/health", (c) => c.json({ status: "ok" }));
 // WebSocket
 // ----------------------------------------------------------------------------
 
-function sendError(ws: WSContext, error: string): void {
-  const res: ServerMessage = {
-    protocol: WSProtocol.ERROR,
-    error,
-  };
-  ws.send(JSON.stringify(res));
-}
-
-function sendErrorAndClose(ws: WSContext, error: string, code: number): void {
-  sendError(ws, error);
-  ws.close(code, error);
-}
-
 app.get(
   "/ws",
   upgradeWebSocket(() => {
@@ -73,16 +60,23 @@ app.get(
           const rawMessage: unknown = JSON.parse(event.data.toString());
           message = parseClientMessage(rawMessage);
         } catch {
-          sendErrorAndClose(ws, "Invalid message", 1003);
+          ws.close(1003, "Invalid message");
           return;
         }
 
         let clientId = clientIds.get(ws);
+        let res: ServerMessage;
 
         // Handle RECONNECT for unknown connections
         if (!clientId && message.protocol === WSProtocol.RECONNECT) {
           if (!testKnownClients.includes(message.id)) {
-            sendErrorAndClose(ws, "Reconnect failed", 1008);
+            res = {
+              protocol: WSProtocol.RECONNECT,
+              success: false,
+              error: "Reconnect failed: unknown client",
+            };
+            ws.send(JSON.stringify(res));
+            ws.close(1008, "Reconnect failed");
             return;
           }
 
@@ -91,9 +85,11 @@ app.get(
           clientId = message.id;
 
           // TODO: Notify game/lobby of reconnection
-          console.log(`${clientId} reconnected`);
+          console.log(
+            `${clientId} reconnected (${connections.size}/${MAX_CONNECTIONS})`
+          );
 
-          const res: ServerMessage = {
+          res = {
             protocol: WSProtocol.RECONNECT,
             id: clientId,
             success: true,
@@ -113,7 +109,7 @@ app.get(
             `${id} connected (${connections.size}/${MAX_CONNECTIONS})`
           );
 
-          const res: ServerMessage = {
+          res = {
             protocol: WSProtocol.CONNECT,
             id,
             success: true,
@@ -124,34 +120,64 @@ app.get(
 
         // Unknown connections must CONNECT or RECONNECT first
         if (!clientId) {
-          sendErrorAndClose(ws, "First message must be CONNECT", 1008);
+          res = {
+            protocol: WSProtocol.CONNECT,
+            success: false,
+            error: "First message must be CONNECT",
+          };
+          ws.send(JSON.stringify(res));
+          ws.close(1008, "First message must be CONNECT");
           return;
         }
 
         // Handle known client messages
         switch (message.protocol) {
-          case WSProtocol.CREATE_LOBBY:
+          case WSProtocol.CREATE_LOBBY: {
             // TODO: Implement lobby creation
-            sendError(ws, "Not yet implemented");
+            res = {
+              protocol: WSProtocol.CREATE_LOBBY,
+              success: false,
+              error: "Not yet implemented",
+            };
+            ws.send(JSON.stringify(res));
             break;
+          }
 
-          case WSProtocol.JOIN_LOBBY:
+          case WSProtocol.JOIN_LOBBY: {
             // TODO: Implement lobby joining
-            sendError(ws, "Not yet implemented");
+            res = {
+              protocol: WSProtocol.JOIN_LOBBY,
+              success: false,
+              error: "Not yet implemented",
+            };
+            ws.send(JSON.stringify(res));
             break;
+          }
 
-          case WSProtocol.LEAVE_LOBBY:
+          case WSProtocol.LEAVE_LOBBY: {
             // TODO: Implement lobby leaving
-            sendError(ws, "Not yet implemented");
+            res = {
+              protocol: WSProtocol.LEAVE_LOBBY,
+              success: false,
+              error: "Not yet implemented",
+            };
+            ws.send(JSON.stringify(res));
             break;
+          }
 
-          case WSProtocol.START_GAME:
+          case WSProtocol.START_GAME: {
             // TODO: Implement game start
-            sendError(ws, "Not yet implemented");
+            res = {
+              protocol: WSProtocol.START_GAME,
+              success: false,
+              error: "Not yet implemented",
+            };
+            ws.send(JSON.stringify(res));
             break;
+          }
 
           default:
-            sendError(ws, "Could not determine intent");
+            break;
         }
       },
 

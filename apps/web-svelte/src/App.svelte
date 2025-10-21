@@ -54,19 +54,20 @@
     serverMessage = JSON.stringify(message, undefined, 2);
 
     switch (message.protocol) {
-      case WSProtocol.ERROR:
-        handleErrorMessage(message);
-        break;
-
       case WSProtocol.CONNECT:
         if (message.success) {
           handleConnectSuccess(message.id);
+        } else {
+          errorMessage = message.error;
         }
         break;
 
       case WSProtocol.RECONNECT:
         if (message.success) {
           handleReconnectSuccess(message.id);
+        } else {
+          errorMessage = message.error;
+          localStorage.removeItem(CLIENT_ID_KEY);
         }
         break;
 
@@ -74,17 +75,12 @@
       case WSProtocol.JOIN_LOBBY:
       case WSProtocol.LEAVE_LOBBY:
       case WSProtocol.START_GAME:
+        if (!message.success) {
+          errorMessage = message.error;
+        }
         // TODO: Implement lobby/game message handlers
         break;
     }
-  }
-
-  function handleErrorMessage(
-    message: ServerMessage & { protocol: WSProtocol.ERROR }
-  ) {
-    errorMessage = message.error;
-    connected = false;
-    localStorage.removeItem(CLIENT_ID_KEY);
   }
 
   function handleConnectSuccess(clientId: string) {
