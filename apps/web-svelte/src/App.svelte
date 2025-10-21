@@ -51,7 +51,7 @@
       return;
     }
 
-    serverMessage = JSON.stringify(message);
+    serverMessage = JSON.stringify(message, undefined, 2);
 
     switch (message.protocol) {
       case WSProtocol.ERROR:
@@ -137,7 +137,8 @@
       <p><strong>Client ID:</strong> {id}</p>
     {/if}
     {#if serverMessage}
-      <p><strong>Result:</strong> {serverMessage}</p>
+      <p><strong>Result:</strong></p>
+      <pre>{serverMessage}</pre>
     {/if}
     {#if errorMessage}
       <p class="error"><strong>Error:</strong> {errorMessage}</p>
