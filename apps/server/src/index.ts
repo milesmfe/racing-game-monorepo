@@ -3,7 +3,6 @@ import { cors } from "hono/cors";
 import { WSContext } from "hono/ws";
 import { serve } from "@hono/node-server";
 import { createNodeWebSocket } from "@hono/node-ws";
-import "dotenv/config";
 
 import {
   Id,
@@ -13,16 +12,17 @@ import {
   ServerMessage,
   parseClientMessage,
 } from "@racing-game-mono/core";
-// import LobbyHandler from "./game/LobbyHandler";
-// import GameHandler from "./game/GameHandler";
 
 // ----------------------------------------------------------------------------
 // State & Connections
 // ----------------------------------------------------------------------------
 const connections = new Map<Id, WSContext>();
 const clientIds = new WeakMap<WSContext, Id>();
-// const lobbyHandler = new LobbyHandler();
-// const gameHandler = new GameHandler();
+/**
+ * TEST IMPLEMENTATION
+ * 
+ * Needs to be replaced by a function which queries all active lobbies/games
+ */
 const testKnownClients = Array<Id>();
 
 // ----------------------------------------------------------------------------
@@ -31,11 +31,11 @@ const testKnownClients = Array<Id>();
 const app = new Hono();
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });
 
-const PORT = process.env.PORT || 3000;
-const MAX_CONNECTIONS = Number(process.env.MAX_CONNECTIONS) || 100;
+const PORT: number = process.env.PORT || 3000;
+const MAX_CONNECTIONS = process.env.MAX_CONNECTIONS || 100;
+const NODE_ENV: string = process.env.NODE_ENV || "development";
 
 app.use("/*", cors({ origin: process.env.ALLOWED_ORIGINS?.split(",") || [] }));
-app.get("/api/health", (c) => c.json({ status: "ok" }));
 
 // ----------------------------------------------------------------------------
 // WebSocket
@@ -198,6 +198,15 @@ app.get(
     };
   })
 );
+
+// ----------------------------------------------------------------------------
+// Serve Frontend in Production
+// ----------------------------------------------------------------------------
+if (NODE_ENV === "production") {
+  // TODO: Implement frontend serving
+} else if (NODE_ENV === "development") {
+  app.get("/", (c) => c.json({ message: "Racing Game Server", env: NODE_ENV }));
+}
 
 // ----------------------------------------------------------------------------
 // Start server
