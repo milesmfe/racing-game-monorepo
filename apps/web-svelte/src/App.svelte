@@ -14,6 +14,35 @@
 
   const CLIENT_ID_KEY = "clientId";
 
+  function create() {
+    const message: ClientMessage = {
+      protocol: WSProtocol.CREATE_LOBBY,
+    };
+    ws?.send(JSON.stringify(message));
+  }
+
+  function join() {
+    const message: ClientMessage = {
+      protocol: WSProtocol.JOIN_LOBBY,
+      id: id,
+    };
+    ws?.send(JSON.stringify(message));
+  }
+
+  function leave() {
+    const message: ClientMessage = {
+      protocol: WSProtocol.LEAVE_LOBBY,
+    };
+    ws?.send(JSON.stringify(message));
+  }
+
+  function start() {
+    const message: ClientMessage = {
+      protocol: WSProtocol.START_GAME,
+    };
+    ws?.send(JSON.stringify(message));
+  }
+
   function connect() {
     ws = new WebSocket(import.meta.env.VITE_WS_URL);
 
@@ -122,6 +151,10 @@
   <div class="controls">
     <button on:click={connect} disabled={connected}>Connect</button>
     <button on:click={disconnect} disabled={!connected}>Disconnect</button>
+    <button on:click={create} disabled={!connected}>Create</button>
+    <button on:click={join} disabled={!connected}>Join</button>
+    <button on:click={leave} disabled={!connected}>Leave</button>
+    <button on:click={start} disabled={!connected}>Start</button>
   </div>
 
   <div class="status">
