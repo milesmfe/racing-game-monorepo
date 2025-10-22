@@ -199,9 +199,15 @@
   <div class="controls">
     <button on:click={connect} disabled={connected}>Connect</button>
     <button on:click={disconnect} disabled={!connected}>Disconnect</button>
-    <button on:click={create} disabled={!connected || !!joinedLobbyId}>Create</button>
-    <button on:click={leave} disabled={!connected || !joinedLobbyId}>Leave</button>
-    <button on:click={start} disabled={!connected || !joinedLobbyId}>Start</button>
+    <button on:click={create} disabled={!connected || !!joinedLobbyId}
+      >Create</button
+    >
+    <button on:click={leave} disabled={!connected || !joinedLobbyId}
+      >Leave</button
+    >
+    <button on:click={start} disabled={!connected || !joinedLobbyId}
+      >Start</button
+    >
   </div>
 
   <div class="lobbyList" hidden={!connected || !lobbyList}>
