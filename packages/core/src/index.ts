@@ -11,12 +11,22 @@ export function createId(): Id {
   return crypto.randomUUID();
 }
 
+const lobbyListSchema = z.array(
+  z.object({
+    id: IdSchema,
+    playerCount: z.number(),
+    maxPlayers: z.number(),
+  })
+);
+export type LobbyList = z.infer<typeof lobbyListSchema>;
+
 // ----------------------------------------------------------------------------
 // WebSocket Messaging
 // ----------------------------------------------------------------------------
 export enum WSProtocol {
   CONNECT = "connect",
   RECONNECT = "reconnect",
+  GET_LOBBY_LIST = "get_lobby_list",
   CREATE_LOBBY = "create_lobby",
   JOIN_LOBBY = "join_lobby",
   LEAVE_LOBBY = "leave_lobby",
@@ -36,6 +46,13 @@ export type ClientReconnectMessage = z.infer<
   typeof clientReconnectMessageSchema
 >;
 
+const clientGetLobbyListMessageSchema = z.object({
+  protocol: z.literal(WSProtocol.GET_LOBBY_LIST),
+});
+export type ClientGetLobbyListMessage = z.infer<
+  typeof clientGetLobbyListMessageSchema
+>;
+
 const clientCreateLobbyMessageSchema = z.object({
   protocol: z.literal(WSProtocol.CREATE_LOBBY),
 });
@@ -53,6 +70,7 @@ export type ClientJoinLobbyMessage = z.infer<
 
 const clientLeaveLobbyMessageSchema = z.object({
   protocol: z.literal(WSProtocol.LEAVE_LOBBY),
+  id: IdSchema,
 });
 export type ClientLeaveLobbyMessage = z.infer<
   typeof clientLeaveLobbyMessageSchema
@@ -68,6 +86,7 @@ export type ClientStartGameMessage = z.infer<
 const clientMessageSchena = z.discriminatedUnion("protocol", [
   clientConnectMessageSchema,
   clientReconnectMessageSchema,
+  clientGetLobbyListMessageSchema,
   clientCreateLobbyMessageSchema,
   clientJoinLobbyMessageSchema,
   clientLeaveLobbyMessageSchema,
@@ -103,6 +122,22 @@ const serverReconnectMessageSchema = z.discriminatedUnion("success", [
 ]);
 export type ServerReconnectMessage = z.infer<
   typeof serverReconnectMessageSchema
+>;
+
+export const serverGetLobbyListMessageSchema = z.discriminatedUnion("success", [
+  z.object({
+    protocol: z.literal(WSProtocol.GET_LOBBY_LIST),
+    success: z.literal(true),
+    lobbyList: lobbyListSchema,
+  }),
+  z.object({
+    protocol: z.literal(WSProtocol.GET_LOBBY_LIST),
+    success: z.literal(false),
+    error: z.string(),
+  }),
+]);
+export type ServerGetLobbyListMessage = z.infer<
+  typeof serverGetLobbyListMessageSchema
 >;
 
 const serverCreateLobbyMessageSchema = z.discriminatedUnion("success", [
@@ -170,6 +205,7 @@ export type ServerStartGameMessage = z.infer<
 const serverMessageSchema = z.discriminatedUnion("protocol", [
   serverConnectMessageSchema,
   serverReconnectMessageSchema,
+  serverGetLobbyListMessageSchema,
   serverCreateLobbyMessageSchema,
   serverJoinLobbyMessageSchema,
   serverLeaveLobbyMessageSchema,

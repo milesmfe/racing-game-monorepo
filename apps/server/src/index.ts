@@ -11,19 +11,39 @@ import {
   ClientMessage,
   ServerMessage,
   parseClientMessage,
+  LobbyList,
 } from "@racing-game-mono/core";
+import { Lobby } from "./Lobby";
 
 // ----------------------------------------------------------------------------
 // State & Connections
 // ----------------------------------------------------------------------------
 const connections = new Map<Id, WSContext>();
 const clientIds = new WeakMap<WSContext, Id>();
-/**
- * TEST IMPLEMENTATION
- * 
- * Needs to be replaced by a function which queries all active lobbies/games
- */
-const testKnownClients = Array<Id>();
+const verifiedClientIds = Array<Id>();
+const lobbies = new Map<Id, Lobby>();
+
+function getLobbyList(): LobbyList {
+  return Array.from(lobbies.values()).map((lobby) => {
+    return {
+      id: lobby.id,
+      playerCount: lobby.getPlayerCount(),
+      maxPlayers: lobby.getMaxPlayers(),
+    };
+  });
+}
+
+function broadcastLobbyList() {
+  const lobbyList = getLobbyList();
+  connections.forEach((connection) => {
+    const res: ServerMessage = {
+      protocol: WSProtocol.GET_LOBBY_LIST,
+      success: true,
+      lobbyList,
+    };
+    connection.send(JSON.stringify(res));
+  });
+}
 
 // ----------------------------------------------------------------------------
 // Hono Setup
@@ -69,7 +89,7 @@ app.get(
 
         // Handle RECONNECT for unknown connections
         if (!clientId && message.protocol === WSProtocol.RECONNECT) {
-          if (!testKnownClients.includes(message.id)) {
+          if (!verifiedClientIds.includes(message.id)) {
             res = {
               protocol: WSProtocol.RECONNECT,
               success: false,
@@ -95,6 +115,7 @@ app.get(
             success: true,
           };
           ws.send(JSON.stringify(res));
+          broadcastLobbyList();
           return;
         }
 
@@ -103,7 +124,7 @@ app.get(
           const id = createId();
           connections.set(id, ws);
           clientIds.set(ws, id);
-          testKnownClients.push(id); // TEST
+          verifiedClientIds.push(id);
 
           console.log(
             `${id} connected (${connections.size}/${MAX_CONNECTIONS})`
@@ -115,6 +136,7 @@ app.get(
             success: true,
           };
           ws.send(JSON.stringify(res));
+          broadcastLobbyList();
           return;
         }
 
@@ -132,36 +154,89 @@ app.get(
 
         // Handle known client messages
         switch (message.protocol) {
-          case WSProtocol.CREATE_LOBBY: {
-            // TODO: Implement lobby creation
+          case WSProtocol.GET_LOBBY_LIST: {
             res = {
-              protocol: WSProtocol.CREATE_LOBBY,
-              success: false,
-              error: "Not yet implemented",
+              protocol: WSProtocol.GET_LOBBY_LIST,
+              success: true,
+              lobbyList: getLobbyList(),
             };
             ws.send(JSON.stringify(res));
+            break;
+          }
+
+          case WSProtocol.CREATE_LOBBY: {
+            const lobbyId = createId();
+            lobbies.set(lobbyId, new Lobby(lobbyId, clientId, ws));
+            res = {
+              protocol: WSProtocol.CREATE_LOBBY,
+              success: true,
+              id: lobbyId,
+            };
+            ws.send(JSON.stringify(res));
+            broadcastLobbyList();
             break;
           }
 
           case WSProtocol.JOIN_LOBBY: {
-            // TODO: Implement lobby joining
+            const lobby = lobbies.get(message.id);
+            if (!lobby) {
+              res = {
+                protocol: WSProtocol.JOIN_LOBBY,
+                success: false,
+                error: "Lobby not found",
+              };
+              ws.send(JSON.stringify(res));
+              break;
+            }
+            if (!lobby.addPlayer(clientId, ws)) {
+              res = {
+                protocol: WSProtocol.JOIN_LOBBY,
+                success: false,
+                error: "Lobby full",
+              };
+              ws.send(JSON.stringify(res));
+              break;
+            }
+
             res = {
               protocol: WSProtocol.JOIN_LOBBY,
-              success: false,
-              error: "Not yet implemented",
+              success: true,
+              id: lobby.id,
             };
             ws.send(JSON.stringify(res));
+            broadcastLobbyList();
             break;
           }
 
           case WSProtocol.LEAVE_LOBBY: {
-            // TODO: Implement lobby leaving
+            const lobby = lobbies.get(message.id);
+            if (!lobby) {
+              res = {
+                protocol: WSProtocol.LEAVE_LOBBY,
+                success: false,
+                error: "Lobby not found",
+              };
+              ws.send(JSON.stringify(res));
+              break;
+            }
+            if (!lobby.removePlayer(clientId)) {
+              res = {
+                protocol: WSProtocol.LEAVE_LOBBY,
+                success: false,
+                error: "Player not in lobby",
+              };
+              ws.send(JSON.stringify(res));
+              break;
+            }
+            if (lobby.isEmpty()) {
+              lobbies.delete(lobby.id);
+            }
             res = {
               protocol: WSProtocol.LEAVE_LOBBY,
-              success: false,
-              error: "Not yet implemented",
+              success: true,
             };
             ws.send(JSON.stringify(res));
+            broadcastLobbyList();
             break;
           }
 
@@ -181,7 +256,7 @@ app.get(
         }
       },
 
-      onClose(_event, ws) {
+      onClose(event, ws) {
         // If socket had no assigned clientId, it was an unknown client
         const clientId = clientIds.get(ws);
         if (!clientId) {
@@ -192,7 +267,8 @@ app.get(
         connections.delete(clientId);
         clientIds.delete(ws);
         console.log(
-          `Client ${clientId} disconnected (${connections.size}/${MAX_CONNECTIONS})`
+          `Client ${clientId} disconnected (${connections.size}/${MAX_CONNECTIONS})`,
+          event.reason ? `\n\tReason: ${event.reason}` : ""
         );
       },
     };

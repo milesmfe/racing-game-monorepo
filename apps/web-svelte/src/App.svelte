@@ -4,6 +4,7 @@
     WSProtocol,
     type ServerMessage,
     type ClientMessage,
+    type LobbyList,
   } from "@racing-game-mono/core";
 
   let ws: WebSocket | null = null;
@@ -11,6 +12,8 @@
   let errorMessage: string = "";
   let serverMessage: string = "";
   let id: string = "";
+  let joinedLobbyId: string = "";
+  let lobbyList: LobbyList = [];
 
   const CLIENT_ID_KEY = "clientId";
 
@@ -21,10 +24,10 @@
     ws?.send(JSON.stringify(message));
   }
 
-  function join() {
+  function join(lobbyId: string) {
     const message: ClientMessage = {
       protocol: WSProtocol.JOIN_LOBBY,
-      id: id,
+      id: lobbyId,
     };
     ws?.send(JSON.stringify(message));
   }
@@ -32,6 +35,7 @@
   function leave() {
     const message: ClientMessage = {
       protocol: WSProtocol.LEAVE_LOBBY,
+      id: joinedLobbyId,
     };
     ws?.send(JSON.stringify(message));
   }
@@ -100,14 +104,51 @@
         }
         break;
 
-      case WSProtocol.CREATE_LOBBY:
+      case WSProtocol.GET_LOBBY_LIST:
+        if (message.success) {
+          lobbyList = message.lobbyList;
+          errorMessage = "";
+        } else {
+          errorMessage = message.error;
+          lobbyList = [];
+        }
+        break;
+
       case WSProtocol.JOIN_LOBBY:
+        if (message.success) {
+          joinedLobbyId = message.id;
+          errorMessage = "";
+        } else {
+          errorMessage = message.error;
+        }
+        break;
+
+      case WSProtocol.CREATE_LOBBY:
+        if (message.success) {
+          joinedLobbyId = message.id;
+          errorMessage = "";
+        } else {
+          errorMessage = message.error;
+        }
+        break;
+
       case WSProtocol.LEAVE_LOBBY:
+        if (message.success) {
+          joinedLobbyId = "";
+          errorMessage = "";
+        } else {
+          errorMessage = message.error;
+        }
+        break;
+
       case WSProtocol.START_GAME:
         if (!message.success) {
           errorMessage = message.error;
         }
-        // TODO: Implement lobby/game message handlers
+        // TODO: Implement start_game logic
+        break;
+
+      default:
         break;
     }
   }
@@ -129,9 +170,16 @@
     connected = false;
   }
 
-  function handleClose() {
+  function handleClose(event: CloseEvent) {
     connected = false;
-    console.log("Disconnected from server");
+    ws = null;
+    id = "";
+    errorMessage = "";
+    serverMessage = "";
+    console.log(
+      "Disconnected from server",
+      event.reason ? `\n\tReason: ${event.reason}` : ""
+    );
   }
 
   function disconnect() {
@@ -151,10 +199,37 @@
   <div class="controls">
     <button on:click={connect} disabled={connected}>Connect</button>
     <button on:click={disconnect} disabled={!connected}>Disconnect</button>
-    <button on:click={create} disabled={!connected}>Create</button>
-    <button on:click={join} disabled={!connected}>Join</button>
-    <button on:click={leave} disabled={!connected}>Leave</button>
-    <button on:click={start} disabled={!connected}>Start</button>
+    <button on:click={create} disabled={!connected || !!joinedLobbyId}>Create</button>
+    <button on:click={leave} disabled={!connected || !joinedLobbyId}>Leave</button>
+    <button on:click={start} disabled={!connected || !joinedLobbyId}>Start</button>
+  </div>
+
+  <div class="lobbyList" hidden={!connected || !lobbyList}>
+    <p>
+      <strong>Available Lobbies:</strong>
+    </p>
+    {#each lobbyList as lobby}
+      <div class="lobby">
+        <p>
+          <strong>Lobby ID:</strong>
+          {lobby.id}
+        </p>
+        <p>
+          <strong>Player Count:</strong>
+          {lobby.playerCount}
+        </p>
+        <p>
+          <strong>Max Players:</strong>
+          {lobby.maxPlayers}
+        </p>
+        <button
+          on:click={() => {
+            join(lobby.id);
+          }}
+          disabled={lobby.id === joinedLobbyId}>Join</button
+        >
+      </div>
+    {/each}
   </div>
 
   <div class="status">
@@ -165,8 +240,14 @@
     {#if id}
       <p><strong>Client ID:</strong> {id}</p>
     {/if}
+    {#if joinedLobbyId}
+      <p>
+        <strong>Lobby ID:</strong>
+        {joinedLobbyId}
+      </p>
+    {/if}
     {#if serverMessage}
-      <p><strong>Result:</strong></p>
+      <p><strong>Latest Message:</strong></p>
       <pre>{serverMessage}</pre>
     {/if}
     {#if errorMessage}
