@@ -5,7 +5,7 @@ import {
   WSProtocol,
   LobbyList,
 } from "@racing-game-mono/core";
-import { state } from "../state";
+import { state } from "./state";
 
 export const getLobbyList = (): LobbyList =>
   Array.from(state.lobbies.values()).map((l) => ({

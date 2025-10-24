@@ -8,9 +8,9 @@ import {
 } from "@racing-game-mono/core";
 import { state } from "./state";
 import { config } from "./config";
-import { send, closeWithError } from "./utils/messaging";
-import { handleConnect, handleReconnect } from "./handlers/handshake";
-import { handlers } from "./handlers/messages";
+import { send, closeWithError } from "./messaging";
+import { handleConnect, handleReconnect } from "../handlers/handshake";
+import { handlers } from "../handlers/messages";
 
 export const setupWebSocket = (app: Hono) => {
   const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });

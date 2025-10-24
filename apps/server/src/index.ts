@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
-import { config } from "./config";
-import { setupWebSocket } from "./websocket";
+import { config } from "./utils/config";
+import { setupWebSocket } from "./utils/websocket";
 
 const app = new Hono();
 

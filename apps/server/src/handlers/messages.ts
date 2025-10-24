@@ -5,7 +5,7 @@ import {
   ClientMessage,
   WSProtocol,
 } from "@racing-game-mono/core";
-import { state } from "../state";
+import { state } from "../utils/state";
 import { Lobby } from "../classes/Lobby";
 import {
   sendSuccess,

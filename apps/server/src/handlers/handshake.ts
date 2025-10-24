@@ -6,8 +6,8 @@ import {
   ServerReconnectMessage,
   WSProtocol,
 } from "@racing-game-mono/core";
-import { state } from "../state";
-import { config } from "../config";
+import { state } from "../utils/state";
+import { config } from "../utils/config";
 import { send, closeWithError, broadcastLobbyList } from "../utils/messaging";
 
 export const handleConnect = (ws: WSContext): boolean => {
