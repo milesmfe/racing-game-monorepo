@@ -12,7 +12,7 @@ export default defineConfig({
   server: { port: VITE_PORT },
   resolve: {
     alias: {
-      "@lib": path.resolve(__dirname, "./src/lib"),
+      "@lib": path.resolve(__dirname, "src/lib"),
     },
   },
 });
