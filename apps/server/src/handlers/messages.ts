@@ -1,9 +1,12 @@
 import { WSContext } from "hono/ws";
+import { fileURLToPath } from "url";
 import {
   Id,
   createId,
   ClientMessage,
   WSProtocol,
+  TrackList,
+  parseServerMessage,
 } from "@racing-game-mono/core";
 import { state } from "../utils/state";
 import { Lobby } from "../classes/Lobby";
@@ -13,8 +16,19 @@ import {
   broadcastLobbyList,
   getLobbyList,
 } from "../utils/messaging";
+import { readFile } from "fs/promises";
+import path from "path";
+import { readdir } from "fs";
 
-type Handler = (msg: ClientMessage, ws: WSContext, clientId: Id) => void;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const tracksDirPath = path.join(__dirname, "../../data/tracks");
+
+type Handler = (
+  msg: ClientMessage,
+  ws: WSContext,
+  clientId: Id
+) => Promise<void> | void;
 
 const handleGetLobbyList: Handler = (_, ws) => {
   sendSuccess(ws, {
@@ -85,6 +99,38 @@ const handleStartGame: Handler = (_, ws) => {
   sendError(ws, WSProtocol.START_GAME, "Not yet implemented");
 };
 
+const handleGetTrackList: Handler = async (msg, ws) => {
+  if (msg.protocol !== WSProtocol.GET_TRACK_LIST) return;
+  try {
+    const files = readdir(tracksDirPath, async (err, files) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      const trackFiles = files.filter((file) => file.endsWith(".json"));
+      const trackList: TrackList = [];
+      for (const file of trackFiles) {
+        const filePath = path.join(tracksDirPath, file);
+        const data = await readFile(filePath, "utf8");
+        trackList.push(JSON.parse(data));
+      }
+      parseServerMessage({
+        protocol: WSProtocol.GET_TRACK_LIST,
+        success: true,
+        trackList,
+      });
+      sendSuccess(ws, {
+        protocol: WSProtocol.GET_TRACK_LIST,
+        success: true,
+        trackList,
+      });
+    });
+  } catch (err) {
+    console.error(err);
+    sendError(ws, WSProtocol.GET_TRACK_LIST, "Error reading track files");
+  }
+};
+
 export const handlers: Record<WSProtocol, Handler> = {
   [WSProtocol.CONNECT]: () => {},
   [WSProtocol.RECONNECT]: () => {},
@@ -93,4 +139,5 @@ export const handlers: Record<WSProtocol, Handler> = {
   [WSProtocol.JOIN_LOBBY]: handleJoinLobby,
   [WSProtocol.LEAVE_LOBBY]: handleLeaveLobby,
   [WSProtocol.START_GAME]: handleStartGame,
+  [WSProtocol.GET_TRACK_LIST]: handleGetTrackList,
 };

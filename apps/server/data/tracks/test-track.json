@@ -1,0 +1,2248 @@
+{
+  "id": "19fbabd5-883d-4319-bcbc-a3216846e735",
+  "name": "Testing Track",
+  "description": "idk what to put here",
+  "author": "Miles Edwards",
+  "data": {
+    "meta": {
+      "lanes": 5,
+      "segmentsPerLane": 67,
+      "direction": "clockwise"
+    },
+    "segments": [
+      {
+        "id": "l0-s0",
+        "type": "corner",
+        "lane": 0,
+        "index": 0,
+        "data": 140,
+        "connections": {
+          "next": "l0-s3",
+          "diag_left": null,
+          "diag_right": "l1-s3"
+        }
+      },
+      {
+        "id": "l0-s3",
+        "type": "normal",
+        "lane": 0,
+        "index": 3,
+        "data": null,
+        "connections": {
+          "next": "l0-s4",
+          "diag_left": null,
+          "diag_right": "l1-s4"
+        }
+      },
+      {
+        "id": "l0-s4",
+        "type": "normal",
+        "lane": 0,
+        "index": 4,
+        "data": null,
+        "connections": {
+          "next": "l0-s5",
+          "diag_left": null,
+          "diag_right": "l1-s5"
+        }
+      },
+      {
+        "id": "l0-s5",
+        "type": "normal",
+        "lane": 0,
+        "index": 5,
+        "data": null,
+        "connections": {
+          "next": "l0-s6",
+          "diag_left": null,
+          "diag_right": "l1-s6"
+        }
+      },
+      {
+        "id": "l0-s6",
+        "type": "normal",
+        "lane": 0,
+        "index": 6,
+        "data": null,
+        "connections": {
+          "next": "l0-s7",
+          "diag_left": null,
+          "diag_right": "l1-s7"
+        }
+      },
+      {
+        "id": "l0-s7",
+        "type": "normal",
+        "lane": 0,
+        "index": 7,
+        "data": null,
+        "connections": {
+          "next": "l0-s8",
+          "diag_left": null,
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l0-s8",
+        "type": "normal",
+        "lane": 0,
+        "index": 8,
+        "data": null,
+        "connections": {
+          "next": "l0-s9",
+          "diag_left": null,
+          "diag_right": "l1-s9"
+        }
+      },
+      {
+        "id": "l0-s9",
+        "type": "normal",
+        "lane": 0,
+        "index": 9,
+        "data": null,
+        "connections": {
+          "next": "l0-s10",
+          "diag_left": null,
+          "diag_right": "l1-s10"
+        }
+      },
+      {
+        "id": "l0-s10",
+        "type": "normal",
+        "lane": 0,
+        "index": 10,
+        "data": null,
+        "connections": {
+          "next": "l0-s11",
+          "diag_left": null,
+          "diag_right": "l1-s11"
+        }
+      },
+      {
+        "id": "l0-s11",
+        "type": "normal",
+        "lane": 0,
+        "index": 11,
+        "data": null,
+        "connections": {
+          "next": "l0-s12",
+          "diag_left": null,
+          "diag_right": "l1-s12"
+        }
+      },
+      {
+        "id": "l0-s12",
+        "type": "normal",
+        "lane": 0,
+        "index": 12,
+        "data": null,
+        "connections": {
+          "next": "l0-s13",
+          "diag_left": null,
+          "diag_right": "l1-s13"
+        }
+      },
+      {
+        "id": "l0-s13",
+        "type": "normal",
+        "lane": 0,
+        "index": 13,
+        "data": null,
+        "connections": {
+          "next": "l0-s14",
+          "diag_left": null,
+          "diag_right": "l1-s14"
+        }
+      },
+      {
+        "id": "l0-s14",
+        "type": "normal",
+        "lane": 0,
+        "index": 14,
+        "data": null,
+        "connections": {
+          "next": "l0-s15",
+          "diag_left": null,
+          "diag_right": "l1-s15"
+        }
+      },
+      {
+        "id": "l0-s15",
+        "type": "normal",
+        "lane": 0,
+        "index": 15,
+        "data": null,
+        "connections": {
+          "next": "l0-s16",
+          "diag_left": null,
+          "diag_right": "l1-s16"
+        }
+      },
+      {
+        "id": "l0-s16",
+        "type": "normal",
+        "lane": 0,
+        "index": 16,
+        "data": null,
+        "connections": {
+          "next": "l0-s17",
+          "diag_left": null,
+          "diag_right": "l1-s17"
+        }
+      },
+      {
+        "id": "l0-s17",
+        "type": "normal",
+        "lane": 0,
+        "index": 17,
+        "data": null,
+        "connections": {
+          "next": "l0-s18",
+          "diag_left": null,
+          "diag_right": "l1-s18"
+        }
+      },
+      {
+        "id": "l0-s18",
+        "type": "normal",
+        "lane": 0,
+        "index": 18,
+        "data": null,
+        "connections": {
+          "next": "l0-s19",
+          "diag_left": null,
+          "diag_right": "l1-s19"
+        }
+      },
+      {
+        "id": "l0-s19",
+        "type": "normal",
+        "lane": 0,
+        "index": 19,
+        "data": null,
+        "connections": {
+          "next": "l0-s20",
+          "diag_left": null,
+          "diag_right": "l1-s20"
+        }
+      },
+      {
+        "id": "l0-s20",
+        "type": "normal",
+        "lane": 0,
+        "index": 20,
+        "data": null,
+        "connections": {
+          "next": "l0-s21",
+          "diag_left": null,
+          "diag_right": "l1-s21"
+        }
+      },
+      {
+        "id": "l0-s21",
+        "type": "normal",
+        "lane": 0,
+        "index": 21,
+        "data": null,
+        "connections": {
+          "next": "l0-s22",
+          "diag_left": null,
+          "diag_right": "l1-s22"
+        }
+      },
+      {
+        "id": "l0-s22",
+        "type": "normal",
+        "lane": 0,
+        "index": 22,
+        "data": null,
+        "connections": {
+          "next": "l0-s23",
+          "diag_left": null,
+          "diag_right": "l1-s23"
+        }
+      },
+      {
+        "id": "l0-s23",
+        "type": "corner",
+        "lane": 0,
+        "index": 23,
+        "data": 80,
+        "connections": {
+          "next": "l0-s25",
+          "diag_left": null,
+          "diag_right": "l1-s25"
+        }
+      },
+      {
+        "id": "l0-s25",
+        "type": "normal",
+        "lane": 0,
+        "index": 25,
+        "data": null,
+        "connections": {
+          "next": "l0-s26",
+          "diag_left": null,
+          "diag_right": "l1-s26"
+        }
+      },
+      {
+        "id": "l0-s26",
+        "type": "normal",
+        "lane": 0,
+        "index": 26,
+        "data": null,
+        "connections": {
+          "next": "l0-s27",
+          "diag_left": null,
+          "diag_right": "l1-s27"
+        }
+      },
+      {
+        "id": "l0-s27",
+        "type": "normal",
+        "lane": 0,
+        "index": 27,
+        "data": null,
+        "connections": {
+          "next": "l0-s28",
+          "diag_left": null,
+          "diag_right": "l1-s28"
+        }
+      },
+      {
+        "id": "l0-s28",
+        "type": "normal",
+        "lane": 0,
+        "index": 28,
+        "data": null,
+        "connections": {
+          "next": "l0-s29",
+          "diag_left": null,
+          "diag_right": "l1-s29"
+        }
+      },
+      {
+        "id": "l0-s29",
+        "type": "normal",
+        "lane": 0,
+        "index": 29,
+        "data": null,
+        "connections": {
+          "next": "l0-s30",
+          "diag_left": null,
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l0-s30",
+        "type": "corner",
+        "lane": 0,
+        "index": 30,
+        "data": 40,
+        "connections": {
+          "next": "l0-s33",
+          "diag_left": null,
+          "diag_right": "l1-s33"
+        }
+      },
+      {
+        "id": "l0-s33",
+        "type": "normal",
+        "lane": 0,
+        "index": 33,
+        "data": null,
+        "connections": {
+          "next": "l0-s34",
+          "diag_left": null,
+          "diag_right": "l1-s34"
+        }
+      },
+      {
+        "id": "l0-s34",
+        "type": "normal",
+        "lane": 0,
+        "index": 34,
+        "data": null,
+        "connections": {
+          "next": "l0-s35",
+          "diag_left": null,
+          "diag_right": "l1-s35"
+        }
+      },
+      {
+        "id": "l0-s35",
+        "type": "corner",
+        "lane": 0,
+        "index": 35,
+        "data": 60,
+        "connections": {
+          "next": "l0-s37",
+          "diag_left": null,
+          "diag_right": "l1-s37"
+        }
+      },
+      {
+        "id": "l0-s37",
+        "type": "normal",
+        "lane": 0,
+        "index": 37,
+        "data": null,
+        "connections": {
+          "next": "l0-s38",
+          "diag_left": null,
+          "diag_right": "l1-s38"
+        }
+      },
+      {
+        "id": "l0-s38",
+        "type": "corner",
+        "lane": 0,
+        "index": 38,
+        "data": 60,
+        "connections": {
+          "next": "l0-s39",
+          "diag_left": null,
+          "diag_right": "l1-s39"
+        }
+      },
+      {
+        "id": "l0-s39",
+        "type": "normal",
+        "lane": 0,
+        "index": 39,
+        "data": null,
+        "connections": {
+          "next": "l0-s40",
+          "diag_left": null,
+          "diag_right": "l1-s40"
+        }
+      },
+      {
+        "id": "l0-s40",
+        "type": "normal",
+        "lane": 0,
+        "index": 40,
+        "data": null,
+        "connections": {
+          "next": "l0-s41",
+          "diag_left": null,
+          "diag_right": "l1-s41"
+        }
+      },
+      {
+        "id": "l0-s41",
+        "type": "normal",
+        "lane": 0,
+        "index": 41,
+        "data": null,
+        "connections": {
+          "next": "l0-s42",
+          "diag_left": null,
+          "diag_right": "l1-s42"
+        }
+      },
+      {
+        "id": "l0-s42",
+        "type": "finish",
+        "lane": 0,
+        "index": 42,
+        "data": null,
+        "connections": {
+          "next": "l0-s43",
+          "diag_left": null,
+          "diag_right": "l1-s43"
+        }
+      },
+      {
+        "id": "l0-s43",
+        "type": "grid",
+        "lane": 0,
+        "index": 43,
+        "data": 3,
+        "connections": {
+          "next": "l0-s44",
+          "diag_left": null,
+          "diag_right": "l1-s44"
+        }
+      },
+      {
+        "id": "l0-s44",
+        "type": "normal",
+        "lane": 0,
+        "index": 44,
+        "data": null,
+        "connections": {
+          "next": "l0-s45",
+          "diag_left": null,
+          "diag_right": "l1-s45"
+        }
+      },
+      {
+        "id": "l0-s45",
+        "type": "normal",
+        "lane": 0,
+        "index": 45,
+        "data": null,
+        "connections": {
+          "next": "l0-s46",
+          "diag_left": null,
+          "diag_right": "l1-s46"
+        }
+      },
+      {
+        "id": "l0-s46",
+        "type": "normal",
+        "lane": 0,
+        "index": 46,
+        "data": null,
+        "connections": {
+          "next": "l0-s47",
+          "diag_left": null,
+          "diag_right": "l1-s47"
+        }
+      },
+      {
+        "id": "l0-s47",
+        "type": "normal",
+        "lane": 0,
+        "index": 47,
+        "data": null,
+        "connections": {
+          "next": "l0-s48",
+          "diag_left": null,
+          "diag_right": "l1-s48"
+        }
+      },
+      {
+        "id": "l0-s48",
+        "type": "normal",
+        "lane": 0,
+        "index": 48,
+        "data": null,
+        "connections": {
+          "next": "l0-s49",
+          "diag_left": null,
+          "diag_right": "l1-s49"
+        }
+      },
+      {
+        "id": "l0-s49",
+        "type": "normal",
+        "lane": 0,
+        "index": 49,
+        "data": null,
+        "connections": {
+          "next": "l0-s50",
+          "diag_left": null,
+          "diag_right": "l1-s50"
+        }
+      },
+      {
+        "id": "l0-s50",
+        "type": "normal",
+        "lane": 0,
+        "index": 50,
+        "data": null,
+        "connections": {
+          "next": "l0-s51",
+          "diag_left": null,
+          "diag_right": "l1-s51"
+        }
+      },
+      {
+        "id": "l0-s51",
+        "type": "corner",
+        "lane": 0,
+        "index": 51,
+        "data": 100,
+        "connections": {
+          "next": "l0-s53",
+          "diag_left": null,
+          "diag_right": "l1-s53"
+        }
+      },
+      {
+        "id": "l0-s53",
+        "type": "normal",
+        "lane": 0,
+        "index": 53,
+        "data": null,
+        "connections": {
+          "next": "l0-s54",
+          "diag_left": null,
+          "diag_right": "l1-s54"
+        }
+      },
+      {
+        "id": "l0-s54",
+        "type": "normal",
+        "lane": 0,
+        "index": 54,
+        "data": null,
+        "connections": {
+          "next": "l0-s55",
+          "diag_left": null,
+          "diag_right": "l1-s55"
+        }
+      },
+      {
+        "id": "l0-s55",
+        "type": "normal",
+        "lane": 0,
+        "index": 55,
+        "data": null,
+        "connections": {
+          "next": "l0-s56",
+          "diag_left": null,
+          "diag_right": "l1-s56"
+        }
+      },
+      {
+        "id": "l0-s56",
+        "type": "normal",
+        "lane": 0,
+        "index": 56,
+        "data": null,
+        "connections": {
+          "next": "l0-s57",
+          "diag_left": null,
+          "diag_right": "l1-s57"
+        }
+      },
+      {
+        "id": "l0-s57",
+        "type": "normal",
+        "lane": 0,
+        "index": 57,
+        "data": null,
+        "connections": {
+          "next": "l0-s58",
+          "diag_left": null,
+          "diag_right": "l1-s58"
+        }
+      },
+      {
+        "id": "l0-s58",
+        "type": "normal",
+        "lane": 0,
+        "index": 58,
+        "data": null,
+        "connections": {
+          "next": "l0-s59",
+          "diag_left": null,
+          "diag_right": "l1-s59"
+        }
+      },
+      {
+        "id": "l0-s59",
+        "type": "normal",
+        "lane": 0,
+        "index": 59,
+        "data": null,
+        "connections": {
+          "next": "l0-s60",
+          "diag_left": null,
+          "diag_right": "l1-s60"
+        }
+      },
+      {
+        "id": "l0-s60",
+        "type": "normal",
+        "lane": 0,
+        "index": 60,
+        "data": null,
+        "connections": {
+          "next": "l0-s61",
+          "diag_left": null,
+          "diag_right": "l1-s61"
+        }
+      },
+      {
+        "id": "l0-s61",
+        "type": "normal",
+        "lane": 0,
+        "index": 61,
+        "data": null,
+        "connections": {
+          "next": "l0-s62",
+          "diag_left": null,
+          "diag_right": "l1-s62"
+        }
+      },
+      {
+        "id": "l0-s62",
+        "type": "normal",
+        "lane": 0,
+        "index": 62,
+        "data": null,
+        "connections": {
+          "next": "l0-s63",
+          "diag_left": null,
+          "diag_right": "l1-s63"
+        }
+      },
+      {
+        "id": "l0-s63",
+        "type": "normal",
+        "lane": 0,
+        "index": 63,
+        "data": null,
+        "connections": {
+          "next": "l0-s64",
+          "diag_left": null,
+          "diag_right": "l1-s64"
+        }
+      },
+      {
+        "id": "l0-s64",
+        "type": "normal",
+        "lane": 0,
+        "index": 64,
+        "data": null,
+        "connections": {
+          "next": "l0-s65",
+          "diag_left": null,
+          "diag_right": "l1-s65"
+        }
+      },
+      {
+        "id": "l0-s65",
+        "type": "normal",
+        "lane": 0,
+        "index": 65,
+        "data": null,
+        "connections": {
+          "next": "l0-s66",
+          "diag_left": null,
+          "diag_right": "l1-s66"
+        }
+      },
+      {
+        "id": "l0-s66",
+        "type": "normal",
+        "lane": 0,
+        "index": 66,
+        "data": null,
+        "connections": {
+          "next": "l0-s0",
+          "diag_left": null,
+          "diag_right": "l1-s0"
+        }
+      },
+      {
+        "id": "l1-s0",
+        "type": "corner",
+        "lane": 1,
+        "index": 0,
+        "data": 140,
+        "connections": {
+          "next": "l1-s3",
+          "diag_left": "l0-s3",
+          "diag_right": "l3-s3"
+        }
+      },
+      {
+        "id": "l1-s3",
+        "type": "normal",
+        "lane": 1,
+        "index": 3,
+        "data": null,
+        "connections": {
+          "next": "l1-s4",
+          "diag_left": "l0-s4",
+          "diag_right": "l3-s4"
+        }
+      },
+      {
+        "id": "l1-s4",
+        "type": "normal",
+        "lane": 1,
+        "index": 4,
+        "data": null,
+        "connections": {
+          "next": "l1-s5",
+          "diag_left": "l0-s5",
+          "diag_right": "l3-s5"
+        }
+      },
+      {
+        "id": "l1-s5",
+        "type": "normal",
+        "lane": 1,
+        "index": 5,
+        "data": null,
+        "connections": {
+          "next": "l1-s6",
+          "diag_left": "l0-s6",
+          "diag_right": "l3-s6"
+        }
+      },
+      {
+        "id": "l1-s6",
+        "type": "normal",
+        "lane": 1,
+        "index": 6,
+        "data": null,
+        "connections": {
+          "next": "l1-s7",
+          "diag_left": "l0-s7",
+          "diag_right": "l3-s7"
+        }
+      },
+      {
+        "id": "l1-s7",
+        "type": "normal",
+        "lane": 1,
+        "index": 7,
+        "data": null,
+        "connections": {
+          "next": null,
+          "diag_left": "l0-s8",
+          "diag_right": "l3-s8"
+        }
+      },
+      {
+        "id": "l1-s12",
+        "type": "normal",
+        "lane": 1,
+        "index": 12,
+        "data": null,
+        "connections": {
+          "next": "l1-s13",
+          "diag_left": "l0-s13",
+          "diag_right": "l3-s13"
+        }
+      },
+      {
+        "id": "l1-s13",
+        "type": "normal",
+        "lane": 1,
+        "index": 13,
+        "data": null,
+        "connections": {
+          "next": "l1-s14",
+          "diag_left": "l0-s14",
+          "diag_right": "l3-s14"
+        }
+      },
+      {
+        "id": "l1-s14",
+        "type": "normal",
+        "lane": 1,
+        "index": 14,
+        "data": null,
+        "connections": {
+          "next": "l1-s15",
+          "diag_left": "l0-s15",
+          "diag_right": "l3-s15"
+        }
+      },
+      {
+        "id": "l1-s15",
+        "type": "normal",
+        "lane": 1,
+        "index": 15,
+        "data": null,
+        "connections": {
+          "next": "l1-s16",
+          "diag_left": "l0-s16",
+          "diag_right": "l3-s16"
+        }
+      },
+      {
+        "id": "l1-s16",
+        "type": "normal",
+        "lane": 1,
+        "index": 16,
+        "data": null,
+        "connections": {
+          "next": "l1-s17",
+          "diag_left": "l0-s17",
+          "diag_right": "l3-s17"
+        }
+      },
+      {
+        "id": "l1-s17",
+        "type": "normal",
+        "lane": 1,
+        "index": 17,
+        "data": null,
+        "connections": {
+          "next": "l1-s18",
+          "diag_left": "l0-s18",
+          "diag_right": "l3-s18"
+        }
+      },
+      {
+        "id": "l1-s18",
+        "type": "normal",
+        "lane": 1,
+        "index": 18,
+        "data": null,
+        "connections": {
+          "next": "l1-s19",
+          "diag_left": "l0-s19",
+          "diag_right": "l3-s19"
+        }
+      },
+      {
+        "id": "l1-s19",
+        "type": "normal",
+        "lane": 1,
+        "index": 19,
+        "data": null,
+        "connections": {
+          "next": "l1-s20",
+          "diag_left": "l0-s20",
+          "diag_right": "l3-s20"
+        }
+      },
+      {
+        "id": "l1-s20",
+        "type": "normal",
+        "lane": 1,
+        "index": 20,
+        "data": null,
+        "connections": {
+          "next": "l1-s21",
+          "diag_left": "l0-s21",
+          "diag_right": "l3-s21"
+        }
+      },
+      {
+        "id": "l1-s21",
+        "type": "normal",
+        "lane": 1,
+        "index": 21,
+        "data": null,
+        "connections": {
+          "next": "l1-s22",
+          "diag_left": "l0-s22",
+          "diag_right": "l3-s22"
+        }
+      },
+      {
+        "id": "l1-s22",
+        "type": "normal",
+        "lane": 1,
+        "index": 22,
+        "data": null,
+        "connections": {
+          "next": "l1-s23",
+          "diag_left": "l0-s23",
+          "diag_right": "l3-s23"
+        }
+      },
+      {
+        "id": "l1-s23",
+        "type": "corner",
+        "lane": 1,
+        "index": 23,
+        "data": 80,
+        "connections": {
+          "next": "l1-s25",
+          "diag_left": "l0-s25",
+          "diag_right": "l3-s25"
+        }
+      },
+      {
+        "id": "l1-s25",
+        "type": "normal",
+        "lane": 1,
+        "index": 25,
+        "data": null,
+        "connections": {
+          "next": "l1-s26",
+          "diag_left": "l0-s26",
+          "diag_right": "l3-s26"
+        }
+      },
+      {
+        "id": "l1-s26",
+        "type": "normal",
+        "lane": 1,
+        "index": 26,
+        "data": null,
+        "connections": {
+          "next": "l1-s27",
+          "diag_left": "l0-s27",
+          "diag_right": "l3-s27"
+        }
+      },
+      {
+        "id": "l1-s27",
+        "type": "normal",
+        "lane": 1,
+        "index": 27,
+        "data": null,
+        "connections": {
+          "next": "l1-s28",
+          "diag_left": "l0-s28",
+          "diag_right": "l3-s28"
+        }
+      },
+      {
+        "id": "l1-s28",
+        "type": "normal",
+        "lane": 1,
+        "index": 28,
+        "data": null,
+        "connections": {
+          "next": "l1-s29",
+          "diag_left": "l0-s29",
+          "diag_right": "l3-s29"
+        }
+      },
+      {
+        "id": "l1-s29",
+        "type": "normal",
+        "lane": 1,
+        "index": 29,
+        "data": null,
+        "connections": {
+          "next": null,
+          "diag_left": "l0-s30",
+          "diag_right": "l3-s30"
+        }
+      },
+      {
+        "id": "l1-s37",
+        "type": "normal",
+        "lane": 1,
+        "index": 37,
+        "data": null,
+        "connections": {
+          "next": "l1-s38",
+          "diag_left": "l0-s38",
+          "diag_right": "l2-s38"
+        }
+      },
+      {
+        "id": "l1-s38",
+        "type": "corner",
+        "lane": 1,
+        "index": 38,
+        "data": 60,
+        "connections": {
+          "next": "l1-s39",
+          "diag_left": "l0-s39",
+          "diag_right": "l2-s39"
+        }
+      },
+      {
+        "id": "l1-s39",
+        "type": "normal",
+        "lane": 1,
+        "index": 39,
+        "data": null,
+        "connections": {
+          "next": "l1-s40",
+          "diag_left": "l0-s40",
+          "diag_right": "l2-s40"
+        }
+      },
+      {
+        "id": "l1-s40",
+        "type": "normal",
+        "lane": 1,
+        "index": 40,
+        "data": null,
+        "connections": {
+          "next": "l1-s41",
+          "diag_left": "l0-s41",
+          "diag_right": "l2-s41"
+        }
+      },
+      {
+        "id": "l1-s41",
+        "type": "normal",
+        "lane": 1,
+        "index": 41,
+        "data": null,
+        "connections": {
+          "next": "l1-s42",
+          "diag_left": "l0-s42",
+          "diag_right": "l2-s42"
+        }
+      },
+      {
+        "id": "l1-s42",
+        "type": "finish",
+        "lane": 1,
+        "index": 42,
+        "data": null,
+        "connections": {
+          "next": "l1-s43",
+          "diag_left": "l0-s43",
+          "diag_right": "l2-s43"
+        }
+      },
+      {
+        "id": "l1-s43",
+        "type": "grid",
+        "lane": 1,
+        "index": 43,
+        "data": 2,
+        "connections": {
+          "next": "l1-s44",
+          "diag_left": "l0-s44",
+          "diag_right": "l2-s44"
+        }
+      },
+      {
+        "id": "l1-s44",
+        "type": "normal",
+        "lane": 1,
+        "index": 44,
+        "data": null,
+        "connections": {
+          "next": "l1-s45",
+          "diag_left": "l0-s45",
+          "diag_right": "l2-s45"
+        }
+      },
+      {
+        "id": "l1-s45",
+        "type": "normal",
+        "lane": 1,
+        "index": 45,
+        "data": null,
+        "connections": {
+          "next": "l1-s46",
+          "diag_left": "l0-s46",
+          "diag_right": "l2-s46"
+        }
+      },
+      {
+        "id": "l1-s46",
+        "type": "normal",
+        "lane": 1,
+        "index": 46,
+        "data": null,
+        "connections": {
+          "next": "l1-s47",
+          "diag_left": "l0-s47",
+          "diag_right": "l2-s47"
+        }
+      },
+      {
+        "id": "l1-s47",
+        "type": "normal",
+        "lane": 1,
+        "index": 47,
+        "data": null,
+        "connections": {
+          "next": "l1-s48",
+          "diag_left": "l0-s48",
+          "diag_right": "l2-s48"
+        }
+      },
+      {
+        "id": "l1-s48",
+        "type": "normal",
+        "lane": 1,
+        "index": 48,
+        "data": null,
+        "connections": {
+          "next": "l1-s49",
+          "diag_left": "l0-s49",
+          "diag_right": "l2-s49"
+        }
+      },
+      {
+        "id": "l1-s49",
+        "type": "normal",
+        "lane": 1,
+        "index": 49,
+        "data": null,
+        "connections": {
+          "next": "l1-s50",
+          "diag_left": "l0-s50",
+          "diag_right": "l2-s50"
+        }
+      },
+      {
+        "id": "l1-s50",
+        "type": "normal",
+        "lane": 1,
+        "index": 50,
+        "data": null,
+        "connections": {
+          "next": "l1-s51",
+          "diag_left": "l0-s51",
+          "diag_right": "l2-s51"
+        }
+      },
+      {
+        "id": "l1-s51",
+        "type": "corner",
+        "lane": 1,
+        "index": 51,
+        "data": 100,
+        "connections": {
+          "next": "l1-s53",
+          "diag_left": "l0-s53",
+          "diag_right": "l3-s53"
+        }
+      },
+      {
+        "id": "l1-s53",
+        "type": "normal",
+        "lane": 1,
+        "index": 53,
+        "data": null,
+        "connections": {
+          "next": "l1-s54",
+          "diag_left": "l0-s54",
+          "diag_right": "l3-s54"
+        }
+      },
+      {
+        "id": "l1-s54",
+        "type": "normal",
+        "lane": 1,
+        "index": 54,
+        "data": null,
+        "connections": {
+          "next": "l1-s55",
+          "diag_left": "l0-s55",
+          "diag_right": "l3-s55"
+        }
+      },
+      {
+        "id": "l1-s55",
+        "type": "normal",
+        "lane": 1,
+        "index": 55,
+        "data": null,
+        "connections": {
+          "next": "l1-s56",
+          "diag_left": "l0-s56",
+          "diag_right": "l3-s56"
+        }
+      },
+      {
+        "id": "l1-s56",
+        "type": "normal",
+        "lane": 1,
+        "index": 56,
+        "data": null,
+        "connections": {
+          "next": "l1-s57",
+          "diag_left": "l0-s57",
+          "diag_right": "l3-s57"
+        }
+      },
+      {
+        "id": "l1-s57",
+        "type": "normal",
+        "lane": 1,
+        "index": 57,
+        "data": null,
+        "connections": {
+          "next": "l1-s58",
+          "diag_left": "l0-s58",
+          "diag_right": "l3-s58"
+        }
+      },
+      {
+        "id": "l1-s58",
+        "type": "normal",
+        "lane": 1,
+        "index": 58,
+        "data": null,
+        "connections": {
+          "next": "l1-s59",
+          "diag_left": "l0-s59",
+          "diag_right": "l3-s59"
+        }
+      },
+      {
+        "id": "l1-s59",
+        "type": "normal",
+        "lane": 1,
+        "index": 59,
+        "data": null,
+        "connections": {
+          "next": "l1-s60",
+          "diag_left": "l0-s60",
+          "diag_right": "l3-s60"
+        }
+      },
+      {
+        "id": "l1-s60",
+        "type": "normal",
+        "lane": 1,
+        "index": 60,
+        "data": null,
+        "connections": {
+          "next": "l1-s61",
+          "diag_left": "l0-s61",
+          "diag_right": "l3-s61"
+        }
+      },
+      {
+        "id": "l1-s61",
+        "type": "normal",
+        "lane": 1,
+        "index": 61,
+        "data": null,
+        "connections": {
+          "next": "l1-s62",
+          "diag_left": "l0-s62",
+          "diag_right": "l3-s62"
+        }
+      },
+      {
+        "id": "l1-s62",
+        "type": "normal",
+        "lane": 1,
+        "index": 62,
+        "data": null,
+        "connections": {
+          "next": "l1-s63",
+          "diag_left": "l0-s63",
+          "diag_right": "l3-s63"
+        }
+      },
+      {
+        "id": "l1-s63",
+        "type": "normal",
+        "lane": 1,
+        "index": 63,
+        "data": null,
+        "connections": {
+          "next": "l1-s64",
+          "diag_left": "l0-s64",
+          "diag_right": "l3-s64"
+        }
+      },
+      {
+        "id": "l1-s64",
+        "type": "normal",
+        "lane": 1,
+        "index": 64,
+        "data": null,
+        "connections": {
+          "next": "l1-s65",
+          "diag_left": "l0-s65",
+          "diag_right": "l3-s65"
+        }
+      },
+      {
+        "id": "l1-s65",
+        "type": "normal",
+        "lane": 1,
+        "index": 65,
+        "data": null,
+        "connections": {
+          "next": "l1-s66",
+          "diag_left": "l0-s66",
+          "diag_right": "l3-s66"
+        }
+      },
+      {
+        "id": "l1-s66",
+        "type": "normal",
+        "lane": 1,
+        "index": 66,
+        "data": null,
+        "connections": {
+          "next": "l1-s0",
+          "diag_left": "l0-s0",
+          "diag_right": "l3-s0"
+        }
+      },
+      {
+        "id": "l2-s36",
+        "type": "normal",
+        "lane": 2,
+        "index": 36,
+        "data": null,
+        "connections": {
+          "next": "l2-s39",
+          "diag_left": "l1-s39",
+          "diag_right": "l3-s39"
+        }
+      },
+      {
+        "id": "l2-s39",
+        "type": "normal",
+        "lane": 2,
+        "index": 39,
+        "data": null,
+        "connections": {
+          "next": "l2-s40",
+          "diag_left": "l1-s40",
+          "diag_right": "l3-s40"
+        }
+      },
+      {
+        "id": "l2-s40",
+        "type": "normal",
+        "lane": 2,
+        "index": 40,
+        "data": null,
+        "connections": {
+          "next": "l2-s41",
+          "diag_left": "l1-s41",
+          "diag_right": "l3-s41"
+        }
+      },
+      {
+        "id": "l2-s41",
+        "type": "normal",
+        "lane": 2,
+        "index": 41,
+        "data": null,
+        "connections": {
+          "next": "l2-s42",
+          "diag_left": "l1-s42",
+          "diag_right": "l3-s42"
+        }
+      },
+      {
+        "id": "l2-s42",
+        "type": "finish",
+        "lane": 2,
+        "index": 42,
+        "data": null,
+        "connections": {
+          "next": "l2-s43",
+          "diag_left": "l1-s43",
+          "diag_right": "l3-s43"
+        }
+      },
+      {
+        "id": "l2-s43",
+        "type": "grid",
+        "lane": 2,
+        "index": 43,
+        "data": 1,
+        "connections": {
+          "next": "l2-s44",
+          "diag_left": "l1-s44",
+          "diag_right": "l3-s44"
+        }
+      },
+      {
+        "id": "l2-s44",
+        "type": "normal",
+        "lane": 2,
+        "index": 44,
+        "data": null,
+        "connections": {
+          "next": "l2-s45",
+          "diag_left": "l1-s45",
+          "diag_right": "l3-s45"
+        }
+      },
+      {
+        "id": "l2-s45",
+        "type": "normal",
+        "lane": 2,
+        "index": 45,
+        "data": null,
+        "connections": {
+          "next": "l2-s46",
+          "diag_left": "l1-s46",
+          "diag_right": "l3-s46"
+        }
+      },
+      {
+        "id": "l2-s46",
+        "type": "normal",
+        "lane": 2,
+        "index": 46,
+        "data": null,
+        "connections": {
+          "next": "l2-s47",
+          "diag_left": "l1-s47",
+          "diag_right": "l3-s47"
+        }
+      },
+      {
+        "id": "l2-s47",
+        "type": "normal",
+        "lane": 2,
+        "index": 47,
+        "data": null,
+        "connections": {
+          "next": "l2-s48",
+          "diag_left": "l1-s48",
+          "diag_right": "l3-s48"
+        }
+      },
+      {
+        "id": "l2-s48",
+        "type": "normal",
+        "lane": 2,
+        "index": 48,
+        "data": null,
+        "connections": {
+          "next": null,
+          "diag_left": "l1-s53",
+          "diag_right": "l3-s53"
+        }
+      },
+      {
+        "id": "l3-s0",
+        "type": "corner",
+        "lane": 3,
+        "index": 0,
+        "data": 140,
+        "connections": {
+          "next": "l3-s3",
+          "diag_left": "l1-s3",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s3",
+        "type": "normal",
+        "lane": 3,
+        "index": 3,
+        "data": null,
+        "connections": {
+          "next": "l3-s4",
+          "diag_left": "l1-s4",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s4",
+        "type": "normal",
+        "lane": 3,
+        "index": 4,
+        "data": null,
+        "connections": {
+          "next": "l3-s5",
+          "diag_left": "l1-s5",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s5",
+        "type": "normal",
+        "lane": 3,
+        "index": 5,
+        "data": null,
+        "connections": {
+          "next": "l3-s6",
+          "diag_left": "l1-s6",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s6",
+        "type": "normal",
+        "lane": 3,
+        "index": 6,
+        "data": null,
+        "connections": {
+          "next": "l3-s7",
+          "diag_left": "l1-s7",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s7",
+        "type": "normal",
+        "lane": 3,
+        "index": 7,
+        "data": null,
+        "connections": {
+          "next": "l3-s8",
+          "diag_left": null,
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s8",
+        "type": "normal",
+        "lane": 3,
+        "index": 8,
+        "data": null,
+        "connections": {
+          "next": "l3-s9",
+          "diag_left": "l1-s9",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s9",
+        "type": "normal",
+        "lane": 3,
+        "index": 9,
+        "data": null,
+        "connections": {
+          "next": "l3-s10",
+          "diag_left": "l1-s10",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s10",
+        "type": "normal",
+        "lane": 3,
+        "index": 10,
+        "data": null,
+        "connections": {
+          "next": "l3-s11",
+          "diag_left": "l1-s11",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s11",
+        "type": "normal",
+        "lane": 3,
+        "index": 11,
+        "data": null,
+        "connections": {
+          "next": "l3-s12",
+          "diag_left": "l1-s12",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s12",
+        "type": "normal",
+        "lane": 3,
+        "index": 12,
+        "data": null,
+        "connections": {
+          "next": "l3-s13",
+          "diag_left": "l1-s13",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s13",
+        "type": "normal",
+        "lane": 3,
+        "index": 13,
+        "data": null,
+        "connections": {
+          "next": "l3-s14",
+          "diag_left": "l1-s14",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s14",
+        "type": "normal",
+        "lane": 3,
+        "index": 14,
+        "data": null,
+        "connections": {
+          "next": "l3-s15",
+          "diag_left": "l1-s15",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s15",
+        "type": "normal",
+        "lane": 3,
+        "index": 15,
+        "data": null,
+        "connections": {
+          "next": "l3-s16",
+          "diag_left": "l1-s16",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s16",
+        "type": "normal",
+        "lane": 3,
+        "index": 16,
+        "data": null,
+        "connections": {
+          "next": "l3-s17",
+          "diag_left": "l1-s17",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s17",
+        "type": "normal",
+        "lane": 3,
+        "index": 17,
+        "data": null,
+        "connections": {
+          "next": "l3-s18",
+          "diag_left": "l1-s18",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s18",
+        "type": "normal",
+        "lane": 3,
+        "index": 18,
+        "data": null,
+        "connections": {
+          "next": "l3-s19",
+          "diag_left": "l1-s19",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s19",
+        "type": "normal",
+        "lane": 3,
+        "index": 19,
+        "data": null,
+        "connections": {
+          "next": "l3-s20",
+          "diag_left": "l1-s20",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s20",
+        "type": "normal",
+        "lane": 3,
+        "index": 20,
+        "data": null,
+        "connections": {
+          "next": "l3-s21",
+          "diag_left": "l1-s21",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s21",
+        "type": "normal",
+        "lane": 3,
+        "index": 21,
+        "data": null,
+        "connections": {
+          "next": "l3-s22",
+          "diag_left": "l1-s22",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s22",
+        "type": "normal",
+        "lane": 3,
+        "index": 22,
+        "data": null,
+        "connections": {
+          "next": "l3-s23",
+          "diag_left": "l1-s23",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s23",
+        "type": "corner",
+        "lane": 3,
+        "index": 23,
+        "data": 80,
+        "connections": {
+          "next": "l3-s25",
+          "diag_left": "l1-s25",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s25",
+        "type": "normal",
+        "lane": 3,
+        "index": 25,
+        "data": null,
+        "connections": {
+          "next": "l3-s26",
+          "diag_left": "l1-s26",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s26",
+        "type": "normal",
+        "lane": 3,
+        "index": 26,
+        "data": null,
+        "connections": {
+          "next": "l3-s27",
+          "diag_left": "l1-s27",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s27",
+        "type": "normal",
+        "lane": 3,
+        "index": 27,
+        "data": null,
+        "connections": {
+          "next": "l3-s28",
+          "diag_left": "l1-s28",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s28",
+        "type": "normal",
+        "lane": 3,
+        "index": 28,
+        "data": null,
+        "connections": {
+          "next": "l3-s29",
+          "diag_left": "l1-s29",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s29",
+        "type": "normal",
+        "lane": 3,
+        "index": 29,
+        "data": null,
+        "connections": {
+          "next": "l3-s30",
+          "diag_left": null,
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s30",
+        "type": "normal",
+        "lane": 3,
+        "index": 30,
+        "data": null,
+        "connections": {
+          "next": "l3-s31",
+          "diag_left": null,
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s31",
+        "type": "corner",
+        "lane": 3,
+        "index": 31,
+        "data": 60,
+        "connections": {
+          "next": "l3-s33",
+          "diag_left": "l1-s33",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s33",
+        "type": "normal",
+        "lane": 3,
+        "index": 33,
+        "data": null,
+        "connections": {
+          "next": "l3-s34",
+          "diag_left": "l1-s34",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s34",
+        "type": "normal",
+        "lane": 3,
+        "index": 34,
+        "data": null,
+        "connections": {
+          "next": "l3-s35",
+          "diag_left": "l1-s35",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s35",
+        "type": "normal",
+        "lane": 3,
+        "index": 35,
+        "data": null,
+        "connections": {
+          "next": "l3-s36",
+          "diag_left": "l2-s36",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s36",
+        "type": "corner",
+        "lane": 3,
+        "index": 36,
+        "data": 60,
+        "connections": {
+          "next": "l3-s39",
+          "diag_left": "l2-s39",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s39",
+        "type": "normal",
+        "lane": 3,
+        "index": 39,
+        "data": null,
+        "connections": {
+          "next": "l3-s40",
+          "diag_left": "l2-s40",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s40",
+        "type": "normal",
+        "lane": 3,
+        "index": 40,
+        "data": null,
+        "connections": {
+          "next": "l3-s41",
+          "diag_left": "l2-s41",
+          "diag_right": "l4-s41"
+        }
+      },
+      {
+        "id": "l3-s41",
+        "type": "normal",
+        "lane": 3,
+        "index": 41,
+        "data": null,
+        "connections": {
+          "next": "l3-s42",
+          "diag_left": "l2-s42",
+          "diag_right": "l4-s42"
+        }
+      },
+      {
+        "id": "l3-s42",
+        "type": "finish",
+        "lane": 3,
+        "index": 42,
+        "data": null,
+        "connections": {
+          "next": "l3-s43",
+          "diag_left": "l2-s43",
+          "diag_right": "l4-s43"
+        }
+      },
+      {
+        "id": "l3-s43",
+        "type": "grid",
+        "lane": 3,
+        "index": 43,
+        "data": 0,
+        "connections": {
+          "next": "l3-s44",
+          "diag_left": "l2-s44",
+          "diag_right": "l4-s44"
+        }
+      },
+      {
+        "id": "l3-s44",
+        "type": "normal",
+        "lane": 3,
+        "index": 44,
+        "data": null,
+        "connections": {
+          "next": "l3-s45",
+          "diag_left": "l2-s45",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s45",
+        "type": "normal",
+        "lane": 3,
+        "index": 45,
+        "data": null,
+        "connections": {
+          "next": "l3-s46",
+          "diag_left": "l2-s46",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s46",
+        "type": "normal",
+        "lane": 3,
+        "index": 46,
+        "data": null,
+        "connections": {
+          "next": "l3-s47",
+          "diag_left": "l2-s47",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s47",
+        "type": "normal",
+        "lane": 3,
+        "index": 47,
+        "data": null,
+        "connections": {
+          "next": "l3-s48",
+          "diag_left": "l2-s48",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s48",
+        "type": "normal",
+        "lane": 3,
+        "index": 48,
+        "data": null,
+        "connections": {
+          "next": "l3-s49",
+          "diag_left": "l2-s49",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s49",
+        "type": "normal",
+        "lane": 3,
+        "index": 49,
+        "data": null,
+        "connections": {
+          "next": "l3-s50",
+          "diag_left": "l2-s50",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s50",
+        "type": "corner",
+        "lane": 3,
+        "index": 50,
+        "data": 80,
+        "connections": {
+          "next": "l3-s53",
+          "diag_left": "l1-s53",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s53",
+        "type": "normal",
+        "lane": 3,
+        "index": 53,
+        "data": null,
+        "connections": {
+          "next": "l3-s54",
+          "diag_left": "l1-s54",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s54",
+        "type": "normal",
+        "lane": 3,
+        "index": 54,
+        "data": null,
+        "connections": {
+          "next": "l3-s55",
+          "diag_left": "l1-s55",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s55",
+        "type": "normal",
+        "lane": 3,
+        "index": 55,
+        "data": null,
+        "connections": {
+          "next": "l3-s56",
+          "diag_left": "l1-s56",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s56",
+        "type": "normal",
+        "lane": 3,
+        "index": 56,
+        "data": null,
+        "connections": {
+          "next": "l3-s57",
+          "diag_left": "l1-s57",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s57",
+        "type": "normal",
+        "lane": 3,
+        "index": 57,
+        "data": null,
+        "connections": {
+          "next": "l3-s58",
+          "diag_left": "l1-s58",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s58",
+        "type": "normal",
+        "lane": 3,
+        "index": 58,
+        "data": null,
+        "connections": {
+          "next": "l3-s59",
+          "diag_left": "l1-s59",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s59",
+        "type": "normal",
+        "lane": 3,
+        "index": 59,
+        "data": null,
+        "connections": {
+          "next": "l3-s60",
+          "diag_left": "l1-s60",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s60",
+        "type": "normal",
+        "lane": 3,
+        "index": 60,
+        "data": null,
+        "connections": {
+          "next": "l3-s61",
+          "diag_left": "l1-s61",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s61",
+        "type": "normal",
+        "lane": 3,
+        "index": 61,
+        "data": null,
+        "connections": {
+          "next": "l3-s62",
+          "diag_left": "l1-s62",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s62",
+        "type": "normal",
+        "lane": 3,
+        "index": 62,
+        "data": null,
+        "connections": {
+          "next": "l3-s63",
+          "diag_left": "l1-s63",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s63",
+        "type": "normal",
+        "lane": 3,
+        "index": 63,
+        "data": null,
+        "connections": {
+          "next": "l3-s64",
+          "diag_left": "l1-s64",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s64",
+        "type": "normal",
+        "lane": 3,
+        "index": 64,
+        "data": null,
+        "connections": {
+          "next": "l3-s65",
+          "diag_left": "l1-s65",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s65",
+        "type": "normal",
+        "lane": 3,
+        "index": 65,
+        "data": null,
+        "connections": {
+          "next": "l3-s66",
+          "diag_left": "l1-s66",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l3-s66",
+        "type": "normal",
+        "lane": 3,
+        "index": 66,
+        "data": null,
+        "connections": {
+          "next": "l3-s0",
+          "diag_left": "l1-s0",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l4-s41",
+        "type": "pit",
+        "lane": 4,
+        "index": 41,
+        "data": 3,
+        "connections": {
+          "next": "l4-s42",
+          "diag_left": "l3-s42",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l4-s42",
+        "type": "pit",
+        "lane": 4,
+        "index": 42,
+        "data": 2,
+        "connections": {
+          "next": "l4-s43",
+          "diag_left": "l3-s43",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l4-s43",
+        "type": "pit",
+        "lane": 4,
+        "index": 43,
+        "data": 1,
+        "connections": {
+          "next": "l4-s44",
+          "diag_left": "l3-s44",
+          "diag_right": null
+        }
+      },
+      {
+        "id": "l4-s44",
+        "type": "pit",
+        "lane": 4,
+        "index": 44,
+        "data": 0,
+        "connections": {
+          "next": null,
+          "diag_left": "l3-s45",
+          "diag_right": null
+        }
+      }
+    ]
+  },
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-168.10000610351562 28.549999237060547 1032.9200134277344 805.9299812316895\" width=\"1032.9200134277344\" height=\"805.9299812316895\"><defs><pattern id=\"checkerboard\" patternUnits=\"userSpaceOnUse\" width=\"12\" height=\"12\"><rect width=\"12\" height=\"12\" fill=\"#f0f0f0\"/><rect width=\"6\" height=\"6\" fill=\"#333\"/><rect x=\"6\" y=\"6\" width=\"6\" height=\"6\" fill=\"#333\"/></pattern></defs><g style=\"vector-effect: non-scaling-stroke;\"><g class=\"segment-group\"><polygon points=\"171.26,139.04 174.12,136.62 177.49,133.81 180.93,131.00 184.43,128.20 187.94,125.45 191.58,122.67 195.24,119.95 198.97,117.25 202.82,114.55 206.75,111.89 210.71,109.31 214.85,106.72 219.07,104.21 223.35,101.77 227.75,99.41 232.18,97.15 236.68,95.00 241.35,92.91 245.93,90.99 250.66,89.14 255.28,87.46 260.00,85.87 264.59,84.42 269.25,83.05 273.78,81.81 278.30,80.65 282.67,79.59 287.12,78.57 291.40,77.63 295.69,76.73 299.73,96.31 295.61,97.18 291.49,98.08 287.28,99.05 283.13,100.06 278.91,101.14 274.69,102.30 270.42,103.55 266.19,104.88 261.91,106.33 257.70,107.86 253.45,109.52 249.29,111.27 245.11,113.14 241.03,115.09 237.00,117.14 233.02,119.28 229.12,121.50 225.27,123.79 221.49,126.16 217.81,128.56 214.17,131.02 210.58,133.53 207.07,136.07 203.62,138.64 200.19,141.26 196.84,143.89 193.51,146.55 190.22,149.24 186.98,151.94 184.00,154.46\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"194.38758607406788\" y=\"133.4367387462291\" transform=\"rotate(52.584128361795635, 194.38758607406788, 133.4367387462291)\" font-size=\"9.999999999999998\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999994\" style=\"pointer-events: none; user-select: none;\">140</text></g><g class=\"segment-group\"><polygon points=\"295.69,76.73 299.93,75.87 304.09,75.05 308.23,74.25 312.28,73.49 316.36,72.73 320.38,71.98 324.36,71.25 328.35,70.51 332.29,69.78 336.27,69.04 339.92,88.71 335.94,89.45 331.98,90.18 327.99,90.91 324.01,91.65 320.01,92.39 315.98,93.14 311.96,93.90 307.90,94.68 303.84,95.48 299.73,96.31\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"336.27,69.04 340.40,68.28 344.50,67.54 348.60,66.81 352.71,66.09 356.84,65.38 360.95,64.70 365.05,64.02 369.24,63.35 373.36,62.70 377.48,62.06 380.50,81.83 376.43,82.46 372.38,83.10 368.28,83.76 364.23,84.43 360.18,85.10 356.12,85.80 352.07,86.50 348.02,87.22 343.98,87.96 339.92,88.71\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"377.48,62.06 381.60,61.44 385.73,60.83 389.85,60.23 393.99,59.64 398.12,59.06 402.26,58.50 406.40,57.95 410.55,57.41 414.65,56.89 418.79,56.38 421.22,76.23 417.14,76.73 413.08,77.25 409.00,77.78 404.92,78.32 400.84,78.88 396.77,79.44 392.70,80.02 388.63,80.61 384.56,81.22 380.50,81.83\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"418.79,56.38 422.95,55.88 427.11,55.39 431.27,54.92 435.45,54.46 439.62,54.01 443.76,53.59 447.91,53.17 452.10,52.77 456.30,52.38 460.50,52.01 462.22,71.93 458.10,72.30 453.99,72.68 449.87,73.08 445.78,73.48 441.70,73.91 437.60,74.34 433.50,74.80 429.40,75.26 425.31,75.74 421.22,76.23\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"460.50,52.01 464.70,51.65 468.83,51.32 473.05,50.99 477.27,50.69 481.50,50.40 485.74,50.13 489.98,49.87 494.13,49.65 498.39,49.43 502.65,49.24 503.51,69.22 499.35,69.41 495.20,69.62 491.10,69.84 486.96,70.09 482.82,70.35 478.68,70.64 474.55,70.94 470.42,71.25 466.34,71.58 462.22,71.93\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"502.65,49.24 506.92,49.07 511.21,48.92 515.50,48.79 519.74,48.70 523.98,48.62 528.30,48.57 532.63,48.55 536.96,48.56 541.31,48.60 545.66,48.67 545.26,68.67 541.06,68.60 536.86,68.56 532.67,68.55 528.48,68.57 524.30,68.62 520.15,68.69 516.00,68.79 511.83,68.91 507.67,69.05 503.51,69.22\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"545.66,48.67 550.01,48.77 554.40,48.92 558.80,49.10 563.22,49.32 567.70,49.59 572.20,49.90 576.66,50.27 581.15,50.68 585.69,51.16 590.30,51.71 587.78,71.55 583.46,71.04 579.18,70.59 574.92,70.19 570.67,69.85 566.40,69.55 562.14,69.29 557.91,69.08 553.68,68.90 549.46,68.77 545.26,68.67\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"590.30,51.71 594.84,52.32 599.55,53.03 604.25,53.81 608.92,54.68 613.51,55.62 617.99,56.60 622.46,57.64 626.91,58.74 631.35,59.89 635.74,61.09 630.32,80.34 626.17,79.21 621.99,78.12 617.80,77.09 613.59,76.11 609.37,75.19 605.09,74.31 600.77,73.51 596.42,72.78 592.06,72.13 587.78,71.55\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"635.74,61.09 640.11,62.35 644.48,63.68 648.85,65.06 653.20,66.51 657.54,68.01 661.86,69.58 666.16,71.20 670.45,72.89 674.73,74.64 679.00,76.46 671.02,94.80 667.03,93.10 663.01,91.46 658.98,89.87 654.94,88.34 650.87,86.87 646.79,85.45 642.69,84.09 638.57,82.78 634.45,81.54 630.32,80.34\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"679.00,76.46 683.22,78.33 687.40,80.25 691.56,82.23 695.70,84.28 699.80,86.38 703.94,88.58 708.02,90.82 712.03,93.11 716.01,95.46 720.06,97.93 709.49,114.91 705.74,112.62 702.00,110.41 698.24,108.27 694.42,106.17 690.56,104.12 686.71,102.15 682.83,100.23 678.92,98.36 674.99,96.56 671.02,94.80\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"720.06,97.93 723.97,100.40 727.86,102.94 731.80,105.61 735.60,108.27 739.42,111.04 743.20,113.87 746.91,116.75 750.61,119.72 754.25,122.75 757.86,125.86 744.67,140.89 741.33,138.01 737.95,135.21 734.52,132.45 731.07,129.77 727.56,127.14 724.01,124.56 720.45,122.07 716.80,119.61 713.16,117.23 709.49,114.91\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"757.86,125.86 761.44,129.06 764.89,132.25 768.37,135.60 771.78,138.99 775.09,142.42 778.39,145.97 781.64,149.61 784.80,153.29 787.86,157.00 790.89,160.84 775.07,173.08 772.30,169.57 769.49,166.15 766.59,162.77 763.61,159.45 760.58,156.19 757.52,153.02 754.38,149.89 751.18,146.81 747.97,143.84 744.67,140.89\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"790.89,160.84 793.86,164.77 796.75,168.77 799.67,173.01 802.51,177.42 805.14,181.76 807.63,186.12 810.04,190.59 812.25,194.90 814.40,199.34 816.41,203.72 798.15,211.89 796.30,207.86 794.34,203.82 792.32,199.86 790.15,195.84 787.90,191.90 785.54,188.00 783.02,184.10 780.41,180.31 777.78,176.66 775.07,173.08\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"816.41,203.72 818.31,208.07 820.14,212.47 821.90,216.93 823.55,221.32 825.13,225.72 826.62,230.10 828.07,234.57 829.40,238.86 830.73,243.39 831.93,247.70 812.64,252.97 811.49,248.86 810.25,244.66 808.99,240.57 807.64,236.41 806.24,232.31 804.77,228.20 803.23,224.10 801.61,219.99 799.92,215.93 798.15,211.89\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"831.93,247.70 833.13,252.22 834.22,256.55 835.29,261.05 836.28,265.44 837.20,269.79 838.11,274.34 838.93,278.71 839.73,283.28 840.44,287.64 841.13,292.24 821.33,295.06 820.68,290.76 820.00,286.58 819.25,282.30 818.47,278.13 817.62,273.87 816.74,269.71 815.80,265.54 814.79,261.31 813.76,257.19 812.64,252.97\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"841.13,292.24 841.73,296.64 842.31,301.22 842.81,305.65 843.28,310.27 843.67,314.69 844.02,319.35 844.30,323.80 844.53,328.48 844.69,333.08 844.79,337.65 824.79,337.95 824.70,333.63 824.55,329.31 824.34,324.95 824.07,320.70 823.74,316.35 823.37,312.12 822.93,307.80 822.45,303.57 821.91,299.27 821.33,295.06\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"844.79,337.65 844.82,342.39 844.77,347.06 844.65,351.75 844.45,356.55 844.16,361.25 843.77,366.12 843.27,371.02 842.66,375.96 841.92,380.93 841.00,386.14 821.36,382.35 822.17,377.75 822.84,373.26 823.40,368.79 823.85,364.32 824.21,359.87 824.47,355.50 824.66,351.07 824.78,346.70 824.82,342.34 824.79,337.95\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"841.00,386.14 839.94,391.24 838.65,396.56 837.26,401.58 835.69,406.66 834.04,411.51 832.28,416.26 830.41,420.94 828.43,425.55 826.35,430.09 824.19,434.54 806.29,425.62 808.26,421.57 810.14,417.46 811.93,413.29 813.62,409.07 815.20,404.80 816.68,400.46 818.06,395.98 819.30,391.51 820.42,386.89 821.36,382.35\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"824.19,434.54 821.94,438.92 819.63,443.21 817.21,447.46 814.72,451.65 812.14,455.79 809.49,459.86 806.75,463.89 803.94,467.85 801.07,471.72 798.13,475.54 782.41,463.18 785.12,459.67 787.75,456.10 790.33,452.47 792.84,448.78 795.27,445.05 797.63,441.26 799.91,437.42 802.12,433.53 804.24,429.61 806.29,425.62\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"798.13,475.54 795.11,479.30 791.98,483.04 788.76,486.73 785.46,490.36 782.07,493.92 778.56,497.45 774.91,500.95 771.18,504.35 767.38,507.66 763.43,510.91 750.92,495.31 754.46,492.39 757.89,489.41 761.25,486.34 764.53,483.19 767.72,479.99 770.81,476.74 773.82,473.43 776.76,470.06 779.63,466.64 782.41,463.18\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"763.43,510.91 759.27,514.14 755.05,517.23 750.63,520.25 745.98,523.19 741.14,526.02 736.11,528.69 730.86,531.20 725.21,533.57 719.37,535.66 713.07,537.51 706.49,538.99 699.02,540.07 691.80,540.50 685.05,540.40 678.37,539.85 672.29,539.00 666.46,537.88 660.86,536.54 655.52,535.04 650.48,533.43 656.85,514.47 661.30,515.89 665.92,517.19 670.69,518.33 675.60,519.28 680.64,519.98 686.00,520.42 691.40,520.50 697.03,520.17 702.77,519.34 708.04,518.16 713.13,516.66 717.96,514.93 722.65,512.96 727.10,510.84 731.40,508.55 735.58,506.11 739.61,503.56 743.49,500.90 747.24,498.17 750.92,495.31\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"735.3280914585255\" y=\"516.5688455994679\" transform=\"rotate(242.15448906831023, 735.3280914585255, 516.5688455994679)\" font-size=\"9.999999999999968\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999845\" style=\"pointer-events: none; user-select: none;\">80</text></g><g class=\"segment-group\"><polygon points=\"650.48,533.43 645.51,531.67 640.77,529.85 636.20,527.96 631.74,526.00 627.40,524.00 623.09,521.91 618.93,519.82 614.87,517.70 610.98,515.61 607.02,513.42 616.77,495.96 620.52,498.03 624.25,500.04 628.08,502.03 631.97,503.99 635.95,505.92 639.96,507.77 644.04,509.56 648.20,511.28 652.46,512.92 656.85,514.47\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"607.02,513.42 603.13,511.22 599.31,509.01 595.53,506.79 591.89,504.61 588.17,502.35 584.60,500.15 580.94,497.88 577.43,495.68 573.94,493.47 570.43,491.25 581.16,474.37 584.62,476.57 588.08,478.75 591.56,480.93 595.10,483.13 598.61,485.29 602.20,487.47 605.76,489.60 609.40,491.74 613.07,493.86 616.77,495.96\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"570.43,491.25 566.96,489.04 563.55,486.86 560.13,484.68 556.77,482.55 553.43,480.42 550.08,478.31 546.84,476.28 543.52,474.22 540.32,472.27 537.12,470.34 547.35,453.15 550.68,455.16 554.01,457.19 557.39,459.29 560.73,461.38 564.11,463.52 567.50,465.67 570.89,467.82 574.30,470.00 577.72,472.18 581.16,474.37\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"537.12,470.34 533.95,468.47 530.83,466.67 527.41,464.75 522.91,462.13 518.49,459.38 514.33,456.64 510.24,453.80 506.31,450.96 502.54,448.11 498.91,445.29 511.29,429.58 514.70,432.24 518.21,434.88 521.81,437.49 525.52,440.06 529.29,442.55 533.23,445.00 537.22,447.33 540.70,449.28 544.02,451.19 547.35,453.15\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"498.91,445.29 495.33,442.42 491.81,439.52 488.38,436.64 485.04,433.76 481.76,430.91 478.58,428.10 475.41,425.27 472.35,422.53 469.31,419.79 466.32,417.11 479.69,402.23 482.69,404.93 485.72,407.66 488.75,410.38 491.85,413.14 494.96,415.88 498.13,418.64 501.34,421.40 504.60,424.15 507.92,426.88 511.29,429.58\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"466.32,417.11 463.37,414.46 460.43,411.83 457.57,409.30 454.72,406.82 451.91,404.40 449.25,402.16 446.52,399.92 443.81,397.78 441.29,395.85 438.80,394.03 436.38,392.36 434.05,390.84 432.00,389.62 430.01,388.54 428.30,387.73 427.01,387.20 425.99,386.86 425.42,386.72 425.36,386.71 425.70,386.72 425.88,386.71 425.37,386.80 424.41,387.05 423.11,387.49 421.51,388.15 419.60,389.04 417.61,390.09 415.42,391.37 413.17,392.80 410.88,394.36 399.38,378.00 402.20,376.08 405.03,374.28 407.88,372.62 410.66,371.15 413.45,369.84 416.13,368.75 418.70,367.89 421.14,367.26 423.39,366.87 425.32,366.72 427.17,366.79 429.21,367.08 431.46,367.62 433.90,368.42 436.42,369.45 439.10,370.73 441.88,372.23 444.64,373.88 447.51,375.74 450.38,377.72 453.27,379.83 456.14,382.02 459.07,384.35 462.01,386.76 464.89,389.18 467.83,391.71 470.78,394.29 473.73,396.89 476.71,399.56 479.69,402.23\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"458.5683028639296\" y=\"397.1908090883108\" transform=\"rotate(-50.013681487423014, 458.5683028639296, 397.1908090883108)\" font-size=\"10.00000000000002\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.500000000000001\" style=\"pointer-events: none; user-select: none;\">40</text></g><g class=\"segment-group\"><polygon points=\"410.88,394.36 408.56,396.04 406.18,397.87 403.76,399.83 401.39,401.84 398.98,403.98 396.56,406.22 394.23,408.45 391.86,410.82 389.50,413.26 387.17,415.75 372.47,402.19 375.02,399.46 377.61,396.79 380.23,394.18 382.85,391.66 385.55,389.16 388.27,386.75 391.00,384.43 393.78,382.18 396.58,380.03 399.38,378.00\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"387.17,415.75 384.91,418.24 382.67,420.79 380.40,423.46 378.23,426.10 376.09,428.79 374.04,431.44 371.95,434.22 369.92,437.02 367.93,439.85 366.08,442.58 349.42,431.52 351.48,428.48 353.64,425.40 355.85,422.36 358.10,419.35 360.37,416.42 362.70,413.50 365.08,410.61 367.52,407.74 369.98,404.94 372.47,402.19\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"366.08,442.58 364.24,445.41 362.50,448.19 360.84,450.95 359.26,453.73 357.79,456.42 356.45,459.07 355.29,461.52 355.28,461.47 355.53,460.51 355.64,459.70 355.99,459.24 356.34,459.34 356.80,460.02 357.48,461.29 358.39,463.04 359.53,465.15 360.98,467.82 362.58,470.68 364.37,473.85 366.35,477.40 348.13,485.66 346.15,482.11 344.28,478.76 342.53,475.56 340.90,472.44 339.49,469.57 338.27,466.85 337.27,464.34 336.52,462.06 336.00,460.04 335.70,458.25 335.91,456.65 336.30,455.17 337.05,453.32 338.49,450.26 340.09,447.13 341.78,444.00 343.58,440.85 345.45,437.73 347.40,434.63 349.42,431.52\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"350.0038391686529\" y=\"450.41180883720176\" transform=\"rotate(211.390626484589, 350.0038391686529, 450.41180883720176)\" font-size=\"9.999999999999998\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999994\" style=\"pointer-events: none; user-select: none;\">60</text></g><g class=\"segment-group\"><polygon points=\"366.35,477.40 368.43,481.21 370.63,485.38 372.85,489.83 375.10,494.70 377.31,500.00 379.41,505.75 381.31,511.96 382.93,518.66 384.15,525.84 384.85,533.48 364.85,533.65 364.22,527.57 363.17,521.77 361.79,516.29 360.14,511.12 358.31,506.24 356.34,501.65 354.30,497.32 352.24,493.26 350.17,489.36 348.13,485.66\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"384.85,533.48 384.92,541.40 384.31,549.46 382.99,557.53 381.03,565.34 378.48,572.83 375.45,579.92 372.10,586.46 368.51,592.50 364.71,598.16 361.18,602.99 345.97,590.00 349.02,585.76 352.15,581.00 355.07,575.96 357.75,570.59 360.13,564.86 362.10,558.87 363.60,552.66 364.57,546.29 364.98,539.93 364.85,533.65\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"367.21387714827193\" y=\"567.2562953238954\" transform=\"rotate(198.8050857860152, 367.21387714827193, 567.2562953238954)\" font-size=\"9.999999999999988\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.4999999999999994\" style=\"pointer-events: none; user-select: none;\">60</text></g><g class=\"segment-group\"><polygon points=\"361.18,602.99 357.54,607.13 353.94,611.01 350.43,614.62 346.89,618.12 343.44,621.43 339.88,624.74 336.44,627.85 332.98,630.90 329.52,633.90 326.09,636.81 313.23,621.49 316.53,618.69 319.83,615.84 323.12,612.93 326.38,609.98 329.71,606.89 332.95,603.78 336.22,600.54 339.45,597.21 342.72,593.70 345.97,590.00\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"326.09,636.81 322.66,639.67 319.20,642.50 315.74,645.29 312.43,647.93 308.95,650.65 305.50,653.33 302.02,656.00 298.67,658.54 295.20,661.14 291.72,663.72 279.85,647.63 283.24,645.11 286.62,642.58 289.92,640.07 293.29,637.49 296.65,634.89 300.01,632.25 303.26,629.66 306.60,626.97 309.93,624.24 313.23,621.49\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"291.72,663.72 288.35,666.20 284.86,668.74 281.48,671.19 278.00,673.68 274.51,676.17 271.11,678.57 267.62,681.01 264.21,683.39 260.72,685.80 257.27,688.17 245.97,671.67 249.37,669.33 252.80,666.96 256.18,664.61 259.60,662.21 262.96,659.84 266.38,657.41 269.78,654.97 273.12,652.55 276.52,650.07 279.85,647.63\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"257.27,688.17 253.79,690.54 250.29,692.92 246.85,695.23 243.35,697.58 239.91,699.87 236.40,702.20 232.95,704.48 229.43,706.78 225.97,709.04 222.45,711.33 211.58,694.54 215.05,692.29 218.49,690.05 221.95,687.77 225.38,685.51 228.83,683.22 232.24,680.95 235.69,678.64 239.10,676.34 242.54,674.01 245.97,671.67\" fill=\"url(&quot;#checkerboard&quot;)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"222.45,711.33 218.96,713.58 215.44,715.85 211.90,718.11 208.50,720.28 204.96,722.52 201.42,724.75 197.87,726.98 194.44,729.13 190.91,731.33 187.34,733.54 176.82,716.53 180.34,714.35 183.84,712.18 187.27,710.03 190.77,707.83 194.26,705.62 197.75,703.41 201.17,701.24 204.65,699.01 208.13,696.77 211.58,694.54\" style=\"fill: rgb(40, 167, 69);\" fill=\"rgb(40, 167, 69)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"210.4539383822475\" y=\"707.1630102169562\" transform=\"rotate(237.68113035427893, 210.4539383822475, 707.1630102169562)\" font-size=\"5.00000000000001\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.2500000000000005\" style=\"pointer-events: none; user-select: none;\">4</text></g><g class=\"segment-group\"><polygon points=\"187.34,733.54 183.80,735.73 180.24,737.91 176.69,740.08 173.23,742.19 169.66,744.35 166.10,746.50 162.52,748.65 158.94,750.79 155.36,752.92 151.77,755.05 141.62,737.82 145.16,735.72 148.70,733.61 152.24,731.50 155.78,729.37 159.30,727.25 162.83,725.11 166.29,723.00 169.80,720.85 173.32,718.69 176.82,716.53\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"151.77,755.05 148.18,757.17 144.59,759.27 140.98,761.37 137.36,763.48 133.74,765.56 130.12,767.64 126.46,769.72 122.82,771.77 119.15,773.83 115.48,775.87 105.78,758.38 109.40,756.37 113.02,754.34 116.61,752.31 120.22,750.26 123.80,748.21 127.37,746.15 130.95,744.07 134.51,742.00 138.06,739.91 141.62,737.82\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"115.48,775.87 111.60,778.00 107.83,780.05 103.91,782.14 99.96,784.20 95.98,786.25 91.95,788.28 87.87,790.28 83.77,792.24 79.61,794.18 75.40,796.08 67.27,777.80 71.28,776.00 75.24,774.15 79.16,772.27 83.07,770.36 86.93,768.41 90.76,766.44 94.56,764.45 98.35,762.44 102.04,760.44 105.78,758.38\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"75.40,796.08 70.94,798.02 66.62,799.82 62.00,801.67 57.30,803.45 52.51,805.15 47.62,806.78 42.64,808.31 37.58,809.73 32.07,811.11 26.71,812.28 22.73,792.68 27.53,791.63 32.41,790.41 37.00,789.12 41.54,787.73 46.01,786.24 50.41,784.67 54.75,783.03 59.02,781.32 63.11,779.61 67.27,777.80\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"26.71,812.28 21.07,813.12 15.25,813.79 9.39,814.24 3.26,814.48 -2.78,814.48 -8.62,814.24 -14.74,813.76 -20.38,813.08 -26.14,812.19 -31.52,811.15 -28.18,791.44 -23.38,792.38 -18.36,793.18 -13.38,793.80 -8.12,794.25 -3.01,794.48 2.22,794.51 7.51,794.33 12.64,793.96 17.74,793.40 22.73,792.68\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-31.52,811.15 -36.73,809.99 -43.40,808.28 -50.02,806.13 -56.42,803.62 -62.32,800.90 -67.97,797.94 -73.34,794.77 -78.45,791.43 -83.33,787.93 -87.97,784.31 -75.89,768.38 -71.89,771.53 -67.71,774.56 -63.35,777.44 -58.80,780.16 -54.05,782.70 -49.10,785.01 -43.82,787.12 -38.37,788.92 -32.86,790.37 -28.18,791.44\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-87.97,784.31 -92.34,780.62 -96.52,776.81 -100.63,772.81 -104.30,768.96 -108.01,764.83 -111.58,760.58 -114.98,756.26 -118.18,751.93 -121.19,747.57 -124.17,742.97 -107.63,731.74 -105.02,735.81 -102.35,739.72 -99.52,743.58 -96.53,747.41 -93.41,751.16 -90.16,754.81 -86.89,758.27 -83.33,761.78 -79.68,765.13 -75.89,768.38\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-124.17,742.97 -127.01,738.27 -129.70,733.46 -132.25,728.54 -134.64,723.50 -136.92,718.18 -139.01,712.74 -140.86,707.21 -142.38,702.05 -143.70,696.95 -144.94,691.53 -146.00,685.97 -146.82,680.58 -147.47,674.87 -147.91,669.14 -148.10,663.62 -148.09,657.96 -147.87,652.43 -147.46,647.05 -146.87,641.74 -146.13,636.50 -126.27,638.87 -126.95,643.49 -127.49,648.16 -127.87,652.88 -128.09,657.68 -128.13,662.56 -127.98,667.37 -127.64,672.28 -127.11,677.18 -126.41,681.92 -125.52,686.73 -124.47,691.46 -123.31,696.01 -122.00,700.58 -120.43,705.33 -118.67,710.01 -116.72,714.60 -114.66,719.02 -112.45,723.34 -110.11,727.58 -107.63,731.74\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"-126.88904629731695\" y=\"713.7177573542893\" transform=\"rotate(-21.98210578623268, -126.88904629731695, 713.7177573542893)\" font-size=\"9.999999999999995\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.4999999999999998\" style=\"pointer-events: none; user-select: none;\">100</text></g><g class=\"segment-group\"><polygon points=\"-146.13,636.50 -145.44,631.33 -144.64,626.38 -143.71,621.41 -142.71,616.66 -141.60,611.85 -140.41,607.18 -139.18,602.62 -137.91,598.22 -136.56,593.82 -135.16,589.42 -116.15,595.64 -117.47,599.77 -118.73,603.91 -119.93,608.05 -121.08,612.29 -122.16,616.59 -123.18,620.96 -124.10,625.32 -124.93,629.79 -125.65,634.27 -126.27,638.87\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-135.16,589.42 -133.75,585.20 -132.26,580.89 -130.78,576.74 -129.26,572.62 -127.68,568.43 -126.11,564.38 -124.52,560.35 -122.90,556.35 -121.26,552.37 -119.62,548.46 -101.19,556.23 -102.79,560.05 -104.38,563.91 -105.95,567.79 -107.49,571.69 -109.01,575.61 -110.52,579.59 -111.98,583.55 -113.40,587.54 -114.81,591.60 -116.15,595.64\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-119.62,548.46 -117.94,544.50 -116.23,540.56 -114.51,536.63 -112.80,532.79 -111.03,528.89 -109.29,525.06 -107.49,521.19 -105.71,517.38 -103.88,513.53 -102.07,509.75 -84.05,518.43 -85.83,522.14 -87.61,525.90 -89.36,529.63 -91.11,533.41 -92.83,537.17 -94.54,540.96 -96.22,544.74 -97.90,548.55 -99.56,552.38 -101.19,556.23\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-102.07,509.75 -100.21,505.91 -98.36,502.14 -96.49,498.37 -94.60,494.59 -92.71,490.84 -90.79,487.10 -88.85,483.33 -86.92,479.61 -84.97,475.90 -82.98,472.16 -65.33,481.57 -67.28,485.23 -69.19,488.88 -71.10,492.53 -73.00,496.22 -74.87,499.90 -76.73,503.58 -78.59,507.28 -80.42,510.98 -82.24,514.68 -84.05,518.43\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-82.98,472.16 -81.00,468.45 -79.01,464.77 -77.00,461.09 -74.98,457.42 -72.92,453.71 -70.87,450.04 -68.81,446.39 -66.73,442.74 -64.64,439.11 -62.54,435.48 -45.25,445.54 -47.32,449.11 -49.37,452.68 -51.41,456.26 -53.44,459.85 -55.46,463.45 -57.47,467.08 -59.46,470.69 -61.43,474.31 -63.39,477.93 -65.33,481.57\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-62.54,435.48 -60.42,431.86 -58.27,428.23 -56.10,424.58 -53.94,420.98 -51.77,417.39 -49.58,413.81 -47.37,410.23 -45.15,406.66 -42.92,403.10 -40.67,399.54 -23.79,410.27 -26.00,413.76 -28.19,417.25 -30.37,420.76 -32.53,424.27 -34.69,427.79 -36.82,431.32 -38.95,434.86 -41.07,438.42 -43.17,441.98 -45.25,445.54\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-40.67,399.54 -38.41,396.00 -36.12,392.46 -33.83,388.93 -31.52,385.41 -29.18,381.88 -26.82,378.34 -24.44,374.81 -22.06,371.32 -19.67,367.84 -17.29,364.41 -0.88,375.84 -3.22,379.22 -5.57,382.63 -7.89,386.05 -10.22,389.49 -12.52,392.94 -14.81,396.40 -17.08,399.85 -19.33,403.31 -21.57,406.79 -23.79,410.27\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-17.29,364.41 -14.92,361.01 -12.54,357.62 -10.16,354.23 -7.77,350.85 -5.38,347.49 -2.97,344.13 -0.57,340.78 1.85,337.42 4.27,334.07 6.72,330.70 22.88,342.48 20.46,345.81 18.06,349.12 15.67,352.45 13.29,355.77 10.91,359.10 8.54,362.43 6.17,365.77 3.82,369.12 1.46,372.48 -0.88,375.84\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"6.72,330.70 9.12,327.40 11.56,324.07 14.01,320.74 16.47,317.41 18.93,314.09 21.39,310.79 23.86,307.48 26.35,304.16 28.81,300.89 31.31,297.59 47.25,309.67 44.78,312.94 42.33,316.19 39.87,319.47 37.42,322.75 34.98,326.02 32.55,329.30 30.12,332.60 27.69,335.90 25.27,339.20 22.88,342.48\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"31.31,297.59 33.81,294.29 36.30,291.03 38.82,287.74 41.35,284.45 43.86,281.20 46.39,277.93 48.94,274.65 51.47,271.42 54.03,268.16 56.61,264.89 72.30,277.30 69.75,280.52 67.22,283.75 64.71,286.96 62.19,290.20 59.68,293.43 57.19,296.66 54.69,299.91 52.20,303.16 49.73,306.41 47.25,309.67\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"56.61,264.89 59.16,261.68 61.75,258.42 64.34,255.17 66.92,251.97 69.53,248.73 72.16,245.49 74.76,242.30 77.40,239.08 80.05,235.85 82.68,232.69 98.07,245.45 95.47,248.59 92.86,251.77 90.25,254.95 87.67,258.11 85.08,261.31 82.50,264.50 79.95,267.68 77.38,270.89 74.83,274.10 72.30,277.30\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"82.68,232.69 85.35,229.47 88.04,226.26 90.70,223.10 93.40,219.91 96.13,216.72 98.86,213.53 101.56,210.41 104.32,207.23 107.10,204.06 109.89,200.90 124.85,214.17 122.12,217.27 119.39,220.38 116.68,223.49 114.01,226.59 111.32,229.72 108.65,232.86 105.99,236.00 103.35,239.13 100.71,242.29 98.07,245.45\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"109.89,200.90 112.64,197.80 115.46,194.65 118.30,191.51 121.16,188.37 124.04,185.24 126.87,182.19 129.79,179.08 132.73,175.97 135.72,172.86 138.71,169.77 153.02,183.74 150.11,186.74 147.22,189.76 144.36,192.78 141.51,195.82 138.72,198.83 135.91,201.88 133.11,204.95 130.34,208.02 127.57,211.11 124.85,214.17\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"138.71,169.77 141.73,166.69 144.78,163.62 147.86,160.57 150.98,157.52 154.13,154.50 157.33,151.48 160.64,148.42 163.93,145.44 167.35,142.40 171.25,139.04 184.00,154.46 180.51,157.46 177.28,160.32 174.14,163.17 171.00,166.08 167.93,168.98 164.89,171.90 161.88,174.83 158.90,177.79 155.95,180.76 153.02,183.74\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"184.00,154.46 186.98,151.94 190.22,149.24 193.51,146.55 196.84,143.89 200.19,141.26 203.62,138.64 207.07,136.07 210.58,133.53 214.17,131.02 217.81,128.56 221.49,126.16 225.27,123.79 229.12,121.50 233.02,119.28 237.00,117.14 241.03,115.09 245.11,113.14 249.29,111.27 253.45,109.52 257.70,107.86 261.91,106.33 266.19,104.88 270.42,103.55 274.69,102.30 278.91,101.14 283.13,100.06 287.28,99.05 291.49,98.08 295.61,97.18 299.73,96.31 303.77,115.90 299.81,116.74 295.85,117.60 291.90,118.51 287.96,119.46 284.04,120.47 280.13,121.55 276.24,122.69 272.38,123.90 268.54,125.20 264.74,126.58 260.96,128.06 257.23,129.62 253.53,131.28 249.87,133.03 246.26,134.86 242.70,136.79 239.17,138.79 235.70,140.86 232.26,143.01 228.87,145.22 225.51,147.49 222.19,149.82 218.91,152.19 215.66,154.61 212.44,157.07 209.25,159.57 206.09,162.10 202.95,164.66 199.84,167.25 196.74,169.87\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"206.5209948223929\" y=\"149.3192625173865\" transform=\"rotate(52.54287303675355, 206.5209948223929, 149.3192625173865)\" font-size=\"9.999999999999998\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999994\" style=\"pointer-events: none; user-select: none;\">140</text></g><g class=\"segment-group\"><polygon points=\"299.73,96.31 303.84,95.48 307.90,94.68 311.96,93.90 315.98,93.14 320.01,92.39 324.01,91.65 327.99,90.91 331.98,90.18 335.94,89.45 339.92,88.71 343.58,108.37 339.59,109.11 335.61,109.85 331.62,110.58 327.64,111.32 323.66,112.05 319.67,112.80 315.69,113.55 311.72,114.32 307.74,115.10 303.77,115.90\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"339.92,88.71 343.98,87.96 348.02,87.22 352.07,86.50 356.12,85.80 360.18,85.10 364.23,84.43 368.28,83.76 372.38,83.10 376.43,82.46 380.50,81.83 383.52,101.60 379.51,102.22 375.51,102.85 371.51,103.50 367.51,104.15 363.52,104.82 359.53,105.51 355.53,106.20 351.55,106.91 347.56,107.63 343.58,108.37\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"380.50,81.83 384.56,81.22 388.63,80.61 392.70,80.02 396.77,79.44 400.84,78.88 404.92,78.32 409.00,77.78 413.08,77.25 417.14,76.73 421.22,76.23 423.65,96.08 419.63,96.58 415.61,97.09 411.59,97.61 407.58,98.14 403.56,98.69 399.55,99.25 395.54,99.82 391.53,100.40 387.52,101.00 383.52,101.60\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"421.22,76.23 425.31,75.74 429.40,75.26 433.50,74.80 437.60,74.34 441.70,73.91 445.78,73.48 449.87,73.08 453.99,72.68 458.10,72.30 462.22,71.93 463.94,91.86 459.90,92.22 455.87,92.59 451.84,92.98 447.81,93.38 443.78,93.80 439.75,94.23 435.72,94.67 431.70,95.13 427.67,95.60 423.65,96.08\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"462.22,71.93 466.34,71.58 470.42,71.25 474.55,70.94 478.68,70.64 482.82,70.35 486.96,70.09 491.10,69.84 495.20,69.62 499.35,69.41 503.51,69.22 504.36,89.20 500.31,89.39 496.27,89.59 492.22,89.81 488.18,90.05 484.14,90.31 480.09,90.59 476.05,90.88 472.01,91.19 467.98,91.52 463.94,91.86\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"503.51,69.22 507.67,69.05 511.83,68.91 516.00,68.79 520.15,68.69 524.30,68.62 528.48,68.57 532.67,68.55 536.86,68.56 541.06,68.60 545.26,68.67 549.46,68.77 553.68,68.90 557.91,69.08 562.14,69.29 566.40,69.55 570.67,69.85 574.92,70.19 579.18,70.59 583.46,71.04 587.78,71.55 592.06,72.13 596.42,72.78 600.77,73.51 605.09,74.31 609.37,75.19 613.59,76.11 617.80,77.09 621.99,78.12 626.17,79.21 630.32,80.34 634.45,81.54 638.57,82.78 642.69,84.09 646.79,85.45 650.87,86.87 654.94,88.34 658.98,89.87 663.01,91.46 667.03,93.10 671.02,94.80 663.05,113.14 659.32,111.55 655.57,110.02 651.80,108.54 648.01,107.10 644.20,105.72 640.38,104.39 636.53,103.12 632.67,101.89 628.79,100.72 624.90,99.60 620.99,98.52 617.07,97.51 613.14,96.54 609.19,95.62 605.23,94.76 601.27,93.94 597.28,93.20 593.29,92.53 589.28,91.93 585.27,91.40 581.24,90.92 577.21,90.49 573.18,90.12 569.14,89.79 565.10,89.50 561.06,89.26 557.01,89.06 552.96,88.89 548.91,88.76 544.86,88.66 540.81,88.60 536.76,88.56 532.71,88.55 528.66,88.57 524.61,88.62 520.56,88.69 516.51,88.78 512.46,88.90 508.41,89.04 504.36,89.20\" fill=\"rgb(34, 34, 34)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"671.02,94.80 674.99,96.56 678.92,98.36 682.83,100.23 686.71,102.15 690.56,104.12 694.42,106.17 698.24,108.27 702.00,110.41 705.74,112.62 709.49,114.91 698.92,131.89 695.46,129.78 691.97,127.72 688.45,125.71 684.91,123.76 681.33,121.86 677.72,120.01 674.09,118.22 670.43,116.47 666.75,114.78 663.05,113.14\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"709.49,114.91 713.16,117.23 716.80,119.61 720.45,122.07 724.01,124.56 727.56,127.14 731.07,129.77 734.52,132.45 737.95,135.21 741.33,138.01 744.67,140.89 731.48,155.92 728.41,153.28 725.29,150.69 722.14,148.15 718.93,145.67 715.69,143.24 712.41,140.86 709.09,138.54 705.74,136.27 702.35,134.05 698.92,131.89\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"744.67,140.89 747.97,143.84 751.18,146.81 754.38,149.89 757.52,153.02 760.58,156.19 763.61,159.45 766.59,162.77 769.49,166.15 772.30,169.57 775.07,173.08 759.26,185.32 756.75,182.14 754.17,179.02 751.53,175.94 748.83,172.92 746.08,169.95 743.26,167.04 740.39,164.18 737.47,161.38 734.50,158.62 731.48,155.92\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"775.07,173.08 777.78,176.66 780.41,180.31 783.02,184.10 785.54,188.00 787.90,191.90 790.15,195.84 792.32,199.86 794.34,203.82 796.30,207.86 798.15,211.89 779.90,220.06 778.21,216.38 776.44,212.74 774.60,209.13 772.67,205.56 770.66,202.05 768.56,198.58 766.37,195.18 764.07,191.84 761.70,188.56 759.26,185.32\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"798.15,211.89 799.92,215.93 801.61,219.99 803.23,224.10 804.77,228.20 806.24,232.31 807.64,236.41 808.99,240.57 810.25,244.66 811.49,248.86 812.64,252.97 793.34,258.24 792.25,254.34 791.11,250.45 789.91,246.58 788.66,242.72 787.36,238.89 785.99,235.08 784.56,231.28 783.08,227.52 781.52,223.78 779.90,220.06\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"812.64,252.97 813.76,257.19 814.79,261.31 815.80,265.54 816.74,269.71 817.62,273.87 818.47,278.13 819.25,282.30 820.00,286.58 820.68,290.76 821.33,295.06 801.53,297.89 800.93,293.88 800.28,289.88 799.58,285.89 798.83,281.91 798.04,277.94 797.20,273.98 796.31,270.02 795.37,266.08 794.38,262.15 793.34,258.24\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"821.33,295.06 821.91,299.27 822.45,303.57 822.93,307.80 823.37,312.12 823.74,316.35 824.07,320.70 824.34,324.95 824.55,329.31 824.70,333.63 824.79,337.95 804.79,338.24 804.71,334.19 804.57,330.14 804.37,326.10 804.12,322.05 803.81,318.01 803.45,313.98 803.05,309.95 802.59,305.92 802.08,301.90 801.53,297.89\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"824.79,337.95 824.82,342.34 824.78,346.70 824.66,351.07 824.47,355.50 824.21,359.87 823.85,364.32 823.40,368.79 822.84,373.26 822.17,377.75 821.36,382.35 801.72,378.57 802.42,374.58 803.02,370.57 803.52,366.55 803.93,362.52 804.26,358.48 804.50,354.44 804.68,350.39 804.78,346.34 804.82,342.29 804.79,338.24\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"821.36,382.35 820.42,386.89 819.30,391.51 818.06,395.98 816.68,400.46 815.20,404.80 813.62,409.07 811.93,413.29 810.14,417.46 808.26,421.57 806.29,425.62 788.39,416.69 790.16,413.05 791.85,409.36 793.45,405.64 794.95,401.88 796.36,398.08 797.67,394.25 798.87,390.38 799.94,386.47 800.90,382.54 801.72,378.57\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"806.29,425.62 804.24,429.61 802.12,433.53 799.91,437.42 797.63,441.26 795.27,445.05 792.84,448.78 790.33,452.47 787.75,456.10 785.12,459.67 782.41,463.18 766.69,450.82 769.16,447.61 771.57,444.35 773.91,441.05 776.19,437.70 778.40,434.30 780.54,430.86 782.62,427.38 784.62,423.86 786.54,420.30 788.39,416.69\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"782.41,463.18 779.63,466.64 776.76,470.06 773.82,473.43 770.81,476.74 767.72,479.99 764.53,483.19 761.25,486.34 757.89,489.41 754.46,492.39 750.92,495.31 738.41,479.70 741.53,477.13 744.59,474.47 747.58,471.74 750.51,468.93 753.36,466.06 756.16,463.13 758.88,460.13 761.55,457.08 764.15,453.97 766.69,450.82\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"750.92,495.31 747.24,498.17 743.49,500.90 739.61,503.56 735.58,506.11 731.40,508.55 727.10,510.84 722.65,512.96 717.96,514.93 713.13,516.66 708.04,518.16 702.77,519.34 697.03,520.17 691.40,520.50 686.00,520.42 680.64,519.98 675.60,519.28 670.69,518.33 665.92,517.19 661.30,515.89 656.85,514.47 663.23,495.51 667.09,496.75 670.99,497.84 674.93,498.79 678.90,499.55 682.91,500.11 686.95,500.44 691.00,500.50 695.05,500.27 699.05,499.69 703.01,498.80 706.89,497.66 710.70,496.29 714.44,494.72 718.10,492.98 721.67,491.08 725.17,489.03 728.59,486.86 731.94,484.58 735.21,482.19 738.41,479.70\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"725.9653467444612\" y=\"499.0922826211057\" transform=\"rotate(241.94790400074214, 725.9653467444612, 499.0922826211057)\" font-size=\"10.000000000000025\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000012\" style=\"pointer-events: none; user-select: none;\">80</text></g><g class=\"segment-group\"><polygon points=\"656.85,514.47 652.46,512.92 648.20,511.28 644.04,509.56 639.96,507.77 635.95,505.92 631.97,503.99 628.08,502.03 624.25,500.04 620.52,498.03 616.77,495.96 626.52,478.50 630.07,480.46 633.64,482.38 637.23,484.25 640.85,486.07 644.50,487.83 648.17,489.53 651.88,491.16 655.63,492.71 659.41,494.16 663.23,495.51\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"616.77,495.96 613.07,493.86 609.40,491.74 605.76,489.60 602.20,487.47 598.61,485.29 595.10,483.13 591.56,480.93 588.08,478.75 584.62,476.57 581.16,474.37 591.89,457.49 595.31,459.66 598.74,461.83 602.17,463.98 605.61,466.11 609.06,468.24 612.52,470.34 616.00,472.42 619.49,474.48 623.00,476.50 626.52,478.50\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"581.16,474.37 577.72,472.18 574.30,470.00 570.89,467.82 567.50,465.67 564.11,463.52 560.73,461.38 557.39,459.29 554.01,457.19 550.68,455.16 547.35,453.15 557.57,435.96 561.04,438.05 564.50,440.17 567.94,442.30 571.38,444.45 574.80,446.61 578.22,448.78 581.64,450.96 585.06,453.14 588.47,455.32 591.89,457.49\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"547.35,453.15 544.02,451.19 540.70,449.28 537.22,447.33 533.23,445.00 529.29,442.55 525.52,440.06 521.81,437.49 518.21,434.88 514.70,432.24 511.29,429.58 523.68,413.88 526.87,416.37 530.11,418.81 533.39,421.18 536.72,423.49 540.10,425.72 543.54,427.86 547.04,429.90 550.57,431.88 554.08,433.90 557.57,435.96\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"511.29,429.58 507.92,426.88 504.60,424.15 501.34,421.40 498.13,418.64 494.96,415.88 491.85,413.14 488.75,410.38 485.72,407.66 482.69,404.93 479.69,402.23 493.06,387.36 496.07,390.07 499.08,392.78 502.10,395.48 505.12,398.18 508.16,400.86 511.22,403.52 514.29,406.16 517.39,408.77 520.52,411.34 523.68,413.88\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"479.69,402.23 476.71,399.56 473.73,396.89 470.78,394.29 467.83,391.71 464.89,389.18 462.01,386.76 459.07,384.35 456.14,382.02 453.27,379.83 450.38,377.72 447.51,375.74 444.64,373.88 441.88,372.23 439.10,370.73 436.42,369.45 433.90,368.42 431.46,367.62 429.21,367.08 427.17,366.79 425.32,366.72 423.39,366.87 421.14,367.26 418.70,367.89 416.13,368.75 413.45,369.84 410.66,371.15 407.88,372.62 405.03,374.28 402.20,376.08 399.38,378.00 396.58,380.03 393.78,382.18 391.00,384.43 388.27,386.75 385.55,389.16 382.85,391.66 380.23,394.18 377.61,396.79 375.02,399.46 372.47,402.19 369.98,404.94 367.52,407.74 365.08,410.61 362.70,413.50 360.37,416.42 358.10,419.35 355.85,422.36 353.64,425.40 351.48,428.48 349.42,431.52 347.40,434.63 345.45,437.73 343.58,440.85 341.78,444.00 340.09,447.13 338.49,450.26 337.05,453.32 336.30,455.17 335.91,456.65 335.70,458.25 336.00,460.04 336.52,462.06 337.27,464.34 338.27,466.85 339.49,469.57 340.90,472.44 342.53,475.56 344.28,478.76 346.15,482.11 348.13,485.66 329.92,493.93 327.94,490.38 325.99,486.84 324.09,483.30 322.27,479.72 320.58,476.10 319.06,472.42 317.74,468.65 316.71,464.79 316.02,460.83 315.75,456.80 316.28,452.79 317.31,448.87 318.81,445.11 320.54,441.45 322.38,437.83 324.31,434.27 326.32,430.75 328.40,427.28 330.55,423.85 332.76,420.45 335.04,417.10 337.36,413.78 339.74,410.50 342.17,407.26 344.65,404.06 347.18,400.89 349.75,397.76 352.38,394.68 355.05,391.63 357.77,388.63 360.53,385.67 363.35,382.76 366.22,379.90 369.14,377.09 372.12,374.34 375.15,371.65 378.23,369.03 381.38,366.48 384.60,364.01 387.87,361.63 391.22,359.35 394.65,357.19 398.15,355.15 401.73,353.26 405.39,351.53 409.15,350.01 412.99,348.72 416.91,347.71 420.90,347.02 424.94,346.73 428.99,346.87 432.99,347.45 436.93,348.39 440.78,349.65 444.54,351.17 448.19,352.91 451.76,354.84 455.23,356.92 458.64,359.12 461.97,361.42 465.24,363.81 468.46,366.27 471.63,368.79 474.77,371.36 477.87,373.96 480.94,376.60 483.99,379.27 487.02,381.95 490.05,384.65 493.06,387.36\" fill=\"rgb(34, 34, 34)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"348.13,485.66 350.17,489.36 352.24,493.26 354.30,497.32 356.34,501.65 358.31,506.24 360.14,511.12 361.79,516.29 363.17,521.77 364.22,527.57 364.85,533.65 344.85,533.83 344.29,529.29 343.42,524.89 342.26,520.61 340.88,516.48 339.31,512.48 337.59,508.60 335.76,504.82 333.86,501.13 331.90,497.50 329.92,493.93\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"364.85,533.65 364.98,539.93 364.57,546.29 363.60,552.66 362.10,558.87 360.13,564.86 357.75,570.59 355.07,575.96 352.15,581.00 349.02,585.76 345.97,590.00 330.76,577.01 333.32,573.37 335.79,569.50 338.05,565.47 340.06,561.27 341.79,556.90 343.18,552.39 344.20,547.79 344.82,543.12 345.03,538.45 344.85,533.83\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"349.18256861914057\" y=\"559.9396699262647\" transform=\"rotate(198.5219361301058, 349.18256861914057, 559.9396699262647)\" font-size=\"10.000000000000016\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000008\" style=\"pointer-events: none; user-select: none;\">60</text></g><g class=\"segment-group\"><polygon points=\"345.97,590.00 342.72,593.70 339.45,597.21 336.22,600.54 332.95,603.78 329.71,606.89 326.38,609.98 323.12,612.93 319.83,615.84 316.53,618.69 313.23,621.49 300.37,606.17 303.53,603.49 306.68,600.77 309.79,598.02 312.89,595.22 315.97,592.35 319.00,589.45 322.01,586.47 324.97,583.42 327.90,580.27 330.76,577.01\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"313.23,621.49 309.93,624.24 306.60,626.97 303.26,629.66 300.01,632.25 296.65,634.89 293.29,637.49 289.92,640.07 286.62,642.58 283.24,645.11 279.85,647.63 267.98,631.53 271.28,629.08 274.57,626.61 277.82,624.15 281.09,621.64 284.34,619.12 287.59,616.58 290.78,614.03 294.00,611.44 297.20,608.82 300.37,606.17\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"279.85,647.63 276.52,650.07 273.12,652.55 269.78,654.97 266.38,657.41 262.96,659.84 259.60,662.21 256.18,664.61 252.80,666.96 249.37,669.33 245.97,671.67 234.66,655.17 238.02,652.86 241.39,650.54 244.73,648.21 248.08,645.86 251.41,643.51 254.75,641.14 258.08,638.75 261.38,636.36 264.70,633.94 267.98,631.53\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"245.97,671.67 242.54,674.01 239.10,676.34 235.69,678.64 232.24,680.95 228.83,683.22 225.38,685.51 221.95,687.77 218.49,690.05 215.05,692.29 211.58,694.54 200.71,677.75 204.14,675.53 207.54,673.31 210.95,671.07 214.35,668.83 217.76,666.57 221.14,664.32 224.53,662.04 227.91,659.77 231.29,657.47 234.66,655.17\" fill=\"url(&quot;#checkerboard&quot;)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"211.58,694.54 208.13,696.77 204.65,699.01 201.17,701.24 197.75,703.41 194.26,705.62 190.77,707.83 187.27,710.03 183.84,712.18 180.34,714.35 176.82,716.53 166.30,699.52 169.77,697.37 173.23,695.22 176.66,693.07 180.12,690.90 183.56,688.72 187.01,686.54 190.43,684.37 193.86,682.17 197.29,679.96 200.71,677.75\" style=\"fill: rgb(0, 123, 255);\" fill=\"rgb(0, 123, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"199.621847164022\" y=\"690.3500243854658\" transform=\"rotate(237.68117849973007, 199.621847164022, 690.3500243854658)\" font-size=\"5.000000000000006\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.25000000000000033\" style=\"pointer-events: none; user-select: none;\">3</text></g><g class=\"segment-group\"><polygon points=\"176.82,716.53 173.32,718.69 169.80,720.85 166.29,723.00 162.83,725.11 159.30,727.25 155.78,729.37 152.24,731.50 148.70,733.61 145.16,735.72 141.62,737.82 131.46,720.59 134.96,718.52 138.46,716.43 141.96,714.34 145.46,712.24 148.94,710.14 152.43,708.03 155.89,705.92 159.36,703.79 162.84,701.66 166.30,699.52\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"141.62,737.82 138.06,739.91 134.51,742.00 130.95,744.07 127.37,746.15 123.80,748.21 120.22,750.26 116.61,752.31 113.02,754.34 109.40,756.37 105.78,758.38 96.09,740.89 99.66,738.90 103.22,736.91 106.77,734.90 110.31,732.88 113.85,730.86 117.38,728.82 120.91,726.78 124.43,724.72 127.95,722.66 131.46,720.59\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"105.78,758.38 102.04,760.44 98.35,762.44 94.56,764.45 90.76,766.44 86.93,768.41 83.07,770.36 79.16,772.27 75.24,774.15 71.28,776.00 67.27,777.80 59.15,759.53 62.94,757.82 66.71,756.06 70.46,754.27 74.18,752.44 77.88,750.58 81.56,748.69 85.22,746.77 88.87,744.83 92.47,742.87 96.09,740.89\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"67.27,777.80 63.11,779.61 59.02,781.32 54.75,783.03 50.41,784.67 46.01,786.24 41.54,787.73 37.00,789.12 32.41,790.41 27.53,791.63 22.73,792.68 18.75,773.08 22.99,772.16 27.23,771.09 31.37,769.93 35.46,768.68 39.51,767.32 43.52,765.89 47.50,764.39 51.43,762.82 55.28,761.21 59.15,759.53\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"22.73,792.68 17.74,793.40 12.64,793.96 7.51,794.33 2.22,794.51 -3.01,794.48 -8.12,794.25 -13.38,793.80 -18.36,793.18 -23.38,792.38 -28.18,791.44 -24.84,771.72 -20.63,772.57 -16.33,773.28 -12.02,773.85 -7.62,774.25 -3.24,774.48 1.18,774.54 5.63,774.42 10.03,774.13 14.41,773.68 18.75,773.08\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-28.18,791.44 -32.86,790.37 -38.37,788.92 -43.82,787.12 -49.10,785.01 -54.05,782.70 -58.80,780.16 -63.35,777.44 -67.71,774.56 -71.89,771.53 -75.89,768.38 -63.80,752.44 -60.44,755.13 -56.96,757.69 -53.36,760.12 -49.63,762.39 -45.77,764.49 -41.78,766.40 -37.62,768.10 -33.35,769.56 -29.00,770.75 -24.84,771.72\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-75.89,768.38 -79.68,765.13 -83.33,761.78 -86.89,758.27 -90.16,754.81 -93.41,751.16 -96.53,747.41 -99.52,743.58 -102.35,739.72 -105.02,735.81 -107.63,731.74 -91.08,720.50 -88.85,724.04 -86.51,727.50 -84.06,730.90 -81.49,734.23 -78.81,737.49 -76.02,740.67 -73.15,743.74 -70.14,746.75 -67.02,749.65 -63.80,752.44\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-107.63,731.74 -110.11,727.58 -112.45,723.34 -114.66,719.02 -116.72,714.60 -118.67,710.01 -120.43,705.33 -122.00,700.58 -123.31,696.01 -124.47,691.46 -125.52,686.73 -126.41,681.92 -127.11,677.18 -127.64,672.28 -127.98,667.37 -128.13,662.56 -128.09,657.68 -127.87,652.88 -127.49,648.16 -126.95,643.49 -126.27,638.87 -106.41,641.23 -107.03,645.24 -107.52,649.27 -107.88,653.33 -108.09,657.41 -108.16,661.50 -108.06,665.59 -107.81,669.69 -107.40,673.79 -106.83,677.86 -106.11,681.93 -105.24,685.97 -104.25,689.97 -103.13,693.95 -101.86,697.92 -100.41,701.83 -98.81,705.70 -97.08,709.49 -95.20,713.22 -93.20,716.89 -91.08,720.50\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"-108.74323517467714\" y=\"705.6244426642489\" transform=\"rotate(-21.683040223930604, -108.74323517467714, 705.6244426642489)\" font-size=\"10\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5\" style=\"pointer-events: none; user-select: none;\">100</text></g><g class=\"segment-group\"><polygon points=\"-126.27,638.87 -125.65,634.27 -124.93,629.79 -124.10,625.32 -123.18,620.96 -122.16,616.59 -121.08,612.29 -119.93,608.05 -118.73,603.91 -117.47,599.77 -116.15,595.64 -97.14,601.86 -98.37,605.71 -99.55,609.59 -100.68,613.48 -101.74,617.39 -102.73,621.32 -103.65,625.27 -104.48,629.23 -105.23,633.21 -105.87,637.21 -106.41,641.23\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-116.15,595.64 -114.81,591.60 -113.40,587.54 -111.98,583.55 -110.52,579.59 -109.01,575.61 -107.49,571.69 -105.95,567.79 -104.38,563.91 -102.79,560.05 -101.19,556.23 -82.76,563.99 -84.33,567.73 -85.87,571.48 -87.39,575.23 -88.88,579.00 -90.34,582.78 -91.77,586.57 -93.17,590.37 -94.54,594.18 -95.86,598.01 -97.14,601.86\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-101.19,556.23 -99.56,552.38 -97.90,548.55 -96.22,544.74 -94.54,540.96 -92.83,537.17 -91.11,533.41 -89.36,529.63 -87.61,525.90 -85.83,522.14 -84.05,518.43 -66.03,527.10 -67.78,530.76 -69.52,534.42 -71.24,538.08 -72.94,541.76 -74.62,545.44 -76.29,549.14 -77.94,552.84 -79.57,556.55 -81.17,560.27 -82.76,563.99\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-84.05,518.43 -82.24,514.68 -80.42,510.98 -78.59,507.28 -76.73,503.58 -74.87,499.90 -73.00,496.22 -71.10,492.53 -69.19,488.88 -67.28,485.23 -65.33,481.57 -47.69,490.98 -49.59,494.56 -51.47,498.15 -53.34,501.74 -55.20,505.34 -57.04,508.95 -58.87,512.57 -60.68,516.19 -62.48,519.82 -64.26,523.46 -66.03,527.10\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-65.33,481.57 -63.39,477.93 -61.43,474.31 -59.46,470.69 -57.47,467.08 -55.46,463.45 -53.44,459.85 -51.41,456.26 -49.37,452.68 -47.32,449.11 -45.25,445.54 -27.96,455.60 -30.00,459.10 -32.01,462.62 -34.02,466.14 -36.01,469.66 -37.99,473.20 -39.96,476.74 -41.91,480.29 -43.85,483.85 -45.78,487.41 -47.69,490.98\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-45.25,445.54 -43.17,441.98 -41.07,438.42 -38.95,434.86 -36.82,431.32 -34.69,427.79 -32.53,424.27 -30.37,420.76 -28.19,417.25 -26.00,413.76 -23.79,410.27 -6.91,420.99 -9.07,424.42 -11.23,427.85 -13.36,431.29 -15.49,434.74 -17.60,438.19 -19.70,441.66 -21.79,445.13 -23.86,448.61 -25.92,452.10 -27.96,455.60\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-23.79,410.27 -21.57,406.79 -19.33,403.31 -17.08,399.85 -14.81,396.40 -12.52,392.94 -10.22,389.49 -7.89,386.05 -5.57,382.63 -3.22,379.22 -0.88,375.84 15.53,387.27 13.23,390.60 10.93,393.93 8.65,397.28 6.39,400.64 4.14,404.01 1.90,407.39 -0.32,410.78 -2.53,414.17 -4.73,417.58 -6.91,420.99\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-0.88,375.84 1.46,372.48 3.82,369.12 6.17,365.77 8.54,362.43 10.91,359.10 13.29,355.77 15.67,352.45 18.06,349.12 20.46,345.81 22.88,342.48 39.04,354.27 36.65,357.55 34.28,360.83 31.91,364.12 29.55,367.41 27.20,370.70 24.85,374.01 22.51,377.31 20.18,380.63 17.85,383.94 15.53,387.27\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"22.88,342.48 25.27,339.20 27.69,335.90 30.12,332.60 32.55,329.30 34.98,326.02 37.42,322.75 39.87,319.47 42.33,316.19 44.78,312.94 47.25,309.67 63.19,321.75 60.75,324.98 58.31,328.21 55.88,331.45 53.45,334.70 51.04,337.95 48.62,341.20 46.22,344.46 43.82,347.73 41.42,350.99 39.04,354.27\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"47.25,309.67 49.73,306.41 52.20,303.16 54.69,299.91 57.19,296.66 59.68,293.43 62.19,290.20 64.71,286.96 67.22,283.75 69.75,280.52 72.30,277.30 87.98,289.70 85.47,292.89 82.97,296.07 80.48,299.26 77.99,302.46 75.51,305.66 73.03,308.87 70.56,312.08 68.10,315.30 65.64,318.52 63.19,321.75\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"72.30,277.30 74.83,274.10 77.38,270.89 79.95,267.68 82.50,264.50 85.08,261.31 87.67,258.11 90.25,254.95 92.86,251.77 95.47,248.59 98.07,245.45 113.47,258.22 110.89,261.34 108.31,264.46 105.74,267.60 103.18,270.74 100.63,273.88 98.09,277.04 95.55,280.19 93.02,283.36 90.50,286.53 87.98,289.70\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"98.07,245.45 100.71,242.29 103.35,239.13 105.99,236.00 108.65,232.86 111.32,229.72 114.01,226.59 116.68,223.49 119.39,220.38 122.12,217.27 124.85,214.17 139.81,227.44 137.13,230.48 134.46,233.53 131.81,236.58 129.16,239.65 126.52,242.72 123.89,245.81 121.27,248.90 118.66,252.00 116.06,255.10 113.47,258.22\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"124.85,214.17 127.57,211.11 130.34,208.02 133.11,204.95 135.91,201.88 138.72,198.83 141.51,195.82 144.36,192.78 147.22,189.76 150.11,186.74 153.02,183.74 167.33,197.71 164.51,200.62 161.71,203.55 158.92,206.49 156.15,209.44 153.39,212.41 150.65,215.39 147.92,218.39 145.21,221.40 142.50,224.41 139.81,227.44\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"153.02,183.74 155.95,180.76 158.90,177.79 161.88,174.83 164.89,171.90 167.93,168.98 171.00,166.08 174.14,163.17 177.28,160.32 180.51,157.46 184.00,154.46 196.74,169.87 193.67,172.52 190.64,175.21 187.64,177.93 184.67,180.68 181.72,183.46 178.80,186.27 175.90,189.10 173.02,191.95 170.17,194.82 167.33,197.71\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"315.75,456.80 316.02,460.83 316.71,464.79 317.74,468.65 319.06,472.42 320.58,476.10 322.27,479.72 324.09,483.30 325.99,486.84 327.94,490.38 329.92,493.93 331.90,497.50 333.86,501.13 335.76,504.82 337.59,508.60 339.31,512.48 340.88,516.48 342.26,520.61 343.42,524.89 344.29,529.29 344.85,533.83 345.03,538.45 344.82,543.12 344.20,547.79 343.18,552.39 341.79,556.90 340.06,561.27 338.05,565.47 335.79,569.50 333.32,573.37 330.76,577.01 315.56,564.01 318.15,561.39 320.52,558.76 322.72,556.03 324.72,553.19 326.50,550.26 328.04,547.22 329.33,544.06 330.34,540.79 331.07,537.42 331.51,533.94 331.68,530.39 331.56,526.75 331.20,523.07 330.60,519.34 329.80,515.60 328.84,511.84 327.73,508.07 326.50,504.28 325.20,500.49 323.85,496.68 322.47,492.85 321.11,489.00 319.79,485.10 318.55,481.18 317.43,477.19 316.50,473.16 315.79,469.08 315.39,464.97 315.35,460.86 315.75,456.80\" fill=\"rgb(178, 242, 187)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"330.76,577.01 327.90,580.27 324.97,583.42 322.01,586.47 319.00,589.45 315.97,592.35 312.89,595.22 309.79,598.02 306.68,600.77 303.53,603.49 300.37,606.17 287.52,590.85 290.54,588.29 293.52,585.71 296.47,583.10 299.39,580.46 302.24,577.81 305.06,575.11 307.81,572.39 310.49,569.63 313.08,566.84 315.56,564.01\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"300.37,606.17 297.20,608.82 294.00,611.44 290.78,614.03 287.59,616.58 284.34,619.12 281.09,621.64 277.82,624.15 274.57,626.61 271.28,629.08 267.98,631.53 256.11,615.43 259.32,613.05 262.52,610.65 265.72,608.22 268.88,605.80 272.03,603.36 275.16,600.90 278.31,598.40 281.40,595.91 284.47,593.39 287.52,590.85\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"267.98,631.53 264.70,633.94 261.38,636.36 258.08,638.75 254.75,641.14 251.41,643.51 248.08,645.86 244.73,648.21 241.39,650.54 238.02,652.86 234.66,655.17 223.36,638.67 226.68,636.39 229.98,634.11 233.28,631.81 236.57,629.51 239.86,627.18 243.12,624.86 246.38,622.53 249.64,620.17 252.87,617.81 256.11,615.43\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"234.66,655.17 231.29,657.47 227.91,659.77 224.53,662.04 221.14,664.32 217.76,666.57 214.35,668.83 210.95,671.07 207.54,673.31 204.14,675.53 200.71,677.75 189.85,660.96 193.22,658.77 196.60,656.57 199.96,654.36 203.33,652.14 206.68,649.92 210.03,647.68 213.37,645.44 216.72,643.19 220.04,640.94 223.36,638.67\" fill=\"url(&quot;#checkerboard&quot;)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"200.71,677.75 197.29,679.96 193.86,682.17 190.43,684.37 187.01,686.54 183.56,688.72 180.12,690.90 176.66,693.07 173.23,695.22 169.77,697.37 166.30,699.52 155.78,682.51 159.20,680.39 162.62,678.26 166.06,676.11 169.46,673.97 172.87,671.83 176.27,669.67 179.69,667.49 183.07,665.33 186.46,663.15 189.85,660.96\" style=\"fill: rgb(220, 53, 69);\" fill=\"rgb(220, 53, 69)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"188.78975591170337\" y=\"673.5370385000792\" transform=\"rotate(237.68122761957687, 188.78975591170337, 673.5370385000792)\" font-size=\"4.999999999999983\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.24999999999999917\" style=\"pointer-events: none; user-select: none;\">2</text></g><g class=\"segment-group\"><polygon points=\"166.30,699.52 162.84,701.66 159.36,703.79 155.89,705.92 152.43,708.03 148.94,710.14 145.46,712.24 141.96,714.34 138.46,716.43 134.96,718.52 131.46,720.59 121.30,703.36 124.76,701.31 128.22,699.25 131.68,697.19 135.13,695.11 138.58,693.03 142.03,690.94 145.49,688.84 148.92,686.73 152.35,684.63 155.78,682.51\" style=\"\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"131.46,720.59 127.95,722.66 124.43,724.72 120.91,726.78 117.38,728.82 113.85,730.86 110.31,732.88 106.77,734.90 103.22,736.91 99.66,738.90 96.09,740.89 86.39,723.39 89.91,721.44 93.41,719.48 96.92,717.50 100.41,715.51 103.90,713.51 107.39,711.49 110.87,709.48 114.35,707.45 117.83,705.41 121.30,703.36\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"96.09,740.89 92.47,742.87 88.87,744.83 85.22,746.77 81.56,748.69 77.88,750.58 74.18,752.44 70.46,754.27 66.71,756.06 62.94,757.82 59.15,759.53 51.02,741.25 54.61,739.63 58.19,737.97 61.75,736.26 65.30,734.52 68.84,732.74 72.36,730.93 75.88,729.08 79.39,727.22 82.91,725.31 86.39,723.39\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"59.15,759.53 55.28,761.21 51.43,762.82 47.50,764.39 43.52,765.89 39.51,767.32 35.46,768.68 31.37,769.93 27.23,771.09 22.99,772.16 18.75,773.08 14.77,753.48 18.45,752.68 22.06,751.77 25.73,750.75 29.38,749.62 33.02,748.41 36.64,747.12 40.24,745.75 43.83,744.32 47.46,742.80 51.02,741.25\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"18.75,773.08 14.41,773.68 10.03,774.13 5.63,774.42 1.18,774.54 -3.24,774.48 -7.62,774.25 -12.02,773.85 -16.33,773.28 -20.63,772.57 -24.84,771.72 -29.00,770.75 -33.35,769.56 -37.62,768.10 -41.78,766.40 -45.77,764.49 -49.63,762.39 -53.36,760.12 -56.96,757.69 -60.44,755.13 -63.80,752.44 -67.02,749.65 -70.14,746.75 -73.15,743.74 -76.02,740.67 -78.81,737.49 -81.49,734.23 -84.06,730.90 -86.51,727.50 -88.85,724.04 -91.08,720.50 -93.20,716.89 -95.20,713.22 -97.08,709.49 -98.81,705.70 -100.41,701.83 -101.86,697.92 -103.13,693.95 -104.25,689.97 -105.24,685.97 -106.11,681.93 -106.83,677.86 -107.40,673.79 -107.81,669.69 -108.06,665.59 -108.16,661.50 -108.09,657.41 -107.88,653.33 -107.52,649.27 -107.03,645.24 -106.41,641.23 -106.41,641.23 -106.63,645.27 -106.72,649.32 -106.68,653.36 -106.49,657.38 -106.16,661.39 -105.67,665.38 -105.03,669.33 -104.24,673.25 -103.30,677.13 -102.22,680.97 -101.01,684.76 -99.67,688.52 -98.22,692.22 -96.66,695.84 -94.94,699.38 -93.08,702.85 -91.10,706.25 -88.99,709.58 -86.78,712.83 -84.47,716.00 -82.05,719.10 -79.54,722.13 -76.94,725.06 -74.27,727.91 -71.51,730.66 -68.67,733.31 -65.73,735.89 -62.75,738.33 -59.68,740.67 -56.54,742.88 -53.35,744.96 -50.09,746.90 -46.77,748.68 -43.39,750.30 -39.97,751.75 -36.50,753.00 -33.03,754.03 -29.53,754.85 -25.98,755.44 -22.17,755.94 -18.37,756.32 -14.63,756.57 -10.86,756.69 -7.17,756.66 -3.45,756.48 0.23,756.16 3.86,755.70 7.52,755.09 11.15,754.35 14.77,753.48\" fill=\"rgb(255, 201, 201)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"196.74,169.87 199.84,167.25 202.95,164.66 206.09,162.10 209.25,159.57 212.44,157.07 215.66,154.61 218.91,152.19 222.19,149.82 225.51,147.49 228.87,145.22 232.26,143.01 235.70,140.86 239.17,138.79 242.70,136.79 246.26,134.86 249.87,133.03 253.53,131.28 257.23,129.62 260.96,128.06 264.74,126.58 268.54,125.20 272.38,123.90 276.24,122.69 280.13,121.55 284.04,120.47 287.96,119.46 291.90,118.51 295.85,117.60 299.81,116.74 303.77,115.90 307.81,135.49 304.01,136.29 300.21,137.12 296.51,137.97 292.79,138.87 289.17,139.80 285.57,140.79 282.07,141.82 278.57,142.92 275.18,144.07 271.77,145.30 268.48,146.59 265.16,147.98 261.95,149.42 258.72,150.97 255.52,152.59 252.37,154.29 249.23,156.08 246.12,157.93 243.03,159.86 239.92,161.88 236.85,163.96 233.80,166.10 230.75,168.31 227.70,170.58 224.69,172.88 221.66,175.25 218.67,177.65 215.68,180.09 212.70,182.57 209.49,185.28\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"218.65440357071793\" y=\"165.2017862885439\" transform=\"rotate(52.49734155853747, 218.65440357071793, 165.2017862885439)\" font-size=\"9.999999999999998\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999994\" style=\"pointer-events: none; user-select: none;\">140</text></g><g class=\"segment-group\"><polygon points=\"303.77,115.90 307.74,115.10 311.72,114.32 315.69,113.55 319.67,112.80 323.66,112.05 327.64,111.32 331.62,110.58 335.61,109.85 339.59,109.11 343.58,108.37 347.23,128.03 343.24,128.77 339.24,129.51 335.26,130.25 331.27,130.99 327.30,131.72 323.37,132.45 319.43,133.20 315.53,133.95 311.65,134.71 307.81,135.49\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"343.58,108.37 347.56,107.63 351.55,106.91 355.53,106.20 359.53,105.51 363.52,104.82 367.51,104.15 371.51,103.50 375.51,102.85 379.51,102.22 383.52,101.60 386.54,121.37 382.59,121.98 378.65,122.61 374.74,123.24 370.79,123.88 366.86,124.54 362.93,125.21 359.00,125.90 355.07,126.60 351.14,127.31 347.23,128.03\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"383.52,101.60 387.52,101.00 391.53,100.40 395.54,99.82 399.55,99.25 403.56,98.69 407.58,98.14 411.59,97.61 415.61,97.09 419.63,96.58 423.65,96.08 426.08,115.94 422.12,116.42 418.14,116.93 414.19,117.44 410.23,117.97 406.28,118.50 402.33,119.05 398.38,119.62 394.43,120.19 390.48,120.78 386.54,121.37\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"423.65,96.08 427.67,95.60 431.70,95.13 435.72,94.67 439.75,94.23 443.78,93.80 447.81,93.38 451.84,92.98 455.87,92.59 459.90,92.22 463.94,91.86 465.66,111.79 461.71,112.14 457.75,112.50 453.80,112.88 449.83,113.28 445.85,113.69 441.90,114.11 437.95,114.55 433.99,115.00 430.04,115.46 426.08,115.94\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"463.94,91.86 467.98,91.52 472.01,91.19 476.05,90.88 480.09,90.59 484.14,90.31 488.18,90.05 492.22,89.81 496.27,89.59 500.31,89.39 504.36,89.20 505.22,109.18 501.28,109.36 497.34,109.56 493.34,109.78 489.40,110.01 485.45,110.27 481.51,110.54 477.56,110.82 473.61,111.13 469.61,111.45 465.66,111.79\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"504.36,89.20 508.41,89.04 512.46,88.90 516.51,88.78 520.56,88.69 524.61,88.62 528.66,88.57 532.71,88.55 536.76,88.56 540.81,88.60 544.86,88.66 544.47,108.66 540.56,108.59 536.66,108.56 532.75,108.55 528.84,108.57 524.92,108.61 520.97,108.68 517.01,108.78 513.08,108.89 509.15,109.03 505.22,109.18\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"544.86,88.66 548.91,88.76 552.96,88.89 557.01,89.06 561.06,89.26 565.10,89.50 569.14,89.79 573.18,90.12 577.21,90.49 581.24,90.92 585.27,91.40 582.75,111.24 579.02,110.79 575.25,110.39 571.44,110.04 567.62,109.73 563.80,109.46 559.97,109.23 556.12,109.04 552.24,108.88 548.37,108.75 544.47,108.66\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"585.27,91.40 589.28,91.93 593.29,92.53 597.28,93.20 601.27,93.94 605.23,94.76 609.19,95.62 613.14,96.54 617.07,97.51 620.99,98.52 624.90,99.60 619.48,118.85 615.82,117.84 612.15,116.89 608.48,115.99 604.79,115.13 601.10,114.32 597.44,113.57 593.80,112.89 590.15,112.29 586.50,111.74 582.75,111.24\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"624.90,99.60 628.79,100.72 632.67,101.89 636.53,103.12 640.38,104.39 644.20,105.72 648.01,107.10 651.80,108.54 655.57,110.02 659.32,111.55 663.05,113.14 655.07,131.48 651.61,130.01 648.13,128.58 644.62,127.20 641.09,125.87 637.53,124.58 633.96,123.34 630.37,122.15 626.77,121.00 623.13,119.90 619.48,118.85\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"663.05,113.14 666.75,114.78 670.43,116.47 674.09,118.22 677.72,120.01 681.33,121.86 684.91,123.76 688.45,125.71 691.97,127.72 695.46,129.78 698.92,131.89 688.35,148.87 685.19,146.94 681.95,145.02 678.67,143.16 675.39,141.35 672.09,139.60 668.73,137.88 665.35,136.21 661.95,134.58 658.52,133.01 655.07,131.48\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"698.92,131.89 702.35,134.05 705.74,136.27 709.09,138.54 712.41,140.86 715.69,143.24 718.93,145.67 722.14,148.15 725.29,150.69 728.41,153.28 731.48,155.92 718.29,170.96 715.49,168.54 712.63,166.17 709.75,163.85 706.80,161.57 703.83,159.34 700.82,157.16 697.74,155.00 694.68,152.93 691.53,150.88 688.35,148.87\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"731.48,155.92 734.50,158.62 737.47,161.38 740.39,164.18 743.26,167.04 746.08,169.95 748.83,172.92 751.53,175.94 754.17,179.02 756.75,182.14 759.26,185.32 743.44,197.57 741.19,194.72 738.86,191.88 736.48,189.11 734.06,186.40 731.57,183.72 729.00,181.06 726.40,178.47 723.76,175.94 721.03,173.41 718.29,170.96\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"759.26,185.32 761.70,188.56 764.07,191.84 766.37,195.18 768.56,198.58 770.66,202.05 772.67,205.56 774.60,209.13 776.44,212.74 778.21,216.38 779.90,220.06 761.65,228.23 760.11,224.90 758.54,221.65 756.88,218.40 755.20,215.28 753.43,212.19 751.59,209.16 749.72,206.26 747.73,203.37 745.62,200.45 743.44,197.57\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"779.90,220.06 781.52,223.78 783.08,227.52 784.56,231.28 785.99,235.08 787.36,238.89 788.66,242.72 789.91,246.58 791.11,250.45 792.25,254.34 793.34,258.24 774.05,263.50 773.02,259.81 771.97,256.24 770.84,252.58 769.69,249.04 768.47,245.48 767.21,241.95 765.90,238.46 764.54,235.04 763.13,231.63 761.65,228.23\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"793.34,258.24 794.38,262.15 795.37,266.08 796.31,270.02 797.20,273.98 798.04,277.94 798.83,281.91 799.58,285.89 800.28,289.88 800.93,293.88 801.53,297.89 781.73,300.71 781.17,297.00 780.55,293.19 779.90,289.48 779.19,285.69 778.46,282.01 777.66,278.24 776.82,274.51 775.95,270.85 775.01,267.12 774.05,263.50\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"801.53,297.89 802.08,301.90 802.59,305.92 803.05,309.95 803.45,313.98 803.81,318.01 804.12,322.05 804.37,326.10 804.57,330.14 804.71,334.19 804.79,338.24 784.80,338.53 784.72,334.75 784.58,330.97 784.40,327.24 784.16,323.40 783.88,319.67 783.54,315.83 783.16,312.10 782.73,308.27 782.26,304.53 781.73,300.71\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"804.79,338.24 804.82,342.29 804.78,346.34 804.68,350.39 804.50,354.44 804.26,358.48 803.93,362.52 803.52,366.55 803.02,370.57 802.42,374.58 801.72,378.57 782.08,374.79 782.68,371.41 783.20,367.88 783.65,364.32 784.01,360.72 784.30,357.10 784.53,353.38 784.69,349.72 784.78,345.98 784.82,342.24 784.80,338.53\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"801.72,378.57 800.90,382.54 799.94,386.47 798.87,390.38 797.67,394.25 796.36,398.08 794.95,401.88 793.45,405.64 791.85,409.36 790.16,413.05 788.39,416.69 770.50,407.77 772.07,404.53 773.56,401.27 774.97,397.99 776.29,394.69 777.52,391.37 778.66,388.04 779.67,384.78 780.59,381.43 781.38,378.18 782.08,374.79\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"788.39,416.69 786.54,420.30 784.62,423.86 782.62,427.38 780.54,430.86 778.40,434.30 776.19,437.70 773.91,441.05 771.57,444.35 769.16,447.61 766.69,450.82 750.97,438.45 753.20,435.55 755.38,432.60 757.49,429.63 759.54,426.61 761.53,423.56 763.46,420.47 765.32,417.34 767.11,414.19 768.84,410.98 770.50,407.77\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"766.69,450.82 764.15,453.97 761.55,457.08 758.88,460.13 756.16,463.13 753.36,466.06 750.51,468.93 747.58,471.74 744.59,474.47 741.53,477.13 738.41,479.70 725.90,464.10 728.61,461.86 731.30,459.53 733.92,457.13 736.48,454.68 739.01,452.13 741.51,449.51 743.95,446.84 746.33,444.10 748.67,441.31 750.97,438.45\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"738.41,479.70 735.21,482.19 731.94,484.58 728.59,486.86 725.17,489.03 721.67,491.08 718.10,492.98 714.44,494.72 710.70,496.29 706.89,497.66 703.01,498.80 699.05,499.69 695.05,500.27 691.00,500.50 686.95,500.44 682.91,500.11 678.90,499.55 674.93,498.79 670.99,497.84 667.09,496.75 663.23,495.51 669.60,476.56 672.87,477.60 676.05,478.50 679.16,479.24 682.21,479.83 685.19,480.24 687.90,480.46 690.60,480.51 693.06,480.36 695.34,480.04 697.97,479.44 700.65,478.66 703.45,477.65 706.23,476.48 709.09,475.12 711.94,473.60 714.77,471.95 717.58,470.17 720.38,468.26 723.18,466.21 725.90,464.10\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"716.6026020303968\" y=\"481.61571964274356\" transform=\"rotate(241.655390693229, 716.6026020303968, 481.61571964274356)\" font-size=\"10.000000000000025\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000012\" style=\"pointer-events: none; user-select: none;\">80</text></g><g class=\"segment-group\"><polygon points=\"663.23,495.51 659.41,494.16 655.63,492.71 651.88,491.16 648.17,489.53 644.50,487.83 640.85,486.07 637.23,484.25 633.64,482.38 630.07,480.46 626.52,478.50 636.27,461.04 639.61,462.88 643.02,464.71 646.38,466.47 649.73,468.15 653.04,469.75 656.39,471.30 659.72,472.76 663.05,474.14 666.36,475.41 669.60,476.56\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"626.52,478.50 623.00,476.50 619.49,474.48 616.00,472.42 612.52,470.34 609.06,468.24 605.61,466.11 602.17,463.98 598.74,461.83 595.31,459.66 591.89,457.49 602.62,440.61 606.00,442.76 609.39,444.90 612.78,447.03 616.12,449.10 619.51,451.18 622.84,453.21 626.23,455.24 629.58,457.21 632.93,459.14 636.27,461.04\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"591.89,457.49 588.47,455.32 585.06,453.14 581.64,450.96 578.22,448.78 574.80,446.61 571.38,444.45 567.94,442.30 564.50,440.17 561.04,438.05 557.57,435.96 567.80,418.78 571.40,420.94 574.99,423.14 578.50,425.31 582.03,427.52 585.49,429.71 588.95,431.90 592.39,434.10 595.81,436.28 599.23,438.45 602.62,440.61\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"557.57,435.96 554.08,433.90 550.57,431.88 547.04,429.90 543.54,427.86 540.10,425.72 536.72,423.49 533.39,421.18 530.11,418.81 526.87,416.37 523.68,413.88 536.06,398.17 539.04,400.50 542.00,402.73 544.96,404.87 547.91,406.92 550.91,408.89 553.85,410.72 556.86,412.48 560.44,414.49 564.15,416.62 567.80,418.78\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"523.68,413.88 520.52,411.34 517.39,408.77 514.29,406.16 511.22,403.52 508.16,400.86 505.12,398.18 502.10,395.48 499.08,392.78 496.07,390.07 493.06,387.36 506.43,372.48 509.45,375.21 512.45,377.90 515.44,380.59 518.39,383.21 521.36,385.83 524.30,388.40 527.24,390.92 530.18,393.39 533.11,395.81 536.06,398.17\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"493.06,387.36 490.05,384.65 487.02,381.95 483.99,379.27 480.94,376.60 477.87,373.96 474.77,371.36 471.63,368.79 468.46,366.27 465.24,363.81 461.97,361.42 473.55,345.12 477.21,347.79 480.78,350.52 484.19,353.22 487.52,355.95 490.84,358.75 494.05,361.50 497.20,364.25 500.32,367.01 503.38,369.75 506.43,372.48\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"461.97,361.42 458.64,359.12 455.23,356.92 451.76,354.84 448.19,352.91 444.54,351.17 440.78,349.65 436.93,348.39 432.99,347.45 428.99,346.87 424.94,346.73 420.90,347.02 416.91,347.71 412.99,348.72 409.15,350.01 405.39,351.53 401.73,353.26 398.15,355.15 394.65,357.19 391.22,359.35 387.87,361.63 376.37,345.27 380.25,342.63 384.26,340.10 388.41,337.68 392.79,335.36 397.34,333.23 402.17,331.27 407.27,329.56 412.68,328.16 418.41,327.18 424.56,326.73 430.80,326.96 436.78,327.81 442.41,329.15 447.67,330.87 452.65,332.89 457.28,335.10 461.63,337.45 465.83,339.95 469.76,342.50 473.55,345.12\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"447.63101341077305\" y=\"343.1806347846767\" transform=\"rotate(-68.35531231341065, 447.63101341077305, 343.1806347846767)\" font-size=\"10.000000000000005\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000003\" style=\"pointer-events: none; user-select: none;\">60</text></g><g class=\"segment-group\"><polygon points=\"387.87,361.63 384.60,364.01 381.38,366.48 378.23,369.03 375.15,371.65 372.12,374.34 369.14,377.09 366.22,379.90 363.35,382.76 360.53,385.67 357.77,388.63 343.06,375.07 346.05,371.88 349.10,368.73 352.22,365.62 355.43,362.53 358.69,359.52 362.02,356.56 365.47,353.63 368.99,350.79 372.61,348.00 376.37,345.27\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"357.77,388.63 355.05,391.63 352.38,394.68 349.75,397.76 347.18,400.89 344.65,404.06 342.17,407.26 339.74,410.50 337.36,413.78 335.04,417.10 332.76,420.45 316.10,409.39 318.59,405.72 321.08,402.16 323.64,398.64 326.24,395.17 328.93,391.69 331.65,388.29 334.43,384.91 337.23,381.62 340.11,378.33 343.06,375.07\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"332.76,420.45 330.55,423.85 328.40,427.28 326.32,430.75 324.31,434.27 322.38,437.83 320.54,441.45 318.81,445.11 317.31,448.87 316.28,452.79 315.75,456.80 295.80,455.35 296.66,448.92 298.33,442.57 300.58,436.90 302.59,432.63 304.67,428.54 306.83,424.54 309.05,420.66 311.35,416.83 313.71,413.07 316.10,409.39\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"315.75,456.80 315.35,460.86 315.39,464.97 315.79,469.08 316.50,473.16 317.43,477.19 318.55,481.18 319.79,485.10 321.11,489.00 322.47,492.85 323.85,496.68 325.20,500.49 326.50,504.28 327.73,508.07 328.84,511.84 329.80,515.60 330.60,519.34 331.20,523.07 331.56,526.75 331.68,530.39 331.51,533.94 331.07,537.42 330.34,540.79 329.33,544.06 328.04,547.22 326.50,550.26 324.72,553.19 322.72,556.03 320.52,558.76 318.15,561.39 315.56,564.01 300.35,551.02 302.45,548.99 304.16,547.26 305.70,545.54 307.03,543.87 308.15,542.30 309.12,540.74 309.93,539.19 310.59,537.62 311.12,535.94 311.51,534.12 311.75,532.11 311.81,529.86 311.67,527.40 311.33,524.71 310.80,521.84 310.08,518.79 309.18,515.56 308.12,512.15 306.94,508.63 305.64,504.94 304.26,501.12 302.81,497.08 301.34,492.84 299.92,488.46 298.53,483.72 297.29,478.73 296.26,473.40 295.57,467.70 295.37,461.66 295.80,455.35\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"308.85356434070275\" y=\"479.63077350344815\" transform=\"rotate(168.51810879232937, 308.85356434070275, 479.63077350344815)\" font-size=\"10\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5\" style=\"pointer-events: none; user-select: none;\">60</text></g><g class=\"segment-group\"><polygon points=\"315.56,564.01 313.08,566.84 310.49,569.63 307.81,572.39 305.06,575.11 302.24,577.81 299.39,580.46 296.47,583.10 293.52,585.71 290.54,588.29 287.52,590.85 274.66,575.53 277.54,573.09 280.37,570.64 283.15,568.18 285.89,565.70 288.50,563.27 291.11,560.78 293.60,558.31 296.01,555.83 298.26,553.41 300.35,551.02\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"287.52,590.85 284.47,593.39 281.40,595.91 278.31,598.40 275.16,600.90 272.03,603.36 268.88,605.80 265.72,608.22 262.52,610.65 259.32,613.05 256.11,615.43 244.25,599.33 247.36,597.02 250.47,594.69 253.62,592.30 256.68,589.95 259.73,587.59 262.74,585.22 265.83,582.77 268.80,580.37 271.74,577.96 274.66,575.53\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"256.11,615.43 252.87,617.81 249.64,620.17 246.38,622.53 243.12,624.86 239.86,627.18 236.57,629.51 233.28,631.81 229.98,634.11 226.68,636.39 223.36,638.67 212.05,622.17 215.33,619.92 218.57,617.68 221.84,615.41 225.05,613.15 228.31,610.86 231.49,608.59 234.68,606.31 237.90,603.98 241.05,601.68 244.25,599.33\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"223.36,638.67 220.04,640.94 216.72,643.19 213.37,645.44 210.03,647.68 206.68,649.92 203.33,652.14 199.96,654.36 196.60,656.57 193.22,658.77 189.85,660.96 178.98,644.17 182.30,642.01 185.65,639.83 188.96,637.66 192.30,635.45 195.60,633.27 198.93,631.05 202.21,628.85 205.53,626.61 208.79,624.40 212.05,622.17\" fill=\"url(&quot;#checkerboard&quot;)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"189.85,660.96 186.46,663.15 183.07,665.33 179.69,667.49 176.27,669.67 172.87,671.83 169.46,673.97 166.06,676.11 162.62,678.26 159.20,680.39 155.78,682.51 145.26,665.50 148.64,663.41 152.02,661.31 155.45,659.16 158.81,657.05 162.17,654.93 165.52,652.80 168.95,650.62 172.29,648.48 175.62,646.34 178.98,644.17\" style=\"fill: rgb(255, 193, 7);\" fill=\"rgb(255, 193, 7)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"177.9576646242459\" y=\"656.7240525591437\" transform=\"rotate(237.68127774370225, 177.9576646242459, 656.7240525591437)\" font-size=\"5.000000000000006\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.25000000000000033\" style=\"pointer-events: none; user-select: none;\">1</text></g><g class=\"segment-group\"><polygon points=\"155.78,682.51 152.35,684.63 148.92,686.73 145.49,688.84 142.03,690.94 138.58,693.03 135.13,695.11 131.68,697.19 128.22,699.25 124.76,701.31 121.30,703.36 111.14,686.14 114.56,684.11 117.99,682.07 121.40,680.03 124.81,677.98 128.22,675.92 131.62,673.86 135.08,671.76 138.48,669.68 141.87,667.59 145.26,665.50\" style=\"\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"121.30,703.36 117.83,705.41 114.35,707.45 110.87,709.48 107.39,711.49 103.90,713.51 100.41,715.51 96.92,717.50 93.41,719.48 89.91,721.44 86.39,723.39 76.70,705.90 80.16,703.98 83.61,702.04 87.07,700.09 90.51,698.13 93.96,696.15 97.40,694.17 100.84,692.18 104.27,690.17 107.71,688.16 111.14,686.14\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"86.39,723.39 82.91,725.31 79.39,727.22 75.88,729.08 72.36,730.93 68.84,732.74 65.30,734.52 61.75,736.26 58.19,737.97 54.61,739.63 51.02,741.25 42.90,722.98 46.28,721.45 49.66,719.88 53.04,718.26 56.41,716.60 59.79,714.90 63.16,713.17 66.54,711.40 69.91,709.61 73.34,707.75 76.70,705.90\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"51.02,741.25 47.46,742.80 43.83,744.32 40.24,745.75 36.64,747.12 33.02,748.41 29.38,749.62 25.73,750.75 22.06,751.77 18.45,752.68 14.77,753.48 10.79,733.88 13.91,733.20 16.89,732.45 20.10,731.56 23.31,730.57 26.52,729.49 29.75,728.34 32.99,727.11 36.24,725.81 39.63,724.40 42.90,722.98\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"14.77,753.48 11.15,754.35 7.52,755.09 3.86,755.70 0.23,756.16 -3.45,756.48 -7.17,756.66 -10.86,756.69 -14.63,756.57 -18.37,756.32 -22.17,755.94 -18.83,736.22 -15.62,736.51 -12.60,736.67 -9.50,736.73 -6.67,736.66 -3.68,736.49 -0.81,736.19 1.98,735.79 4.90,735.26 7.81,734.63 10.79,733.88\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-22.17,755.94 -25.98,755.44 -29.53,754.85 -33.03,754.03 -36.50,753.00 -39.97,751.75 -43.39,750.30 -46.77,748.68 -50.09,746.90 -53.35,744.96 -56.54,742.88 -44.46,726.95 -41.90,728.56 -39.34,730.03 -36.78,731.36 -34.23,732.53 -31.69,733.54 -29.18,734.39 -26.84,735.02 -24.51,735.49 -22.11,735.82 -18.83,736.22\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-56.54,742.88 -59.68,740.67 -62.75,738.33 -65.73,735.89 -68.67,733.31 -71.51,730.66 -74.27,727.91 -76.94,725.06 -79.54,722.13 -82.05,719.10 -84.47,716.00 -86.78,712.83 -88.99,709.58 -91.10,706.25 -93.08,702.85 -94.94,699.38 -96.66,695.84 -98.22,692.22 -99.67,688.52 -101.01,684.76 -102.22,680.97 -103.30,677.13 -104.24,673.25 -105.03,669.33 -105.67,665.38 -106.16,661.39 -106.49,657.38 -106.68,653.36 -106.72,649.32 -106.63,645.27 -106.41,641.23 -86.55,643.59 -86.70,647.02 -86.75,650.43 -86.68,653.81 -86.49,657.11 -86.19,660.33 -85.75,663.61 -85.20,666.74 -84.53,669.85 -83.72,673.08 -82.81,676.17 -81.78,679.27 -80.60,682.48 -79.35,685.59 -78.08,688.43 -76.68,691.21 -75.17,693.95 -73.51,696.72 -71.74,699.46 -69.88,702.14 -67.92,704.77 -65.88,707.33 -63.70,709.91 -61.48,712.38 -59.22,714.73 -56.91,716.99 -54.53,719.17 -52.00,721.35 -49.56,723.29 -47.03,725.18 -44.46,726.95\" fill=\"rgb(231, 76, 60)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"-63.85678563603371\" y=\"723.362380106177\" transform=\"rotate(-46.089589718922724, -63.85678563603371, 723.362380106177)\" font-size=\"9.999999999999963\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.49999999999999817\" style=\"pointer-events: none; user-select: none;\">80</text></g><g class=\"segment-group\"><polygon points=\"-106.41,641.23 -105.87,637.21 -105.23,633.21 -104.48,629.23 -103.65,625.27 -102.73,621.32 -101.74,617.39 -100.68,613.48 -99.55,609.59 -98.37,605.71 -97.14,601.86 -78.13,608.07 -79.28,611.66 -80.38,615.27 -81.43,618.91 -82.40,622.50 -83.30,626.05 -84.12,629.57 -84.87,633.14 -85.52,636.63 -86.09,640.15 -86.55,643.59\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-97.14,601.86 -95.86,598.01 -94.54,594.18 -93.17,590.37 -91.77,586.57 -90.34,582.78 -88.88,579.00 -87.39,575.23 -85.87,571.48 -84.33,567.73 -82.76,563.99 -64.33,571.76 -65.86,575.41 -67.36,579.04 -68.82,582.67 -70.26,586.31 -71.67,589.95 -73.03,593.54 -74.37,597.18 -75.67,600.83 -76.92,604.42 -78.13,608.07\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-82.76,563.99 -81.17,560.27 -79.57,556.55 -77.94,552.84 -76.29,549.14 -74.62,545.44 -72.94,541.76 -71.24,538.08 -69.52,534.42 -67.78,530.76 -66.03,527.10 -48.01,535.78 -49.73,539.37 -51.42,542.93 -53.11,546.53 -54.76,550.11 -56.42,553.72 -58.04,557.31 -59.65,560.94 -61.23,564.54 -62.79,568.15 -64.33,571.76\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-66.03,527.10 -64.26,523.46 -62.48,519.82 -60.68,516.19 -58.87,512.57 -57.04,508.95 -55.20,505.34 -53.34,501.74 -51.47,498.15 -49.59,494.56 -47.69,490.98 -30.04,500.40 -31.90,503.89 -33.75,507.42 -35.59,510.95 -37.40,514.47 -39.21,518.00 -41.00,521.56 -42.78,525.10 -44.54,528.66 -46.29,532.23 -48.01,535.78\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-47.69,490.98 -45.78,487.41 -43.85,483.85 -41.91,480.29 -39.96,476.74 -37.99,473.20 -36.01,469.66 -34.02,466.14 -32.01,462.62 -30.00,459.10 -27.96,455.60 -10.68,465.66 -12.67,469.10 -14.66,472.55 -16.63,476.01 -18.59,479.48 -20.53,482.94 -22.45,486.40 -24.37,489.89 -26.27,493.39 -28.17,496.89 -30.04,500.40\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-27.96,455.60 -25.92,452.10 -23.86,448.61 -21.79,445.13 -19.70,441.66 -17.60,438.19 -15.49,434.74 -13.36,431.29 -11.23,427.85 -9.07,424.42 -6.91,420.99 9.98,431.72 7.85,435.07 5.74,438.44 3.64,441.82 1.55,445.20 -0.52,448.59 -2.58,452.00 -4.63,455.41 -6.65,458.81 -8.67,462.22 -10.68,465.66\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"-6.91,420.99 -4.73,417.58 -2.53,414.17 -0.32,410.78 1.90,407.39 4.14,404.01 6.39,400.64 8.65,397.28 10.93,393.93 13.23,390.60 15.53,387.27 31.95,398.69 29.68,401.97 27.43,405.24 25.20,408.52 22.99,411.79 20.79,415.08 18.61,418.38 16.43,421.70 14.26,425.03 12.11,428.37 9.98,431.72\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"15.53,387.27 17.85,383.94 20.18,380.63 22.51,377.31 24.85,374.01 27.20,370.70 29.55,367.41 31.91,364.12 34.28,360.83 36.65,357.55 39.04,354.27 55.20,366.05 52.85,369.28 50.50,372.53 48.16,375.78 45.82,379.05 43.48,382.31 41.16,385.59 38.85,388.85 36.54,392.13 34.24,395.41 31.95,398.69\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"39.04,354.27 41.42,350.99 43.82,347.73 46.22,344.46 48.62,341.20 51.04,337.95 53.45,334.70 55.88,331.45 58.31,328.21 60.75,324.98 63.19,321.75 79.13,333.83 76.72,337.02 74.29,340.24 71.89,343.44 69.49,346.65 67.09,349.88 64.70,353.10 62.32,356.33 59.94,359.56 57.57,362.79 55.20,366.05\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"63.19,321.75 65.64,318.52 68.10,315.30 70.56,312.08 73.03,308.87 75.51,305.66 77.99,302.46 80.48,299.26 82.97,296.07 85.47,292.89 87.98,289.70 103.67,302.11 101.19,305.25 98.72,308.40 96.24,311.57 93.79,314.73 91.33,317.89 88.87,321.08 86.43,324.25 84.00,327.43 81.56,330.63 79.13,333.83\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"87.98,289.70 90.50,286.53 93.02,283.36 95.55,280.19 98.09,277.04 100.63,273.88 103.18,270.74 105.74,267.60 108.31,264.46 110.89,261.34 113.47,258.22 128.87,270.98 126.30,274.08 123.77,277.16 121.24,280.25 118.70,283.36 116.18,286.46 113.67,289.57 111.15,292.71 108.66,295.83 106.17,298.96 103.67,302.11\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"113.47,258.22 116.06,255.10 118.66,252.00 121.27,248.90 123.89,245.81 126.52,242.72 129.16,239.65 131.81,236.58 134.46,233.53 137.13,230.48 139.81,227.44 154.77,240.71 152.15,243.69 149.54,246.67 146.93,249.67 144.31,252.71 141.72,255.73 139.14,258.75 136.56,261.79 133.97,264.86 131.42,267.92 128.87,270.98\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"139.81,227.44 142.50,224.41 145.21,221.40 147.92,218.39 150.65,215.39 153.39,212.41 156.15,209.44 158.92,206.49 161.71,203.55 164.51,200.62 167.33,197.71 181.64,211.68 178.91,214.50 176.20,217.33 173.49,220.19 170.79,223.07 168.07,226.00 165.40,228.91 162.73,231.83 160.08,234.77 157.44,237.72 154.77,240.71\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"167.33,197.71 170.17,194.82 173.02,191.95 175.90,189.10 178.80,186.27 181.72,183.46 184.67,180.68 187.64,177.93 190.64,175.21 193.67,172.52 196.74,169.87 209.48,185.28 206.84,187.58 204.00,190.09 201.14,192.68 198.34,195.28 195.52,197.94 192.71,200.64 189.92,203.36 187.15,206.11 184.39,208.88 181.64,211.68\" fill=\"rgb(255, 255, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/></g><g class=\"segment-group\"><polygon points=\"244.25,599.33 241.05,601.68 237.90,603.98 234.68,606.31 231.49,608.59 228.31,610.86 225.05,613.15 221.84,615.41 218.57,617.68 215.33,619.92 212.05,622.17 200.75,605.68 203.98,603.45 207.16,601.26 210.39,599.01 213.54,596.80 216.76,594.53 219.87,592.32 222.97,590.09 226.16,587.79 229.22,585.56 232.38,583.23\" style=\"fill: rgb(40, 167, 69);\" fill=\"rgb(40, 167, 69)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"222.44048539782628\" y=\"602.6730040645513\" transform=\"rotate(234.64427500882746, 222.44048539782628, 602.6730040645513)\" font-size=\"9.999999999999975\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.4999999999999988\" style=\"pointer-events: none; user-select: none;\">4</text></g><g class=\"segment-group\"><polygon points=\"212.05,622.17 208.79,624.40 205.53,626.61 202.21,628.85 198.93,631.05 195.60,633.27 192.30,635.45 188.96,637.66 185.65,639.83 182.30,642.01 178.98,644.17 168.11,627.38 171.38,625.26 174.71,623.09 177.97,620.95 181.28,618.77 184.52,616.62 187.82,614.42 191.05,612.25 194.34,610.04 197.54,607.87 200.75,605.68\" style=\"fill: rgb(0, 123, 255);\" fill=\"rgb(0, 123, 255)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"190.03420279722758\" y=\"624.8996485852181\" transform=\"rotate(236.37122415630583, 190.03420279722758, 624.8996485852181)\" font-size=\"10.00000000000001\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000006\" style=\"pointer-events: none; user-select: none;\">3</text></g><g class=\"segment-group\"><polygon points=\"178.98,644.17 175.62,646.34 172.29,648.48 168.95,650.62 165.52,652.80 162.17,654.93 158.81,657.05 155.45,659.16 152.02,661.31 148.64,663.41 145.26,665.50 134.74,648.49 138.07,646.43 141.41,644.35 144.85,642.20 148.16,640.12 151.48,638.03 154.78,635.93 158.21,633.75 161.50,631.64 164.79,629.53 168.11,627.38\" style=\"fill: rgb(220, 53, 69);\" fill=\"rgb(220, 53, 69)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"156.80922122067034\" y=\"646.4374999293424\" transform=\"rotate(237.68132890322377, 156.80922122067034, 646.4374999293424)\" font-size=\"10.00000000000002\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.500000000000001\" style=\"pointer-events: none; user-select: none;\">2</text></g><g class=\"segment-group\"><polygon points=\"145.26,665.50 141.87,667.59 138.48,669.68 135.08,671.76 131.62,673.86 128.22,675.92 124.81,677.98 121.40,680.03 117.99,682.07 114.56,684.11 111.14,686.14 100.98,668.91 104.36,666.91 107.75,664.89 111.12,662.88 114.49,660.85 117.86,658.82 121.22,656.78 124.68,654.67 128.04,652.62 131.39,650.56 134.74,648.49\" style=\"fill: rgb(255, 193, 7);\" fill=\"rgb(255, 193, 7)\" stroke=\"#333\" stroke-width=\"1\" stroke-dasharray=\"none\"/><text x=\"123.0494776971073\" y=\"667.3188983054782\" transform=\"rotate(238.8374952952563, 123.0494776971073, 667.3188983054782)\" font-size=\"10.000000000000005\" font-family=\"sans-serif\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"white\" stroke=\"black\" stroke-width=\"0.5000000000000003\" style=\"pointer-events: none; user-select: none;\">1</text></g></g></svg>"
+}

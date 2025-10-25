@@ -3,6 +3,7 @@ import {
   WSProtocol,
   type ClientMessage,
   type LobbyList,
+  type TrackList,
   type ServerMessage,
 } from "@racing-game-mono/core";
 import { writable, get } from "svelte/store";
@@ -18,6 +19,7 @@ export const serverMessage = writable<string>("");
 export const id = writable<string>("");
 export const joinedLobbyId = writable<string>("");
 export const lobbyList = writable<LobbyList>([]);
+export const trackList = writable<TrackList>([]);
 
 export const connect = () => {
   if (ws) {
@@ -73,6 +75,13 @@ export const startGame = () => {
   ws?.send(JSON.stringify(message));
 };
 
+export const getTrackList = () => {
+  const message: ClientMessage = {
+    protocol: WSProtocol.GET_TRACK_LIST,
+  };
+  ws?.send(JSON.stringify(message));
+};
+
 function handleOpen() {
   connected.set(true);
   errorMessage.set("");
@@ -90,6 +99,38 @@ function handleOpen() {
   ws?.send(JSON.stringify(message));
 }
 
+function truncateMessage(
+  message: ServerMessage,
+  maxLength: number = 500
+): string {
+  const stringified = JSON.stringify(message, undefined, 2);
+
+  if (stringified.length <= maxLength) {
+    return stringified;
+  }
+
+  const truncated = { ...message };
+
+  if ("trackList" in truncated && Array.isArray(truncated.trackList)) {
+    truncated.trackList = truncated.trackList.map((track: any) => ({
+      ...track,
+      svg: track.svg ? `<svg>... (${track.svg.length} chars)` : track.svg,
+      data: {
+        ...track.data,
+        segments: `... (${track.data?.segments?.length || 0} segments)`,
+      },
+    }));
+  }
+
+  const result = JSON.stringify(truncated, undefined, 2);
+
+  if (result.length > maxLength) {
+    return result.substring(0, maxLength) + "\n... (truncated)";
+  }
+
+  return result;
+}
+
 function handleMessage(event: MessageEvent) {
   let message: ServerMessage;
 
@@ -101,7 +142,7 @@ function handleMessage(event: MessageEvent) {
     return;
   }
 
-  serverMessage.set(JSON.stringify(message, undefined, 2));
+  serverMessage.set(truncateMessage(message));
 
   switch (message.protocol) {
     case WSProtocol.CONNECT:
@@ -165,6 +206,15 @@ function handleMessage(event: MessageEvent) {
         return;
       }
       // TODO: Implement start_game logic
+      break;
+
+    case WSProtocol.GET_TRACK_LIST:
+      if (!message.success) {
+        errorMessage.set(message.error);
+        return;
+      }
+      trackList.set(message.trackList);
+      errorMessage.set("");
       break;
   }
 }

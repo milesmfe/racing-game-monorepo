@@ -20,6 +20,38 @@ const lobbyListSchema = z.array(
 );
 export type LobbyList = z.infer<typeof lobbyListSchema>;
 
+const trackListSchema = z.array(
+  z.object({
+    id: IdSchema,
+    name: z.string(),
+    description: z.string(),
+    author: z.string(),
+    data: z.object({
+      meta: z.object({
+        lanes: z.number(),
+        segmentsPerLane: z.number(),
+        direction: z.string(),
+      }),
+      segments: z.array(
+        z.object({
+          id: z.string(),
+          type: z.string(),
+          lane: z.number(),
+          index: z.number(),
+          data: z.number().nullable(),
+          connections: z.object({
+            next: z.string().nullable(),
+            diag_left: z.string().nullable(),
+            diag_right: z.string().nullable(),
+          }),
+        })
+      ),
+    }),
+    svg: z.string().startsWith("<svg"),
+  })
+);
+export type TrackList = z.infer<typeof trackListSchema>;
+
 // ----------------------------------------------------------------------------
 // WebSocket Messaging
 // ----------------------------------------------------------------------------
@@ -31,6 +63,7 @@ export enum WSProtocol {
   JOIN_LOBBY = "join_lobby",
   LEAVE_LOBBY = "leave_lobby",
   START_GAME = "start_game",
+  GET_TRACK_LIST = "get_track_list",
 }
 
 const clientConnectMessageSchema = z.object({
@@ -83,6 +116,11 @@ export type ClientStartGameMessage = z.infer<
   typeof clientStartGameMessageSchema
 >;
 
+const clientGetTrackListSchema = z.object({
+  protocol: z.literal(WSProtocol.GET_TRACK_LIST),
+});
+export type ClientGetTrackList = z.infer<typeof clientGetTrackListSchema>;
+
 const clientMessageSchena = z.discriminatedUnion("protocol", [
   clientConnectMessageSchema,
   clientReconnectMessageSchema,
@@ -91,6 +129,7 @@ const clientMessageSchena = z.discriminatedUnion("protocol", [
   clientJoinLobbyMessageSchema,
   clientLeaveLobbyMessageSchema,
   clientStartGameMessageSchema,
+  clientGetTrackListSchema,
 ]);
 export type ClientMessage = z.infer<typeof clientMessageSchena>;
 
@@ -202,6 +241,20 @@ export type ServerStartGameMessage = z.infer<
   typeof serverStartGameMessageSchema
 >;
 
+const serverGetTrackListSchema = z.discriminatedUnion("success", [
+  z.object({
+    protocol: z.literal(WSProtocol.GET_TRACK_LIST),
+    success: z.literal(true),
+    trackList: trackListSchema,
+  }),
+  z.object({
+    protocol: z.literal(WSProtocol.GET_TRACK_LIST),
+    success: z.literal(false),
+    error: z.string(),
+  }),
+]);
+export type ServerGetTrackList = z.infer<typeof serverGetTrackListSchema>;
+
 const serverMessageSchema = z.discriminatedUnion("protocol", [
   serverConnectMessageSchema,
   serverReconnectMessageSchema,
@@ -210,6 +263,7 @@ const serverMessageSchema = z.discriminatedUnion("protocol", [
   serverJoinLobbyMessageSchema,
   serverLeaveLobbyMessageSchema,
   serverStartGameMessageSchema,
+  serverGetTrackListSchema,
 ]);
 export type ServerMessage = z.infer<typeof serverMessageSchema>;
 

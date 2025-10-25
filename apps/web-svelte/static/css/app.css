@@ -54,6 +54,7 @@ main h1 {
   padding: 0.875rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
+  min-width: 7.5pc;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -129,6 +130,126 @@ main h1 {
   transform: translateY(0);
 }
 
+/* Track List Carousel */
+.trackList {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.trackList > p strong {
+  font-size: 1.1rem;
+}
+
+.track > p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.track > p strong {
+  font-size: 1.1rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.track {
+  min-width: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+  transition: background-color 0.3s, border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.trackContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  overflow: auto;
+  min-height: 200px;
+}
+
+.trackContainer svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.carouselControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carouselButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.carouselButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carouselButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.carouselButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.carouselIndicator {
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: center;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.carouselDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carouselDot:hover {
+  transform: scale(1.2);
+}
+
 /* Status section */
 .status {
   border-radius: 8px;
@@ -141,6 +262,15 @@ main h1 {
   font-size: 0.95rem;
   line-height: 1.6;
   word-break: break-all;
+}
+
+.status pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.6;
+  overflow-wrap: normal;
 }
 
 .status p:first-child {
@@ -219,6 +349,16 @@ footer a:hover {
     color: #721c24;
   }
 
+  .trackList {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+
+  .track {
+    background-color: #ffffff;
+    border-color: #e9ecef;
+  }
+
   .lobbyList {
     background-color: #f8f9fa;
     border-color: #dee2e6;
@@ -271,6 +411,16 @@ footer a:hover {
     background-color: #2d1517;
     border: 1px solid #5a2a2e;
     color: #f8d7da;
+  }
+
+  .trackList {
+    background-color: #2a2a2a;
+    border-color: #3a3a3a;
+  }
+
+  .track {
+    background-color: #1e1e1e;
+    border-color: #333333;
   }
 
   .lobbyList {
