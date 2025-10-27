@@ -161,6 +161,7 @@ main h1 {
 
 .carouselTrack {
   display: flex;
+  align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -180,12 +181,13 @@ main h1 {
   padding: 1rem;
   border-radius: 8px;
   transition: background-color 0.3s;
-  overflow: auto;
-  min-height: 200px;
+  overflow: hidden;
+  min-height: 300px;
+  max-height: 400px;
 }
 
 .trackContainer svg {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
   display: block;
   border-radius: 4px;

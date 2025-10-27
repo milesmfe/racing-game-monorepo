@@ -247,4 +247,7 @@ function handleClose(event: CloseEvent) {
     "Disconnected from server",
     event.reason ? `\n\tReason: ${event.reason}` : ""
   );
+  if (event.code === 1008) {
+    connect();
+  }
 }
